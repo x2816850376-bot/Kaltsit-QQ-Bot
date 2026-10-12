@@ -1,0 +1,11 @@
+# Runtime actually validated with these library versions. No API SDK required.
+httpx==0.28.1
+mcp==1.26.0
+fastapi==0.141.1
+uvicorn==0.53.0
+websockets==15.0.1
+python-dotenv==1.2.3
+Pillow==12.3.0
+jieba==0.42.1
+jsonschema==4.25.1
+opencc-python-reimplemented==0.1.7

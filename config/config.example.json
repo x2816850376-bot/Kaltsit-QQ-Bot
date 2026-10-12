@@ -1,0 +1,15 @@
+{
+  "account": "",
+  "groups": [],
+  "onebot_http_url": "http://127.0.0.1:3000",
+  "onebot_ws_url": "ws://127.0.0.1:3001",
+  "onebot_token": "",
+  "mcp_port": 18778,
+  "test_port": 18883,
+  "model": "gpt-6-luna",
+  "reasoning": "high",
+  "fast": false,
+  "max_parallel_groups": 1,
+  "codex_path": "",
+  "node_path": ""
+}

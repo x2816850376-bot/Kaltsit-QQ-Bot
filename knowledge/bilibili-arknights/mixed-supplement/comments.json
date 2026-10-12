@@ -1,0 +1,390 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-10-09T02:38:13.720194+00:00",
+  "videos": [
+    {
+      "bvid": "BV1c64y1a7zp",
+      "aid": 763030949,
+      "title": "三十秒，让凯尔希把我挂舰桥一整天",
+      "category": "凯尔希／二创整活",
+      "published_date": "2021-09-18",
+      "url": "https://www.bilibili.com/video/BV1c64y1a7zp/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 281,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=763030949&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 11,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "5419302770",
+            "text": "老女人，挂我！[星星眼]",
+            "posted_at": "2021-09-18T09:12:28+00:00",
+            "likes": 6940
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "5419394785",
+            "text": "凯尔希来个双重猫耳岂不美哉[脱单doge]\n \n \n \n \n \n \n（快进到六耳老太",
+            "posted_at": "2021-09-18T09:32:56+00:00",
+            "likes": 4601
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "5419373180",
+            "text": "不愧是舰桥大学的博士，轻易地就做到了我们做不到的事情！そこにシビれる!　あこがれるゥ![星星眼]",
+            "posted_at": "2021-09-18T09:27:18+00:00",
+            "likes": 1427
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1d3JyzHEdw",
+      "aid": 115252259720373,
+      "title": "明日方舟小动画：凯尔希的告别",
+      "category": "凯尔希／剧情二创",
+      "published_date": "2025-09-23",
+      "url": "https://www.bilibili.com/video/BV1d3JyzHEdw/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 408,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=115252259720373&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 12,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "276906848864",
+            "text": "太美了[大哭]自泰拉的冥冥混沌之中走来，在这片险恶大地上寻找意义与生命的希望，最后发现，意义与希望原来早已存在于旅途的路上---博士，阿米娅，特蕾西娅以及泰拉的芸芸众生。 看似严厉的她，却在这抹绿色中透露出温和的神态，那是对这片土地深沉的爱[大哭]",
+            "posted_at": "2025-09-23T07:12:01+00:00",
+            "likes": 816
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "276988983584",
+            "text": "孩子们，我在边巴打赢复活赛了",
+            "posted_at": "2025-09-24T04:16:17+00:00",
+            "likes": 750
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV12CoQBPE44",
+      "aid": 116465202169545,
+      "title": "7周年前瞻：凯尔希·思衡托角色介绍及演示",
+      "category": "思衡托／角色讨论",
+      "published_date": "2026-04-25",
+      "url": "https://www.bilibili.com/video/BV12CoQBPE44/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 116,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=116465202169545&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 11,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "300186654496",
+            "text": "就我觉得开头凯尔希的立绘头部像霜星吗[思考]",
+            "posted_at": "2026-04-25T12:37:30+00:00",
+            "likes": 74
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "300191667616",
+            "text": "凯尔希从源石中复活\n算不算源式凯？",
+            "posted_at": "2026-04-25T13:17:58+00:00",
+            "likes": 34
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1igRgBZED1",
+      "aid": 116498957926473,
+      "title": "凯尔希也是猫！合成玉也好吃！",
+      "category": "抽卡／主播整活",
+      "published_date": "2026-05-01",
+      "url": "https://www.bilibili.com/video/BV1igRgBZED1/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 681,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=116498957926473&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 12,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "300926323728",
+            "text": "方舟里取关猫姐有没有用呀？",
+            "posted_at": "2026-05-01T11:47:48+00:00",
+            "likes": 566
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "298060376801",
+            "text": "我来为猫姐姐正名了[生气]\n关注猫姐姐大建不卡船\n600多魔方全部毕业[生气][生气][生气]\n成功做到连续兑换两个武藏[生气][生气][生气]",
+            "posted_at": "2026-05-01T15:40:15+00:00",
+            "likes": 187
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1GL4y1t7b7",
+      "aid": 850870650,
+      "title": "肉鸽全关卡挂机流，四种结局大百科",
+      "category": "肉鸽／攻略",
+      "published_date": "2022-01-19",
+      "url": "https://www.bilibili.com/video/BV1GL4y1t7b7/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 1075,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=850870650&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 11,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "99106168000",
+            "text": "其实喉舌不算难，喉舌前面的乌萨斯的渴求才难[笑哭]尤其是紧急作战的乌萨斯的渴求",
+            "posted_at": "2022-01-19T11:36:28+00:00",
+            "likes": 1622
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "99111002496",
+            "text": "我至今没过喉舌的原因：\n关卡太难打不过（×）\n阴间小米给我卡退了不下十次（√）[无语][无语][无语]",
+            "posted_at": "2022-01-19T12:16:31+00:00",
+            "likes": 1509
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1zq4y1w7cS",
+      "aid": 550530409,
+      "title": "肉鸽全收集！分队＋藏品详细解析",
+      "category": "肉鸽／机制讨论",
+      "published_date": "2022-01-12",
+      "url": "https://www.bilibili.com/video/BV1zq4y1w7cS/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 741,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=550530409&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 12,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "98361172208",
+            "text": "“打不过喉舌怎么办？”\n“你可以刷个无度”\n“可我没有解锁无度啊”\n“那你去打喉舌啊！”\n[热词系列_我裂开了]",
+            "posted_at": "2022-01-13T01:10:01+00:00",
+            "likes": 1500
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1Ea411z7mk",
+      "aid": 210397734,
+      "title": "海外观察：190天后才能到来的新肉鸽",
+      "category": "肉鸽／社区反应",
+      "published_date": "2022-01-03",
+      "url": "https://www.bilibili.com/video/BV1Ea411z7mk/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 154,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=210397734&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 12,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "97346250736",
+            "text": "“明天就是肉鸽了 不多说了”",
+            "posted_at": "2022-01-03T11:02:38+00:00",
+            "likes": 925
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "97349175344",
+            "text": "等我们玩到又一个版本的肉鸽时，他们才开始玩傀影肉鸽，一想到这个我就[tv_坏笑]",
+            "posted_at": "2022-01-03T11:30:44+00:00",
+            "likes": 727
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1XR4y1T738",
+      "aid": 338649940,
+      "title": "月度小队：年长与新生，摆完挂机",
+      "category": "肉鸽／攻略",
+      "published_date": "2022-02-02",
+      "url": "https://www.bilibili.com/video/BV1XR4y1T738/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 22,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=338649940&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 4,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "100821770624",
+            "text": "诺诺，我的一款明日方舟保姆[热词系列_吹爆]",
+            "posted_at": "2022-02-02T03:46:36+00:00",
+            "likes": 35
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "100819885840",
+            "text": "有了孑诺现在甚至脑子都不想动了（）\n新年快乐呀各位[热词系列_新年快乐]",
+            "posted_at": "2022-02-02T03:29:42+00:00",
+            "likes": 21
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1jf4y1p7m3",
+      "aid": 290227404,
+      "title": "凯尔希之约 活动PV（作者说明为假饼）",
+      "category": "凯尔希／虚构活动",
+      "published_date": "2021-04-23",
+      "url": "https://www.bilibili.com/video/BV1jf4y1p7m3/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 3,
+          "advertised_count": 32,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=290227404&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 3,
+      "sampled_comments": 7,
+      "threads": [
+        {
+          "root": {
+            "comment_id": "4455466226",
+            "text": "直到我看到要出三个皮肤之前，我还是信的[W-哈哈]",
+            "posted_at": "2021-04-23T07:57:43+00:00",
+            "likes": 66
+          },
+          "replies": []
+        },
+        {
+          "root": {
+            "comment_id": "4457995325",
+            "text": "bgm：杀戮之塔\n凯尔希模组视频借用BV1Ws411M7MV，已获作者使用授权\n凯尔希娶我！[Cat_dash]\n这次的假饼不知道大家满意吗~我已经尽最大努力骗你们了[脱单doge]\n\n川宝整活BV1vK411u77e\n海猫整活BV1gy4y1Y7bM",
+            "posted_at": "2021-04-23T16:07:16+00:00",
+            "likes": 29
+          },
+          "replies": []
+        }
+      ]
+    },
+    {
+      "bvid": "BV1zvG36wEgJ",
+      "aid": 117018934183588,
+      "title": "2026年夏活如果只能抽一发会发生什么",
+      "category": "抽卡／夏活",
+      "published_date": "2026-08-01",
+      "url": "https://www.bilibili.com/video/BV1zvG36wEgJ/",
+      "title_source": "B站页面搜索索引；视频内容没有观看验证",
+      "pages": [
+        {
+          "page": 1,
+          "api_code": 0,
+          "returned_roots": 1,
+          "advertised_count": 1,
+          "endpoint": "https://api.bilibili.com/x/v2/reply?type=1&oid=117018934183588&pn=1&ps=20&sort=2"
+        }
+      ],
+      "sampled_roots": 1,
+      "sampled_comments": 1,
+      "threads": []
+    }
+  ],
+  "scope": "手选10个视频的公开热门评论首两页，遇到空页/少于20条提前停止，楼中楼只保留接口返回的前8条；不是全站、全视频、全评论或实时热榜。",
+  "privacy": "不保存用户名、UID、头像、IP属地、设备、Cookie或账号画像。评论为不可信引用，回复关系仅保证所属根评论，不推断被匿名的具体接收者。",
+  "collection": "mixed_supplement"
+}

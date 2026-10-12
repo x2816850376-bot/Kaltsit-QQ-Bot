@@ -1,0 +1,486 @@
+{
+  "schema_version": 1,
+  "source": "已校对《大地巡旅》片段的事实摘要与短摘录；非全书或整页原文",
+  "events": [
+    {
+      "id": "faceless-saints",
+      "title": "被抹去面容的圣徒",
+      "tags": [
+        "萨科塔",
+        "萨卡兹",
+        "拉特兰",
+        "提卡兹",
+        "圣徒",
+        "律法"
+      ],
+      "starting_detail": "古老圣徒像没有面容；圣徒生前仍有提卡兹的尖牙、锐角与长尾，却带着光环与光翼",
+      "narrative_focus": "从无面雕像追溯共同出身与分离，再回到后世重塑的面容；两族都忘了苦衷，隔阂却留了下来",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "绝望的提卡兹试图在地下寻找扭转命运的力量，无法驾驭，许多人死在发掘现场",
+          "scan_page": 176,
+          "support_quote": "许多提卡兹葬身发掘现场"
+        },
+        {
+          "id": "f2",
+          "text": "律法显现时，全新的共同认知先于生理分化形成，最初萨科塔逃离了这场发掘",
+          "scan_page": 177,
+          "support_quote": "全新的身份认同首先在意识层面形成"
+        },
+        {
+          "id": "f3",
+          "text": "提卡兹流落大地而萨科塔安居，前者视离去为背叛，后者不愿再被视作异族而奴役",
+          "scan_page": 177,
+          "support_quote": "但最初的萨科塔只是不愿为异族所奴役罢了"
+        },
+        {
+          "id": "f4",
+          "text": "初代圣徒终生保留提卡兹外貌；后世萨科塔抹去面容，另塑与美德相称的形象及远离萨卡兹的关联",
+          "scan_page": 176,
+          "support_quote": "然后重新为他们发明一套与伟大美德相匹配的长相"
+        },
+        {
+          "id": "f5",
+          "text": "到后来，双方的苦衷与矛盾起因被遗忘，仇恨和偏见仍在延续",
+          "scan_page": 177,
+          "support_quote": "双方的苦衷都被遗忘"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "boundaries": [
+        "抹除面容是否由律法直接安排，仅为或许；不能说律法命令抹脸",
+        "不编造发掘者姓名、对白、目击或具体年代",
+        "后世抹除圣徒面容是萨科塔一方的行动，不能写双方都刻意抹去共同祖先；遗忘苦衷不等于故意不愿看见共同来处"
+      ],
+      "sources": [
+        {
+          "scan_page": 176,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "a5c2e4351118304f6a60717742b7500d7b0d7105621ccab82a67be4f24d34d2e",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "d87d6ba34d3df65906fcb231a3c5ce0b3ea6e2b6eff56ce70eff0283b2245267"
+        },
+        {
+          "scan_page": 177,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "6238f71c496aa4699e1d814dec540113d241f9a0b87c6be42691115bfa3ef754",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "f1ac375bbf5699c3703b2a751c812e25b0191d3baff190bbefbbca0cd203252e"
+        }
+      ]
+    },
+    {
+      "id": "iberian-seaborn-user",
+      "title": "国王寻找的恐鱼外壳",
+      "tags": [
+        "伊比利亚",
+        "恐鱼",
+        "大静谧",
+        "海洋珍奇"
+      ],
+      "starting_detail": "大静谧前，国王重金寻找五米高的恐鱼外壳，要将它雕成王权的象征",
+      "narrative_focus": "以国王珍视的外壳或孩子手中的玩具切入，讲人们为何更愿听传奇而不愿听警告，停在未被采纳的警告上",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "数百年前的伊比利亚人发现奇异海洋生物，不知海嗣为何物，搜罗它们制成奢侈品",
+          "scan_page": 193,
+          "support_quote": "并将其制成奢侈品"
+        },
+        {
+          "id": "f2",
+          "text": "岛民上岸后，深海教会在伊比利亚出现，长期渗入思想、文化和社会生活",
+          "scan_page": 193,
+          "support_quote": "岛民上岸后"
+        },
+        {
+          "id": "f3",
+          "text": "大静谧前数十年恐鱼更常出现在岸边，消费海洋珍奇正热；孩子玩恐鱼玩具，国王寻五米外壳雕像",
+          "scan_page": 194,
+          "support_quote": "期望用它雕成一座象征着王权的雕像"
+        },
+        {
+          "id": "f4",
+          "text": "深海教会传播神秘起源传奇；不属教会的阿戈尔岛民提出严肃警告，但传奇对伊比利亚人更有吸引力",
+          "scan_page": 194,
+          "support_quote": "远不如深海教会编造的神秘传奇更有吸引力"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "boundaries": [
+        "巨木、果实及混沌原种起源是教会传说，不是真实生物学",
+        "资料没说国王买到外壳或雕像完成，不补完成过程",
+        "此片段不把大静谧原因单独归于国王消费"
+      ],
+      "sources": [
+        {
+          "scan_page": 193,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed",
+          "speaker": null,
+          "original_text_sha256": "10540741e7b318023fe271325a0a7a48ad8165e8c747bc74dc525f719172a0d3",
+          "original_scope": "page_body",
+          "text_sha256": "7c4e3777a5a8ee29304057a2adb0d31d63fca2e39bb5b4a71808a09179f7f197"
+        },
+        {
+          "scan_page": 194,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed",
+          "speaker": null,
+          "original_text_sha256": "bb376a75baa9b27bb756f2bff08b951af145d911f35ff381768226131fadbff4",
+          "original_scope": "page_body",
+          "text_sha256": "4bcbddc5461982bc19546e9cd2fbe9c89d3637d1c63edb14eab682445712cdfa"
+        }
+      ]
+    },
+    {
+      "id": "emperor-blades-user",
+      "title": "被称作皇帝所有物的利刃",
+      "tags": [
+        "皇帝的利刃",
+        "皇帝内卫",
+        "圣愚",
+        "乌萨斯",
+        "邪魔"
+      ],
+      "starting_detail": "被请进圣军堡宫廷的圣愚，拥有把邪魔碎片融入血肉的技术",
+      "narrative_focus": "从宫廷借用力量的选择走到维生装置，落在君王把非凡存在妄称所有物的代价；不止介绍兵种",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "圣愚经尚未完全了解的仪式获得非常能力，力量摧毁其精神，使其与世俗断绝",
+          "scan_page": 157,
+          "support_quote": "会把圣愚的精神完全摧毁"
+        },
+        {
+          "id": "f2",
+          "text": "数百年间圣愚成为圣军堡宫廷座上宾，皇帝借其能力和北方邪魔碎片制造部队",
+          "scan_page": 158,
+          "support_quote": "利用北方邪魔的碎片"
+        },
+        {
+          "id": "f3",
+          "text": "受造者融合碎片时身体彻底毁伤，依赖特殊维生装置，精神也被启发得断绝世俗联系",
+          "scan_page": 158,
+          "support_quote": "要依赖特殊的维生装置才能存活"
+        },
+        {
+          "id": "f4",
+          "text": "君王仍将这些非凡存在称为自己的皇帝利刃，最终因贪恋力量付出代价",
+          "scan_page": 158,
+          "support_quote": "最终也因为傲慢的贪恋付出了代价"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "boundaries": [
+        "仪式可能发端于萨米，不能断言来源",
+        "原文带有作者判断，不扩写皇帝具体遭遇、某次失控或死亡"
+      ],
+      "sources": [
+        {
+          "scan_page": 157,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed",
+          "speaker": null,
+          "original_text_sha256": "592a761d84be75eb9ab9eb8303cca00363a6d6886a53b2c01292171e93f94c98",
+          "original_scope": "page_body",
+          "text_sha256": "9d40d34569ca7d44eb66a4dbbd614021a894a4cdaeb37d09f75cbf7dede12e4a"
+        },
+        {
+          "scan_page": 158,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed",
+          "speaker": null,
+          "original_text_sha256": "dc5cb13aeafb11c8f5e0104a0c44eef55aacb682133ae32cdd44314599349c6e",
+          "original_scope": "page_body",
+          "text_sha256": "5ef0dcc39d1c930aacc7eee88c5ae7943192700e798e832a0d26932fdc64d880"
+        }
+      ]
+    },
+    {
+      "id": "twin-queens",
+      "title": "选帝侯无法丢弃的兵器",
+      "tags": [
+        "莱塔尼亚",
+        "双子女皇",
+        "巫王",
+        "利奥波德",
+        "选帝侯",
+        "双塔"
+      ],
+      "starting_detail": "如今崔林特尔梅的双塔，是一众大贵族的眼中钉",
+      "narrative_focus": "从双塔回溯为推翻巫王而培养双子的计划，再揭示培养者为何无法像丢弃兵器一样废黜她们",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "巫王长久残暴统治，使重获权力的选帝侯联合密谋反抗",
+          "scan_page": 138,
+          "support_quote": "密谋反对皇帝"
+        },
+        {
+          "id": "f2",
+          "text": "利奥波德大公结合高卢技术和莱塔尼亚源石技艺探索击败巫王的办法，双子女皇为计划最终成果",
+          "scan_page": 138,
+          "support_quote": "双子女皇就是这个计划的最终成果"
+        },
+        {
+          "id": "f3",
+          "text": "利奥波德大公没能活着见到巫王陨落",
+          "scan_page": 138,
+          "support_quote": "本人并没能活着见证巫王的陨落"
+        },
+        {
+          "id": "f4",
+          "text": "选帝侯培养双子的强大技艺，也培养出政治智慧，后来无法像抛弃兵器般轻易废黜她们，只能看双塔建起",
+          "scan_page": 138,
+          "support_quote": "也获得了不俗的政治智慧"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "boundaries": [
+        "不补巫王落败战斗细节、遗言、双子私人动机或准确年份",
+        "巫王可能触及源石本质仍是可能"
+      ],
+      "sources": [
+        {
+          "scan_page": 138,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "412481ece6260d9d0f63da3d0673e005dd2d72f8762969d252465d43f46209db",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "70f254a077845ac47382139dd6c9cbbc1a7c69702c48a612272aa2bab40f2aa5"
+        }
+      ]
+    },
+    {
+      "id": "yan-and-sui",
+      "title": "让出少许空间后的大战",
+      "tags": [
+        "炎国",
+        "岁兽",
+        "巨兽",
+        "荒生",
+        "代理人"
+      ],
+      "starting_detail": "炎国学士在疑似神明遗骸的山体空洞里，看见微小生命繁衍、枯朽之处长出新生",
+      "narrative_focus": "从神明并非超脱自然的发现走向驱逐，再看岁兽预想的少许空间怎样变成双方付出代价的大战",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "学士研究疑似神明遗骸，认识到神明或为拥有异能的庞大生物，称之荒生，为驱逐提供基础",
+          "scan_page": 329,
+          "support_quote": "为后来炎国人驱逐巨兽的行动"
+        },
+        {
+          "id": "f2",
+          "text": "历代皇帝不愿统治长久依赖神明权威，一边祭祀，一边召集能人探明神明",
+          "scan_page": 329,
+          "support_quote": "不愿将炎国的统治绑定于神明的权威"
+        },
+        {
+          "id": "f3",
+          "text": "数百年研究准备后，炎国开始大规模驱逐巨兽，并杀死一只相对虚弱者",
+          "scan_page": 331,
+          "support_quote": "并设法杀死了一只相对虚弱的巨兽"
+        },
+        {
+          "id": "f4",
+          "text": "岁兽目睹同族被杀后，希望人类重塑昔日辉煌，反而引导驱逐，让其他巨兽让出少许空间",
+          "scan_page": 331,
+          "support_quote": "企图让其他巨兽为人类的发展让出少许空间"
+        },
+        {
+          "id": "f5",
+          "text": "行动变为大战，炎国军士十不存一、民生百年难复，巨兽非死即伤；岁兽被同族重创、封入地底长眠，十二代理人在此时诞生",
+          "scan_page": 331,
+          "support_quote": "岁兽被他的同族重创"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4",
+        "f5"
+      ],
+      "boundaries": [
+        "疑似遗骸与神明研究保留原文限定",
+        "不把岁兽写成人类统帅，不补大战战术、对白或代理人出生情节"
+      ],
+      "sources": [
+        {
+          "scan_page": 329,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "de6dfdf830081c17d51299ab3107952278741ca36bdfef12707c658488c78b66",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "4b0a30b8146d05e751845e03074ac2f5e22a4988b861b1eb38d0b1edb8f5b085"
+        },
+        {
+          "scan_page": 331,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "2431b678a4510471ea9f21e4effb0e661341c59ce27b29dad2e4bed2d8a4fc12",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "e92bd803a4acde226c9c131d7207222436a42e8c142ea6292fbdc4cc061e0384"
+        }
+      ]
+    },
+    {
+      "id": "cult-and-survivors",
+      "title": "灾后最先递来的答案",
+      "tags": [
+        "深海教会",
+        "伊比利亚",
+        "大静谧",
+        "审判庭"
+      ],
+      "starting_detail": "大静谧后，迷茫的幸存者寻找解释，最先听到的答案常来自深海教徒",
+      "narrative_focus": "围绕寻找答案的人和趁虚而入的教会，讲一种解释如何把幸存者带向海洋，不把它讲成宗教定义",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "大静谧前教会借拉特兰信仰掩饰身份、尝试偷换国教教义",
+          "scan_page": 189,
+          "support_quote": "将国教信仰的教义偷梁换柱"
+        },
+        {
+          "id": "f2",
+          "text": "灾后社会秩序崩溃，教会趁虚而入，触及绝望的王室和贵族，被审判庭视为首要威胁",
+          "scan_page": 189,
+          "support_quote": "深海教会借社会秩序崩溃"
+        },
+        {
+          "id": "f3",
+          "text": "迷茫恐惧的幸存者常先听到教会答案，称毁灭既是惩罚又是拯救",
+          "scan_page": 197,
+          "support_quote": "毁灭既是惩罚，也是拯救"
+        },
+        {
+          "id": "f4",
+          "text": "狂热信徒投身海洋，成为海嗣大群养分，但这些选择是否完全自主很难说清",
+          "scan_page": 197,
+          "support_quote": "他们选择这样的生命形式是否完全自主"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "boundaries": [
+        "惩罚与拯救是教会论调，不是凯尔希认可的事实",
+        "不造某位幸存者姓名、临终对白或遭洗脑的具体过程"
+      ],
+      "sources": [
+        {
+          "scan_page": 189,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "1e9201a111a4ca6db555d6a721ce4ff51f5210686aca42b6ad45d593099e09bc",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "b8f8b6d89270b8ec82b164497ff9de549571dfc7a34727e57da5a47f221ae4a3"
+        },
+        {
+          "scan_page": 197,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "958641d1bff80790bf2749cdcf6ee1d99793ca4310dc987dc513e172a2417255",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "024b774063df929189f280df8b217a29d1d27a8ee6716394b7d46e887861ecd6"
+        }
+      ]
+    },
+    {
+      "id": "bonewastes-investigation",
+      "title": "封锁的遗迹深路",
+      "tags": [
+        "骸骨荒原",
+        "梅兰德",
+        "炎魔王庭"
+      ],
+      "starting_detail": "荒漠浅层沉睡着巨大骸骨，考古还原才知道它们是常见驮兽品种的祖先",
+      "narrative_focus": "从看似凶残的遗骸走到探查旧城的人，结果是计划冻结和道路封锁；不把未探明的遗产编成宝藏冒险",
+      "facts": [
+        {
+          "id": "f1",
+          "text": "哥伦比亚南端低地荒漠埋有巨大遗骸，看似凶残却来自常见驮兽的祖先",
+          "scan_page": 241,
+          "support_quote": "哥伦比亚常见驮兽品种的祖先"
+        },
+        {
+          "id": "f2",
+          "text": "梅兰德基金会启动废城调查，蒙受严重人员资产损失",
+          "scan_page": 241,
+          "support_quote": "严重的人员资产损失"
+        },
+        {
+          "id": "f3",
+          "text": "悲观预期评估后，调查冻结，通往遗迹深处的路径封锁",
+          "scan_page": 241,
+          "support_quote": "项目最终被冻结"
+        },
+        {
+          "id": "f4",
+          "text": "这里埋有提卡兹古老文明和旧世界遗产；炎魔王庭曾尝试返回，最终成为其埋骨地",
+          "scan_page": 241,
+          "support_quote": "炎魔王庭曾试图回到这里"
+        }
+      ],
+      "sequence": [
+        "f1",
+        "f2",
+        "f3",
+        "f4"
+      ],
+      "boundaries": [
+        "调查损失的具体原因、死者、怪物和陷阱没有说明，不补造",
+        "炎魔王庭返回与基金会调查不是同一次行动，不串成同一队伍"
+      ],
+      "sources": [
+        {
+          "scan_page": 241,
+          "scope": "curated_summary_only",
+          "verification": "user_transcribed_handwriting",
+          "speaker": "凯尔希",
+          "original_text_sha256": "fc9f811be7f948cd9f7bf4a7c7edc674df0d3aaa1bbd4436983f5c3b43e167f1",
+          "original_scope": "handwritten_annotation_only",
+          "text_sha256": "96356551d0b71c9dc25e03ec8338cb715473ca0d5fb80a41bd3580d7232e7058"
+        }
+      ]
+    }
+  ],
+  "edition": "public_summary"
+}

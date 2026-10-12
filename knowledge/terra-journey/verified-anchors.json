@@ -1,0 +1,108 @@
+[
+  {
+    "id": "originium",
+    "terms": [
+      "源石",
+      "源石技艺",
+      "能源"
+    ],
+    "verification": "visually_verified_summary",
+    "scan_pages": [
+      10
+    ],
+    "printed_pages": [
+      2
+    ],
+    "summary": "源石是泰拉常见的含能结晶矿物，兼具天然能源与工业原料用途；源石技艺可转化其中的能量。书中描述了源石在天然环境中的增长以及接触带来的矿石病风险，不可简单等同于地球的普通矿石或燃料。"
+  },
+  {
+    "id": "catastrophe",
+    "terms": [
+      "天灾",
+      "灾害"
+    ],
+    "verification": "visually_verified_summary",
+    "scan_pages": [
+      24
+    ],
+    "printed_pages": [
+      16
+    ],
+    "summary": "泰拉天灾有多种表现，暴风、雪灾、强降雨、高温、陨石和部分地质活动都可涉及；源石与天灾的形成相关。书中区分自然灾害的表现和源石因素，不能将所有天灾简化成同一种风暴。"
+  },
+  {
+    "id": "oripathy",
+    "terms": [
+      "矿石病",
+      "感染者",
+      "治愈",
+      "治疗"
+    ],
+    "verification": "visually_verified_summary",
+    "scan_pages": [
+      34
+    ],
+    "printed_pages": [
+      26
+    ],
+    "summary": "在本书记述时期，矿石病与活性源石感染相关，尚无确认治愈的先例；抑制治疗有效，不等于已能根治。历史上的痊愈报告须区分诊断误差、传闻和证实，不能编造罗德岛早已拥有彻底治愈方案。"
+  },
+  {
+    "id": "settlements",
+    "terms": [
+      "移动城市",
+      "聚落",
+      "谢拉格",
+      "居住"
+    ],
+    "verification": "visually_verified_summary",
+    "scan_pages": [
+      51
+    ],
+    "printed_pages": [
+      43
+    ],
+    "summary": "移动城市的重要作用包括躲避天灾，但泰拉并非所有人都居住在移动城市。不同地理环境存在固定聚落；不能把移动城市与泰拉人的全部生活直接绑定。"
+  },
+  {
+    "id": "holy-fools-user",
+    "terms": [
+      "圣愚",
+      "仪式",
+      "邪魔"
+    ],
+    "verification": "user_transcribed_summary",
+    "scan_pages": [
+      157
+    ],
+    "summary": "本页记述圣愚来自尚未完全理解的仪式，精神受到摧毁；乌萨斯民间的受祝、得道解释不等于本书对其机制的认定。书中只说仪式可能发端于萨米，不可断言起源已证实。"
+  },
+  {
+    "id": "emperor-blades-user",
+    "terms": [
+      "皇帝的利刃",
+      "皇帝内卫",
+      "圣愚"
+    ],
+    "verification": "user_transcribed_summary",
+    "scan_pages": [
+      158
+    ],
+    "summary": "本页记述乌萨斯皇室借圣愚利用北方邪魔碎片创造皇帝的利刃，融合毁伤身体、需要维生装置，精神与世俗断绝；凡人君王对其力量的所有权是一种傲慢，并非普通军队制造方式。"
+  },
+  {
+    "id": "iberian-seaborn-user",
+    "terms": [
+      "恐鱼",
+      "海嗣",
+      "深海教会",
+      "大静谧"
+    ],
+    "verification": "user_transcribed_summary",
+    "scan_pages": [
+      193,
+      194
+    ],
+    "summary": "书中记述大静谧前伊比利亚曾搜集恐鱼制作奢侈品，后有玩具、外壳雕像等消费热潮。非教徒阿戈尔人曾严肃警告。巨木果实和混沌原种是深海教会散播的来源传说，不是已证实的海嗣起源；不要将信仰宣传与作者历史记述混为一谈。"
+  }
+]

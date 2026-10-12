@@ -1,0 +1,897 @@
+{
+  "edition": "public-source",
+  "prepared_date": "2026-10-12",
+  "model": "gpt-6-luna",
+  "reasoning": "high",
+  "fast": false,
+  "personal_data_included": false,
+  "full_book_included": false,
+  "manifest_self_excluded": true,
+  "files": [
+    {
+      "path": ".gitignore",
+      "size": 256,
+      "sha256": "e12f3f1a33d191847ddf20c2ee3528e60b80960782f4566edd51fb12fd493c86"
+    },
+    {
+      "path": "01-安装依赖.cmd",
+      "size": 170,
+      "sha256": "4c38a9cd9976e4fae1f1683ed4e577bcf3be3210e91b7ff035e311ecaaa96ae7"
+    },
+    {
+      "path": "02-配置机器人.cmd",
+      "size": 149,
+      "sha256": "eb72de36f8d86e21ecd6add906742d98a7a7a30074da9ec143a6b28192dd59b1"
+    },
+    {
+      "path": "03-启动机器人.cmd",
+      "size": 153,
+      "sha256": "16147d0048136e31b0eeb053ae9c70cdd94285cc57c4ec9c74f0be90ea5c7558"
+    },
+    {
+      "path": "04-停止机器人.cmd",
+      "size": 152,
+      "sha256": "9d70af6b50374c2f8c2206763b8ad4517ea7cab13d7786fe035ea71c4bae8b0a"
+    },
+    {
+      "path": "05-查看状态.cmd",
+      "size": 154,
+      "sha256": "54856080093fb6551c6fc2f9cd16146ed60c061fcd7ce7826b0575e854414b37"
+    },
+    {
+      "path": "06-人格测试窗口.cmd",
+      "size": 152,
+      "sha256": "adfa573d629d16dc305dbd9cd115a369d9a281125cbccfd4372f6fc9b26cc89f"
+    },
+    {
+      "path": "07-检查接入.cmd",
+      "size": 146,
+      "sha256": "7d4952290d5b1081b2346c3337e53615b11854445eae6fd24458583289ced2fa"
+    },
+    {
+      "path": "08-暂停群回复.cmd",
+      "size": 153,
+      "sha256": "ed2ff5ed8daf24a2ed1cc40e7951645c573dbb548bfbae4ed83e7ac449df1886"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 713,
+      "sha256": "4e96af0a4aaf6509626e9851d819f7167f37a0f702b545cc55778ec7f545f6fa"
+    },
+    {
+      "path": "bot_config.py",
+      "size": 4276,
+      "sha256": "60a7bba6179d3781ac051427fad9a515e1d117944ded1dbecfa298890891eb6a"
+    },
+    {
+      "path": "chat_address.py",
+      "size": 9536,
+      "sha256": "9d46a7742def2f167527aa1ee26c86cca8404c8109f596fe3a7bc305da0ab985"
+    },
+    {
+      "path": "chat_bubbles.py",
+      "size": 9943,
+      "sha256": "dfd7a459b40e5f693e7d3a4115387175ec176c06c9ec4225e71175f75e2fac7d"
+    },
+    {
+      "path": "chat_community.py",
+      "size": 8616,
+      "sha256": "bc405e4054c3b18273f1d89eca525d82e1c2265ed0ab321b852ff9432c2c6d13"
+    },
+    {
+      "path": "chat_completion.py",
+      "size": 1067,
+      "sha256": "338989ab69c9bb3d4f3dc232cf300cdcdeac66ebe459c8b49b35396b851f84de"
+    },
+    {
+      "path": "chat_context.py",
+      "size": 9148,
+      "sha256": "bdeb8fd20fefa53adfb1a2e43436b39e7689c1df8f982a376f61e8e308338a61"
+    },
+    {
+      "path": "chat_dialogue.py",
+      "size": 2166,
+      "sha256": "0ba9f0d49f0f5a66d6586d581bf765a66a03f0d35ed8c131f250190f4afc21f3"
+    },
+    {
+      "path": "chat_expression_history.py",
+      "size": 4116,
+      "sha256": "2084365ee8ebc9935f48130f4ea5842cad89650bf94addddd9e66e040d21f807"
+    },
+    {
+      "path": "chat_knowledge.py",
+      "size": 17027,
+      "sha256": "e95bc64d24eef7a9e8a329fadb2466e529c17c90a97b34af34a719420f6bfcca"
+    },
+    {
+      "path": "chat_participation.py",
+      "size": 7591,
+      "sha256": "42eb56637b2108bd50fa9f15001a76ebcfda225fc842939072374a209bd940fb"
+    },
+    {
+      "path": "chat_scope.py",
+      "size": 1247,
+      "sha256": "68123786c49e9b4c39fb68ae5fc0a9192fbba11c9d09999391ea75c7d5bb76fb"
+    },
+    {
+      "path": "chat_story.py",
+      "size": 4941,
+      "sha256": "53b56565a386532735438e9e07a716968524076fba28f0e7c8285b434e025308"
+    },
+    {
+      "path": "chat_style.py",
+      "size": 1183,
+      "sha256": "42022267edd3d30cb10223af1c77470c4296f25cb8596040982099128e652ea7"
+    },
+    {
+      "path": "chat_world.py",
+      "size": 15870,
+      "sha256": "c0212f5a565446f776e058f73638559cc38cee923b2777ed819cf013235ba5c6"
+    },
+    {
+      "path": "cli_config.py",
+      "size": 2592,
+      "sha256": "5188db4768261d7befa5dd9eee99d736c6c0f6a4e90262d8ac94908aba98d6a0"
+    },
+    {
+      "path": "config/config.example.json",
+      "size": 334,
+      "sha256": "1b00451f7f049539040bdd3f26649cd90990fc64ea3dafa29421d0a703ba086c"
+    },
+    {
+      "path": "configure.py",
+      "size": 3257,
+      "sha256": "cea47b21f3b3506e763e7d2f25a0792397b3796097d8534c0c30dcc0c6937d35"
+    },
+    {
+      "path": "control.py",
+      "size": 6323,
+      "sha256": "79b61e6b6bbeae5964d18a15bc86a247fa6c1f20ba6a15c5164f5907f0de3142"
+    },
+    {
+      "path": "dialogue-test-window/index.html",
+      "size": 6710,
+      "sha256": "434da475f119f675b4dc281f605f8406cb34231723ae2f100738be422a952cbe"
+    },
+    {
+      "path": "dialogue-test-window/server.py",
+      "size": 11074,
+      "sha256": "892000301745f54f49259220d6a5a9d7d076d7c07dab07c7758ebae5aa3148e7"
+    },
+    {
+      "path": "dialogue-test-window/test-policy.txt",
+      "size": 1379,
+      "sha256": "7bcdf1a08ed7be220de165a0cdd94e8696ca59ee35f9d4803ad3d801154c8a9f"
+    },
+    {
+      "path": "docs/knowledge.md",
+      "size": 1490,
+      "sha256": "aae94c3828a6f8a3b13d01b7d1a93e66eb63de6587d6c5247d594d3cfcf6b73e"
+    },
+    {
+      "path": "docs/validation.md",
+      "size": 2924,
+      "sha256": "667ca3818b123f6528a44b8c918ff187dc4d83ed43867be9bd694de0d6853d75"
+    },
+    {
+      "path": "doctor.py",
+      "size": 3121,
+      "sha256": "0fb231b952eab15767f88213f0fb82ab37e9687994c432a3475a716dff08d728"
+    },
+    {
+      "path": "group-chat-policy.txt",
+      "size": 13646,
+      "sha256": "b4ab331be45d8c3492fd0115e688ebc4d51a5d663583a1b3ea30788621a610b2"
+    },
+    {
+      "path": "knowledge/arknights/operator-aliases.json",
+      "size": 402096,
+      "sha256": "e461b9743017fca98d8d2c91782a8b5795ca4fc6a5f1e90b9968fe0f4bb4c261"
+    },
+    {
+      "path": "knowledge/arknights/operators.json",
+      "size": 665917,
+      "sha256": "1195e0b724672f87a71b01597965c758257b1151760a3e2543938a2fbcc876aa"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/cards.json",
+      "size": 308031,
+      "sha256": "cfaed2d9be262e29437b19f20fe4a6eaa9d6f331202e522931052a0ced1650cf"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/comments.json",
+      "size": 313507,
+      "sha256": "1b1fbad8519e4698139f8b31a8c4a70e243c10718fba86d20466961c9bb5d191"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/manifest.json",
+      "size": 207578,
+      "sha256": "bf8971c5b1f00428b8e8fc094e72b360b73729e2cf78a9f57389d0e24e804278"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/mixed-supplement/cards.json",
+      "size": 10699,
+      "sha256": "b353772f85e88a0931641b9f473f23c8218979d7f290f01a946c4104b2e4ba66"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/mixed-supplement/comments.json",
+      "size": 13947,
+      "sha256": "4c259aa4a8f67cd78111e0dd33d7b061972793ce2d1a0c9b857f6a4b9a3a43f5"
+    },
+    {
+      "path": "knowledge/bilibili-arknights/mixed-supplement/manifest.json",
+      "size": 277,
+      "sha256": "36d7e5d92baf2c8b5a9df48835070c3fb03157ba05f0a1658ddc18adb5e2ad00"
+    },
+    {
+      "path": "knowledge/terra-journey/index.sqlite3",
+      "size": 49152,
+      "sha256": "104c0ea7c9fb02c9a6efe24a666943df68ec313366b89795e573805dd2fe2c75"
+    },
+    {
+      "path": "knowledge/terra-journey/manifest.json",
+      "size": 172,
+      "sha256": "d7e0135075094767a17a4f6fe05d78312e21d27f4b786f820c3e7e80b50f5764"
+    },
+    {
+      "path": "knowledge/terra-journey/story-events.json",
+      "size": 19636,
+      "sha256": "e7e91598ea7e3b8179f8f84f0cab3004e193628d7bc1136224574d09bf7aef2b"
+    },
+    {
+      "path": "knowledge/terra-journey/summary-source.json",
+      "size": 7350,
+      "sha256": "841e1839153ba86d0539a77167822a362e1bcf8ae85ab219a8d75538b89ba92e"
+    },
+    {
+      "path": "knowledge/terra-journey/topic-catalog.json",
+      "size": 3538,
+      "sha256": "e119b330d038d4140f07d287779805fca32a47a1150b33fe9f04b5d9d3d8e75d"
+    },
+    {
+      "path": "knowledge/terra-journey/verified-anchors.json",
+      "size": 3550,
+      "sha256": "b4f894b67c4ba67ad625b1f087923184dedc68dfccec642e9d2b1eff805c46f3"
+    },
+    {
+      "path": "LICENSE",
+      "size": 1238,
+      "sha256": "0aee4bbe48cbf5e4e45bff58ea918814eaa92a00669f018964b1161c7b4fd5b1"
+    },
+    {
+      "path": "licenses/qq-bridge-MIT.txt",
+      "size": 1584,
+      "sha256": "ccfcba25fce9fe3a97a25f0825c0b7c4c9faa72a0a3914972b9f281a3f3ebd9d"
+    },
+    {
+      "path": "local_service.py",
+      "size": 1143,
+      "sha256": "6e709c815d06375e8673a606f7645617239c3efeb962b18d8cdcaf39404fe05e"
+    },
+    {
+      "path": "luna-chat-runtime.py",
+      "size": 21083,
+      "sha256": "89be6d3a764a5570120ff9974d75803b777425bddf4e6c2966182a3339932cb9"
+    },
+    {
+      "path": "mcp-stdio-proxy.py",
+      "size": 16593,
+      "sha256": "02164b6296b2cd70f414f1872486e88f4daa2a72347430fdb5caa75984d346ad"
+    },
+    {
+      "path": "model_slots.py",
+      "size": 1248,
+      "sha256": "6e0efe9608d68464debdd8eadde5208fc023a22c200b92d47d9a815b4df5d226"
+    },
+    {
+      "path": "prompts/persona_full.txt",
+      "size": 17245,
+      "sha256": "2889a454c08cc796b6f272957baf7677f057cd89ccf59e870209b33ed0630b7d"
+    },
+    {
+      "path": "prompts/persona_runtime.txt",
+      "size": 14763,
+      "sha256": "5e8212db4177943e47be289468e6606406b37957f16a62a353918d204786d4fd"
+    },
+    {
+      "path": "README.md",
+      "size": 6781,
+      "sha256": "227b44566d0f19ea2957ca8c070c45205d7f7fcc5855991ef670e53b011f8387"
+    },
+    {
+      "path": "requirements.txt",
+      "size": 261,
+      "sha256": "02ff7a7057856a19abdd38af9e1e68b9ce6ad19e5168a4ce6ec24152cd10257c"
+    },
+    {
+      "path": "scripts/build_source_zip.py",
+      "size": 1961,
+      "sha256": "e33aba7f1efdeeeac599bb0bc1d00da347a8b758a5a8ba1f3be2d46db3e07118"
+    },
+    {
+      "path": "scripts/check_cli_transport.py",
+      "size": 1869,
+      "sha256": "3236be6ee1a84fef3eb4cb91f18df5167256ad936f5e591cf8b0c0902fc55624"
+    },
+    {
+      "path": "scripts/check_release.py",
+      "size": 1864,
+      "sha256": "df633b4e1b4ec7f92ca52af6ab375ec4fc3539020ac02ee1c977a4c3197985e7"
+    },
+    {
+      "path": "scripts/import_private_knowledge.py",
+      "size": 2327,
+      "sha256": "42651bc432a05699fa9800193fb36b6c561b79ec750885b6b0c4df8f8839dd7f"
+    },
+    {
+      "path": "scripts/run_tests.py",
+      "size": 1367,
+      "sha256": "e3f2f7e02e26fe3a1ba1836df0f7952c32120fb376c29cc2e99e95defeb33e90"
+    },
+    {
+      "path": "scripts/smoke_fake_bridge.py",
+      "size": 9455,
+      "sha256": "2973a1f4b98a7b33d27233473bd31af0e09d6426637dd02600c2d4aa3a4ee4ad"
+    },
+    {
+      "path": "setup.ps1",
+      "size": 2496,
+      "sha256": "72ee0b1dfc2cd1809e199aa7f01c974c3f936febb10be983fe25b698a55af593"
+    },
+    {
+      "path": "skills/kaltsit-bubble-coherence/SKILL.md",
+      "size": 2521,
+      "sha256": "8ef8586f634a3bb78435ae5646bf608b9460f19236e13a95225e418005013709"
+    },
+    {
+      "path": "skills/kaltsit-dialogue-output/references/feedback-20261009.md",
+      "size": 4088,
+      "sha256": "e843db408b7380d071d2ed11f62f6999eb1d33c3ed097045eacf8d75c1970f40"
+    },
+    {
+      "path": "skills/kaltsit-dialogue-output/SKILL.md",
+      "size": 6222,
+      "sha256": "cb3cf81335140b24437c1f682f65342bf1bfbd0b8aae5d488b70d64b425ad731"
+    },
+    {
+      "path": "tests/test_chat_bubbles.py",
+      "size": 10789,
+      "sha256": "09ebf1db63f518f1302f703f9accfe81fad31bea735f4ec0dd8a1e86622b70fa"
+    },
+    {
+      "path": "tests/test_chat_participation.py",
+      "size": 6469,
+      "sha256": "82c389d2167dee67f15007251165738873e718af0e1f9cab7a3a6a8a5fc28aa7"
+    },
+    {
+      "path": "tests/test_dialogue_output.py",
+      "size": 3412,
+      "sha256": "81c0b11554713c412f571cb2bb288326d08775bdde0e73ea99d4dc3bab5f2f5d"
+    },
+    {
+      "path": "tests/test_expression_history.py",
+      "size": 4692,
+      "sha256": "b8351e5402de8de00aafbc272f787ff0aee9a9a79cb9509908ae87904325841c"
+    },
+    {
+      "path": "tests/test_hook.cjs",
+      "size": 685,
+      "sha256": "abe072a22690e761ed2f177098ad83b2b6f01583385079bbd0b419038d868d53"
+    },
+    {
+      "path": "tests/test_model_slots.py",
+      "size": 1121,
+      "sha256": "2014ed8f4140d1c2695ec82c22bef695b35c1bf2aa9b7fd3987acbaf0a2b594b"
+    },
+    {
+      "path": "tests/test_native_doctor_at.py",
+      "size": 6425,
+      "sha256": "42d3e2c4132a0960a98534691d44e759d455e392e3791800128f386630acc38d"
+    },
+    {
+      "path": "tests/test_portable_config.py",
+      "size": 2803,
+      "sha256": "72fa977f6f99f33d73f62c4e7a7190fb73ba02a5ae9808a25c784341eaa48ad7"
+    },
+    {
+      "path": "tests/test_public_knowledge.py",
+      "size": 2069,
+      "sha256": "6988f94f88e941428439bacb3dd766589aed638c4d785a860c57d37d9353a474"
+    },
+    {
+      "path": "tests/test_reply_routing.py",
+      "size": 5121,
+      "sha256": "4f637f53200c8b8a1affc39b2abdf5cb74faff588ef706a5ca767d34c118b473"
+    },
+    {
+      "path": "tests/test_role_address.py",
+      "size": 8975,
+      "sha256": "7807fef7055128cc5bb041817d189e83d5b57449f0615580b91ff8d19759feb9"
+    },
+    {
+      "path": "tests/test_web_fallback.py",
+      "size": 3592,
+      "sha256": "af60ce8375257c7703b54b25499737f46f180086a3f7d5cdc196474c338f6dce"
+    },
+    {
+      "path": "tests/test_world_completion.py",
+      "size": 4207,
+      "sha256": "ada76e6ace5069375dc4691352244fdfb048a754437533bd47fcbc12676e2818"
+    },
+    {
+      "path": "THIRD_PARTY.md",
+      "size": 2839,
+      "sha256": "5e25b905388e666057d320cd866f1f2f3dba3eb116eeecf8cf0c75a211e26537"
+    },
+    {
+      "path": "tulpa-tools-only.cjs",
+      "size": 3235,
+      "sha256": "63772320958eb5b0cec54f2e57605ca903816cb5ec85c7b75b7223292a2df8bf"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/__init__.py",
+      "size": 40,
+      "sha256": "9b589688810295753e46641eaa44e17aecca6484218703f0909d667289cbfaf9"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/__main__.py",
+      "size": 1724,
+      "sha256": "077b98b2b1a43d2a9d21985b353330cedd11331d65dfabb7bd7c5f3a728512d9"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/activity.py",
+      "size": 843,
+      "sha256": "e83a357d1fd7d344347e96b3026f4218280c26ae1e460c611bbe5679505917ba"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/agent.py",
+      "size": 52970,
+      "sha256": "62b86810c709b6a883ea136878f17abed83ed5b5cf8954bd9887a85a724cfeb0"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/agent_profiles.py",
+      "size": 1790,
+      "sha256": "9fd1b3df8efa148bf7a92ae405fabc9d96ffe13542cd01cd9f8947f4909300b9"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/agent_sessions.py",
+      "size": 7195,
+      "sha256": "3e7a7e30669645b7a2122a04f4371f647a161f66fdc88dd26bbcec4533331f87"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/agent_tools.py",
+      "size": 43953,
+      "sha256": "195e9628b357b1b0f1e5d793e3670984d12b387afda9eee19e16ae68bf07af70"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/appearance.py",
+      "size": 13526,
+      "sha256": "25e926ef3e0483e259ffce0f8857f91ed0bb808d5fde6527b43a82faac27fabf"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/artifact_metadata.py",
+      "size": 2483,
+      "sha256": "b927d4dcd6d39eb49081f44dc107cfbf5ad800311ad02951dec0e6394d6e2817"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/artifact_onebot.py",
+      "size": 10892,
+      "sha256": "e54c449ea4eaf6088bf092527c6293bbe1457949e14b683045356256a6267f75"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/artifact_routes.py",
+      "size": 9173,
+      "sha256": "f5e015e40f469662a3a1bc02cb2079489c4434c781c3cc4b1f2ddd243c94049a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/artifact_tools.py",
+      "size": 3791,
+      "sha256": "3e93a260db9ab2d465bf6a8a513acfe5df35fcae2cd0684c0e2a6c232e2d6028"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/artifacts.py",
+      "size": 22429,
+      "sha256": "0111387ac3a6209a6815653283c2e35d93da67462e372cc847daead460a981bc"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/changes.py",
+      "size": 5026,
+      "sha256": "72976a364978bb466bb12f9c5542ddf669285d7ddf0708ee77d6b29db7b5dede"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/chat_view.py",
+      "size": 9189,
+      "sha256": "a7d6d07d083c8d23a02a4348d79c0132a13c0658f4fcdcaf163e53db3049a39c"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/client_accounts.py",
+      "size": 5162,
+      "sha256": "fb20a431a694b62a4bcbcf261278c1515408e00a8dea0dcc37a12273ad8092a5"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/collections.py",
+      "size": 10497,
+      "sha256": "c5ff811984c1f4fc69981bf7e1dfa55bb8f4e045722dcb39529df19510ce4aee"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/config.py",
+      "size": 2810,
+      "sha256": "81990f18601a3b0c21913cb3c9caaa8788182759f7699c8c0389e778d77e5c40"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/data_delete.py",
+      "size": 10381,
+      "sha256": "7b3561f3fadd457ce90f08e4c07bb43769311309ec84c638b035558a78a71c19"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/data_routes.py",
+      "size": 18012,
+      "sha256": "c5f6a974e42978afbb1a486d5df37cf5b431d29c121acb2b95e90a6bf5a8a3c9"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/desktop_routes.py",
+      "size": 10497,
+      "sha256": "50806fa6f404c4d9a60519c97cdd1b6cf44b82fcc5df3d678517f5c2ff7da0d0"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/group_admin.py",
+      "size": 16371,
+      "sha256": "47d04c23ccf687c67a93811ff85f5dce07b10c788c9ab4d7e411fb4869955089"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/group_admin_routes.py",
+      "size": 3076,
+      "sha256": "959d3238829654a85feecace56b276632059817114881fc95303db05041d3f78"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/group_knowledge.py",
+      "size": 8906,
+      "sha256": "08bce06ba337e4f0d16513aaa5acada9dc2c7f0850b249f6330392359b09e04a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/identity.py",
+      "size": 3825,
+      "sha256": "dc1732880ad8c5af970cde1ddcfca98fe980e48d52a25f0d791bb9ad2de194f1"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/import_pipeline.py",
+      "size": 13789,
+      "sha256": "ebe75d6b8d74076ba059aac8e77215bee5912885e7828def9b0b8f2f317ac3f7"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/import_scope.py",
+      "size": 3194,
+      "sha256": "f32efc3e5b783d484ea6fff06a705131d218c96fc0a2928c428adf85ba95a5c0"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/interactions.py",
+      "size": 7615,
+      "sha256": "c13f9a1914ca377ade00a0b7181e0d1a52e6cad90c082980de6970d0137d86f4"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/investigation_routes.py",
+      "size": 7755,
+      "sha256": "c47f0a6f235f88fd34cc809399fe3d374caeabd21a2f59422ab51f67b5289eaf"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/investigation_sql.py",
+      "size": 10671,
+      "sha256": "1af0cf08557e11d76556ff96d7efaf9e899f1f3a1eb65a383223fa112b8406ff"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/investigation_tools.py",
+      "size": 11286,
+      "sha256": "5fa2bf42735e23cf447d693b35af504b3db850df26c343de2b3c8b09cd55078a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/live.py",
+      "size": 17278,
+      "sha256": "067231937487dc7e858b774a2b6aa7d86e91e7403826fcb017048beb06d6e648"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/live_state.py",
+      "size": 2182,
+      "sha256": "cb5cab6a4952f87431bf151b094d64357cfa45d8e75d29799e2b198334ceaff7"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/llm.py",
+      "size": 11065,
+      "sha256": "a9d6560575da8ef9865fe59afabb1bbb003dd8b6bef1037bc042253ace84f508"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_access.py",
+      "size": 13016,
+      "sha256": "76bd65ebbbc8cdfde8f8fd7cf91c14b36caaf546bebb0ed6b74ce6b012c33b51"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_actions.py",
+      "size": 9264,
+      "sha256": "42a64f7cff07547b798dacc7edbf561e0d6aa0f1359fb6bbe1224fda9e38d64a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_chat.py",
+      "size": 37311,
+      "sha256": "475c7e446399839b12401cfa2d24e1f51fee3e81d1ff9be7f8d9533ee15003d5"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_chat_media.py",
+      "size": 27098,
+      "sha256": "18e02e1f3a84efe0f71d4d98c7064d59772edab3f6ba57bc110e440076d20e23"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_chat_prompts.py",
+      "size": 13765,
+      "sha256": "decaa28bcd7ffab384b7afb6333e370149b507711699fd74ef60f3b3edc714d5"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_connect.py",
+      "size": 4361,
+      "sha256": "1b2f4ccfbc5e4c3b64cfb9fd152abdbd0cd610f56692c189f875e99bde226f45"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_routes.py",
+      "size": 7764,
+      "sha256": "b415f1add730e515feef668139f13c0018b79c8a1739df52e2757c97872243e9"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_server.py",
+      "size": 11798,
+      "sha256": "bea6c18ea0fe270a685d814085ad635728a1dee1ff9524ec79d024f0fcb3b85e"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/mcp_tools.py",
+      "size": 24952,
+      "sha256": "3b5cc659b02aa785adb61ab2d5de334cc0f262410ad091a1fc6e3da674cccc53"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/media.py",
+      "size": 5725,
+      "sha256": "fbd0cd84acffd8869746b9f5b7e1aab54249077c5ea4b3574b096c04f31045b3"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/media_refresh.py",
+      "size": 8922,
+      "sha256": "cbfd85095f39e25c84d4ebc7c4b1bb8f532f36bb4e392f325885db6afd8ab508"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/message_sender.py",
+      "size": 10988,
+      "sha256": "7d1d26fa3f7e6eb2fbc83ca017a34b3bbc47b88c1a84ec004c5c421c5b067e99"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/normalize.py",
+      "size": 12501,
+      "sha256": "288507195f187c89fb7cab5da0bd7727338dfe9f0c5ebad8ffa6e4d39346a001"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/onebot.py",
+      "size": 5077,
+      "sha256": "dd433e290a86c42743c9dc4c1bcec0c617fa58264d16c4e4511cf952b1bd7d39"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/onebot_events.py",
+      "size": 7314,
+      "sha256": "a6d8d6f44744ad72284223ddfe6e3ec5d64d0aee3b0adc6e769bbca8f8d23494"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/optional_components.py",
+      "size": 6260,
+      "sha256": "9e7e5244809f3bef6afbf0e9c19baa7cc3ad5c03762d2aff1e7a045273b98ec8"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/people.py",
+      "size": 5466,
+      "sha256": "196b802b9fb05a4934dc582a6d9d8a33e4129be4fb5d6e8758ea763d48c793aa"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/behavior.md",
+      "size": 4592,
+      "sha256": "4559d10da210342262bdac03617d8e27cfd92dd0bfe2b1b93ab75dcb74157c96"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/examples.json",
+      "size": 3334,
+      "sha256": "9eefbc2f4ad9038b12c29381e59ee10d8ce76edbb4b2c39a1289ab370542249b"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/kaltsit_arknights_standard.md",
+      "size": 14763,
+      "sha256": "5e8212db4177943e47be289468e6606406b37957f16a62a353918d204786d4fd"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/qq_labels.py",
+      "size": 2072,
+      "sha256": "587722b9c1422cb4b219efaeb5778b7b3a26475a7754f62c36964d08e47296be"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/qq_storage.py",
+      "size": 5699,
+      "sha256": "a3a8d2ace1c36b734e2138b532b5f46b415fbdb1bc1ba563e20d7eb3ce949037"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/qq_tools.py",
+      "size": 10067,
+      "sha256": "2c659ce54f29d0254f2c50662cbcece1eee656215ee4a272362e37c3a6423c5d"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/read_options.py",
+      "size": 1476,
+      "sha256": "b4be8dfade07b6f4f156c62e7455d0b2079a03b4de72b7142b2c72eca26fbb58"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/reader_batches.py",
+      "size": 4931,
+      "sha256": "39c4917ed9e927d348dafc6140656752d4e43adaaedad680a0747f0972db158c"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/reasoning.py",
+      "size": 2084,
+      "sha256": "037b2a2ddc7d73e5b834bbfb93dd12b9cd6975ec419efbd487858ca058499ed0"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/render.py",
+      "size": 20859,
+      "sha256": "0eed669ea94baf850286bc9ab5ea1b63b8d6fa4a4e4bfc92f6be8c7e3a0935a1"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/replies.py",
+      "size": 16855,
+      "sha256": "c6545b5fc3a2971fcae2812ceb7b249cbdaf3d8394aafd5964b78965a2c6745a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/reply_agent.py",
+      "size": 7524,
+      "sha256": "bf2526ab1736364a69241e944e0804705ec67707bbbcd9f5bce9e3de25d56520"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/reply_history.py",
+      "size": 10045,
+      "sha256": "caced905f2b21e8cd08e2ad6fb9a158517974de4db1a6c64e458287b7958af6c"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/reply_routes.py",
+      "size": 3476,
+      "sha256": "a7b5b5688411abc944f1d924055b0fe3f378bf52f93fa11fabf7fa34520b6587"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/retrieval.py",
+      "size": 9755,
+      "sha256": "4c667bcba59143e4d06b48aca0b4600c826394c5a70ba200a3eeebefd7c227cc"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/store.py",
+      "size": 26561,
+      "sha256": "a778456abb25e4148c300388fa1f78dac1dde7d9f2ad5b4611df15164de867c7"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/sync.py",
+      "size": 12426,
+      "sha256": "58c9ba618f79ba3571e0e8ed3e6b8d39856238e76ed4c5d12ae6f299a9008c4b"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/sync_state.py",
+      "size": 1619,
+      "sha256": "811df6e588112f47416e0feb22b0c3b0b6b5820a4c877913a16f3076fd71d1f6"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/tulpa.py",
+      "size": 25168,
+      "sha256": "d46366d573aaa56eae0ad7cf21f60380dba0ee9b8892069d4c84e67fdc45cbdc"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/tulpa_model.py",
+      "size": 2947,
+      "sha256": "2eb4d98d718453d61bbdcf8fc802cf9e4557e42dd3cf628fcc7500b3420e4aae"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/tulpa_reply.py",
+      "size": 3895,
+      "sha256": "606f78db8a22b0a9f06948759ec45f19d71dcc54f6f5243e0772a6e7593e4be0"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/tulpa_routes.py",
+      "size": 3234,
+      "sha256": "42ef73c39466e6a076ab7ad6fd33a65c017080d7fb3e6ab07e5f11d53c33933a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/ui.py",
+      "size": 38970,
+      "sha256": "ce00758f0f7a56949802f8a57a8a1072c8e09e2e2871f13a765c269c813a4723"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/version.py",
+      "size": 86,
+      "sha256": "afd46ccc3b6b617dd9e7f09b92baf3bc7b41c1e6de0b59f6845dda629f28e61e"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/vision.py",
+      "size": 8350,
+      "sha256": "9c86496e0bb8005a9151c2010c0d577d678cd84ba15f7e6eacc24bed6ce18a7a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/voice.py",
+      "size": 16546,
+      "sha256": "980d990dc3275c14105b350dcdad5e6a2ff61b99438e705eff961c013f24bd5e"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/voice_metadata.py",
+      "size": 1666,
+      "sha256": "2aad23b9cad066d8e782eddbf95f80ce900a9daa2aa23ed8d07afaa2bca57d4e"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/voice_process.py",
+      "size": 2084,
+      "sha256": "3ee1ebc81e276c72d588c45cff94af6d8b916450fc760da8613ada6dabfa627f"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/voice_routes.py",
+      "size": 6595,
+      "sha256": "6d0b4484aca5858f2742d3a82965412825874a895ca104a4908afc26dc6dfae2"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/watch_agent.py",
+      "size": 1685,
+      "sha256": "335ec962f3afaf125375085a289cf3cac8ff92f01bc50cc1a6cc8fe3519f8a7d"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/watch_check.py",
+      "size": 4401,
+      "sha256": "32d07dc06349adc4205f7063d44f3f3ff00722e9de31d2f0c196baae0a3e6398"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/watch_routes.py",
+      "size": 17157,
+      "sha256": "2e2ea00b059895e68442773a012834e6f58dea76a27e2575eba06b5f17a5bd02"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/watch_view.py",
+      "size": 4208,
+      "sha256": "ec96281fd23a64328235bc90c0e59fe2f5f7766af38a912f3d91934cff5e1604"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/watches.py",
+      "size": 20717,
+      "sha256": "28a19297f10ef699350bc41becd91b5d2b9fc9d1422de910cc4fd48b66674baf"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/wechat_keys.py",
+      "size": 4706,
+      "sha256": "214b30a30017d6883fd60201e727652fb9e0889340cb58a0343de60b18f95884"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspace_ide.py",
+      "size": 8524,
+      "sha256": "1be002323dd57fae218dae0779f26f109525c3df0fbda768bf15f1630467b05e"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspace_routes.py",
+      "size": 9293,
+      "sha256": "111d7e19799e91ddfe13a4b54f7bc81e1dfd61a6a3ca536255c4ce92bab06647"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspace_runner.py",
+      "size": 9927,
+      "sha256": "1ab169ff603e19a5a8f43b8deb7bc452f15c932610abd90b2f0fb577bc98063d"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspace_tools.py",
+      "size": 17049,
+      "sha256": "2226e047328df5313bdb388d590f750c075b615bf922ee60f1160a52697e048a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspace_view.py",
+      "size": 10082,
+      "sha256": "0c5b82f33b10deb10e67664a1337091cf58da32e637f176afc0e238e6c931d2a"
+    },
+    {
+      "path": "vendor/Tulpa/chatlocal/workspaces.py",
+      "size": 39991,
+      "sha256": "3bf9b31170c4829d41aa4cdd14e3ff60ad9c94d7a8c65956231e421260e3d3b4"
+    },
+    {
+      "path": "vendor/Tulpa/LICENSE",
+      "size": 1096,
+      "sha256": "ef81f235949481abc167b306426521d9c60765116fe771f2fd2ea713f21f03b0"
+    }
+  ]
+}
