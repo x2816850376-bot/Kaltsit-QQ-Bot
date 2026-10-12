@@ -79,6 +79,28 @@ def query_tokens(query):
     return tokens[:50]
 
 
+def focus_tokens(query,subjects):
+    """Rank the requested detail separately from its named country/person."""
+    text=query
+    for subject in sorted(subjects,key=len,reverse=True):text=text.replace(subject,' ')
+    text=re.sub(r'请问|是不是|不是|来自于|来自|能不能|有什么关系|是什么关系|什么关系|为什么|是什么|怎么样|如何|什么|怎么|哪里|哪种|哪些|介绍一下|解释一下|说一下|给我|关于|以及|有关|到底|的|是|吗|呢|啊|和|与|？|\?', ' ', text)
+    return query_tokens(text)
+
+
+def relevant_excerpt(text,size,subjects,focus):
+    if len(text)<=size:return text
+    # Find a window containing the requested detail, not just the first
+    # appearance of a country name. Keep the original OCR/transcription intact.
+    starts={0,max(0,len(text)-size)}
+    for term in focus or subjects:
+        for match in list(re.finditer(re.escape(term),text))[:12]:
+            starts.add(max(0,min(len(text)-size,match.start()-100)))
+    start=max(sorted(starts),key=lambda at:(
+        sum(term in text[at:at+size] for term in focus),
+        sum(term in text[at:at+size] for term in subjects)))
+    return text[start:start+size]
+
+
 class TerraKnowledge:
     def __init__(self,root=ROOT):
         self.root=Path(root);self.sessions={}
@@ -120,7 +142,8 @@ class TerraKnowledge:
             result=self.retrieve(STORY_EVENTS[selected['id']],max_chars)
             result.update(query=original_query,mode='documented_story',story_topic=selected['id'],usage=STORY_USAGE)
             return result
-        tokens=query_tokens(query)
+        focus=focus_tokens(query,subjects) if subjects else []
+        tokens=list(dict.fromkeys(query_tokens(' '.join(subjects))+focus)) if subjects else query_tokens(query)
         if not tokens:return {'status':'not_found','rules':RULES,'pages':[],'verified_summaries':summaries}
         with closing(sqlite3.connect(index.resolve().as_uri()+'?mode=ro',uri=True)) as db:
             match=' OR '.join('"'+token+'"' for token in tokens)
@@ -134,6 +157,7 @@ class TerraKnowledge:
         if subjects:rows=[row for row in rows if any(term in row[2] for term in subjects)]
         evidence_pages={page for anchor in summaries for page in anchor.get('scan_pages',[])}
         rows.sort(key=lambda row:(sum(term in row[2] for term in subjects),
+                                  sum(term in row[2] for term in focus),
                                   (8 if row[0] in evidence_pages else 0)+sum(term in row[2][:180] for term in subjects)+sum(token in row[2] for token in tokens)+(3 if row[4] in ('user_transcribed','user_transcribed_handwriting') else 0)),reverse=True)
         # Prefer one relevant passage per scan, without conflating verified
         # handwriting with the still-unverified printed/OCR body.
@@ -144,13 +168,14 @@ class TerraKnowledge:
             if len(selected)==2:break
         rows=selected
         budget=max_chars; excerpts=[]
-        for page,file,text,chapter,verification,scope,speaker in rows:
+        for i,(page,file,text,chapter,verification,scope,speaker) in enumerate(rows):
             size=min(budget,1200)
+            if i+1<len(rows):
+                # A long first page must not crowd out the second relevant
+                # passage. Unused space from a short page goes to the next one.
+                size=min(size,budget-min(len(rows[i+1][2]),budget//2))
             if size<=0:break
-            positions=[text.find(term) for term in subjects if term in text]
-            if not positions:positions=[text.find(term) for term in tokens if term in text]
-            start=0 if len(text)<=size else max(0,min(positions,default=0)-140)
-            excerpt=text[start:start+size];budget-=len(excerpt)
+            excerpt=relevant_excerpt(text,size,subjects,focus);budget-=len(excerpt)
             excerpts.append({'scan_page':page,'file':file,'chapter':chapter,'verification':verification,'scope':scope,'source_speaker':speaker,'excerpt':excerpt})
         result={'status':'ok' if excerpts or summaries else 'not_found','source':'明日方舟：大地巡旅（全量已录入文字与校对手写）',
                 'query':original_query,'matched_topics':subjects,'rules':RULES,'verified_summaries':summaries,'pages':excerpts}

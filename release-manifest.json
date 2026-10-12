@@ -135,8 +135,8 @@
     },
     {
       "path": "chat_world.py",
-      "size": 15924,
-      "sha256": "a0b5f04fc0612f9b4086d85fcbf38181d92b98396a137ebc96babccb6e97258f"
+      "size": 17398,
+      "sha256": "0235d3b09b88409dc826b6fe503f95d2089362d904db954cd2ec7a243e5ca551"
     },
     {
       "path": "cli_config.py",
@@ -170,18 +170,18 @@
     },
     {
       "path": "dialogue-test-window/test-policy.txt",
-      "size": 2210,
-      "sha256": "f039fc2a9bbd90f6112fd5a6161657b23ebe1859148f23aebe4bed2813404ef9"
+      "size": 2935,
+      "sha256": "d27cd57594d012a51cbbc60a3f267bd9ff633a46127a13135b37752151669538"
     },
     {
       "path": "docs/knowledge.md",
-      "size": 4056,
-      "sha256": "6fa972cfc587459013382ae2bbcdecd7499d5cb40bf32afa4363ff9ef518032f"
+      "size": 4655,
+      "sha256": "5270e08bc3c4e5c99697008eea286810900e54d04b7cc553412a21e92a1b8fa6"
     },
     {
       "path": "docs/validation.md",
-      "size": 7740,
-      "sha256": "3014022d7368b00eb460f7f423a31696195bf79d067bede09780ddaca3cdee7c"
+      "size": 9153,
+      "sha256": "c48cfb960bc668422b1b1f7b87a4ea4452e914e9ea1aa716be0e653b4c13147f"
     },
     {
       "path": "doctor.py",
@@ -190,8 +190,8 @@
     },
     {
       "path": "group-chat-policy.txt",
-      "size": 14762,
-      "sha256": "fca2832480c155c700ae8af1df338281ec6ddf57a1ce0bf40805b813776ac34d"
+      "size": 15612,
+      "sha256": "7a0641de989da096b2c6b07e84538d468727a8d8ef66b0f035f4c0f40b6844f6"
     },
     {
       "path": "knowledge/arknights/operator-aliases.json",
@@ -410,18 +410,18 @@
     },
     {
       "path": "prompts/persona_full.txt",
-      "size": 17245,
-      "sha256": "2889a454c08cc796b6f272957baf7677f057cd89ccf59e870209b33ed0630b7d"
+      "size": 17554,
+      "sha256": "9292c97b721b1010941b9455d95c720f6306e260b60157df0f7f4c3de5382da4"
     },
     {
       "path": "prompts/persona_runtime.txt",
-      "size": 14763,
-      "sha256": "5e8212db4177943e47be289468e6606406b37957f16a62a353918d204786d4fd"
+      "size": 15291,
+      "sha256": "b18256f5076365ba324f038605a7a1328ea76effa19c925e6c295d746038bf2d"
     },
     {
       "path": "README.md",
-      "size": 9543,
-      "sha256": "d4a89a1fa2f78e7d7f19feab3bf8d0d30f0c4301aa50d60091ae01fb89b3a83e"
+      "size": 10020,
+      "sha256": "fbb71f727322ed04a07401eb38ac32bcf7fa61b856728c14435bc7ba762a6983"
     },
     {
       "path": "requirements.txt",
@@ -475,13 +475,13 @@
     },
     {
       "path": "skills/kaltsit-dialogue-output/references/feedback-20261009.md",
-      "size": 6452,
-      "sha256": "c998f338400d3b4ab6472906296a7d7eada3829a5cc87f643cf4a5821d0e38e2"
+      "size": 10630,
+      "sha256": "f59eccd25ea19e8badc3c0638d2b5da10cc386fcca43ff3becbc36bf27e26a54"
     },
     {
       "path": "skills/kaltsit-dialogue-output/SKILL.md",
-      "size": 6209,
-      "sha256": "7aa471e3aa3c2df3711b5c486db2190dc76c11cd7d47f2c0c8f121735f3387b4"
+      "size": 6141,
+      "sha256": "5beb3a09b3969ee957e0179730ae48e1df095c82cd3bbf5bdb9cd32eab727acb"
     },
     {
       "path": "tests/test_chat_bubbles.py",
@@ -552,6 +552,11 @@
       "path": "tests/test_world_completion.py",
       "size": 4457,
       "sha256": "82086946c445c8dc5c64e918911c7b64b41eb7cd8ad8c78100567ff7cfaa4e21"
+    },
+    {
+      "path": "tests/test_world_relevance.py",
+      "size": 3165,
+      "sha256": "c1375689e0a245896f968ec98ad3b8d0d9493e275ddae4177079c7db9bc5d125"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -830,8 +835,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/kaltsit_arknights_standard.md",
-      "size": 14763,
-      "sha256": "5e8212db4177943e47be289468e6606406b37957f16a62a353918d204786d4fd"
+      "size": 15291,
+      "sha256": "b18256f5076365ba324f038605a7a1328ea76effa19c925e6c295d746038bf2d"
     },
     {
       "path": "vendor/Tulpa/chatlocal/qq_labels.py",
