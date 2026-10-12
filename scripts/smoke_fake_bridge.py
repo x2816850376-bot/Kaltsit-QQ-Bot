@@ -78,7 +78,7 @@ async def check(stage,cfg,env):
                     async with ClientSession(pr,pw) as proxy:
                         await proxy.initialize()
                         tools={t.name for t in (await proxy.list_tools()).tools}
-                        assert 'send_chat_message' in tools and 'get_world_knowledge' in tools and 'read_file_chunks' not in tools
+                        assert 'send_chat_message' in tools and 'get_world_knowledge' in tools and 'get_canonical_knowledge' in tools and 'read_file_chunks' not in tools
                         assert (await proxy.call_tool('get_chat_session',{'session_id':sids[1]})).isError
                         data(await proxy.call_tool('get_chat_session',{'session_id':sids[0]}))
                         event={'post_type':'message','message_type':'group','self_id':int(ACCOUNT),'group_id':int(GROUPS[0]),'message_id':101,'user_id':30000001,'time':int(time.time()),'sender':{'user_id':30000001,'nickname':'测试群友'},'message':[{'type':'at','data':{'qq':ACCOUNT}},{'type':'text','data':{'text':'凯尔希，在吗？'}}]}
@@ -88,6 +88,10 @@ async def check(stage,cfg,env):
                         assert len(messages)==1 and '在吗' in messages[0]['content']
                         evidence=data(await proxy.call_tool('get_world_knowledge',{'session_id':sids[0],'query':'讲个萨科塔的故事','max_chars':1600}))
                         assert evidence['status']=='ok' and evidence['mode']=='documented_story'
+                        canonical=data(await proxy.call_tool('get_canonical_knowledge',{'session_id':sids[0],'query':'任命助理','max_chars':500}))
+                        assert canonical['status']=='ok' and sum(len(p['excerpt']) for p in canonical['passages'])<=500
+                        assert (await proxy.call_tool('get_canonical_knowledge',{'session_id':sids[1],'query':'任命助理'})).isError
+                        assert (await proxy.call_tool('get_canonical_knowledge',{'session_id':sids[0],'query':'任命助理','path':'auth.json'})).isError
                         send={'session_id':sids[0],'respond_to_event_id':messages[0]['id'],'bubbles':['在，博士','先把你的阵容发来'],'participation_mode':'direct','idempotency_key':'synthetic-bubbles-one'}
                         receipt=data(await proxy.call_tool('send_chat_message',send))
                         assert receipt['state']=='SUCCEEDED' and receipt['sent_parts']==2

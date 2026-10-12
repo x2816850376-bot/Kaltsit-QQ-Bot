@@ -35,7 +35,7 @@ RULES+='user_transcribed表示用户校对正文，不代表整本人工校对�
 RULES+='user_transcribed_handwriting只核实该页独立手写区域，印刷正文仍有单独的核验状态。同一话题优先采用用户校对的手写段落，勿用同页失真手写OCR覆盖它。source_speaker表示原话作者，Mechamist的批注不属于凯尔希，作者署名和看后页标记不需要带入聊天。'
 RULES+='assistant_visual_body_checked仅表示该扫描页正文已与原图核对；heading_checked或no_body仅表示标题或无正文版式，不代表正文已校对，更不代表全书已完成。'
 RULES+='automatic_ocr_crosschecked表示两套离线OCR、原图单行复识别与部分差异目视核对后的快速校对，不能视作人工逐字转录或绝对无误；混合页的用户手写转录独立优先，印刷文字不得混入失真批注。遇到互相矛盾、可疑姓名、数字或断裂语句，不据此补造事实。'
-RULES+='curated_summary/curated_summary_only表示公开版的事实摘要与短摘录，不是整页原文或全书；完整正文只有用户自行导入后才能检索。'
+RULES+='curated_summary/curated_summary_only表示公开版的事实摘要与短摘录，不是整页原文或全书；当前完整版内置全量已录入正文与独立手写；若用户额外导入则优先使用扩展。'
 RULES+='采用证据须保留主体、时期、地区与不确定性：可能、学者认为、传说不可改成定论。与已核验后续官方剧情有冲突时分别说明时期，玩家评论不覆盖官方设定。无需向群友宣读检索过程；自然保持第一人称，缺乏依据不编造。'
 RULES+='出处与核验标记用于内部核实；普通历史与世界观介绍消化后直接讲述，不播报编年史、档案或设定集引证。若对方明确求出处或引文，再准确给来源，不因角色口吻伪造亲历。'
 TERMS=re.compile(r'泰拉|源石技艺|源石|天灾信使|天灾|矿石病|移动城市|菲林|萨卡兹|萨科塔|罗德岛|世界观|大地巡旅|维多利亚|莱塔尼亚|乌萨斯|拉特兰|伊比利亚|阿戈尔|谢拉格|卡西米尔|哥伦比亚|玻利瓦尔|叙拉古|萨尔贡|米诺斯|萨米|雷姆必拓|龙门|东国|卡兹戴尔|莱茵生命|企鹅物流|黑钢|铳械|蚀刻弹药|天使|龙族|种族|圣愚|皇帝的利刃|皇帝内卫|邪魔|恐鱼|海嗣|深海教会|大静谧',re.I)
@@ -152,7 +152,7 @@ class TerraKnowledge:
             start=0 if len(text)<=size else max(0,min(positions,default=0)-140)
             excerpt=text[start:start+size];budget-=len(excerpt)
             excerpts.append({'scan_page':page,'file':file,'chapter':chapter,'verification':verification,'scope':scope,'source_speaker':speaker,'excerpt':excerpt})
-        result={'status':'ok' if excerpts or summaries else 'not_found','source':'明日方舟：大地巡旅（本机摘要或可选完整导入）',
+        result={'status':'ok' if excerpts or summaries else 'not_found','source':'明日方舟：大地巡旅（全量已录入文字与校对手写）',
                 'query':original_query,'matched_topics':subjects,'rules':RULES,'verified_summaries':summaries,'pages':excerpts}
         if STORY_REQUEST.search(query):result.update(mode='documented_story',usage=STORY_USAGE)
         return result

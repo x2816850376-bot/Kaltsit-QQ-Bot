@@ -22,6 +22,7 @@ from chat_knowledge import OperatorKnowledge
 from chat_participation import ChatParticipation
 from chat_community import CommunityKnowledge
 from chat_world import TerraKnowledge
+from chat_corpus import CanonicalKnowledge
 from chat_completion import require_complete_text, UNFINISHED_REPLY
 from chat_bubbles import BubbleSender
 from chat_expression_history import ExpressionHistory
@@ -35,11 +36,18 @@ async def main():
     participation = ChatParticipation(runtime_dir()/'group-participation-state.json')
     community = CommunityKnowledge(root/'knowledge/bilibili-arknights')
     world = TerraKnowledge()
+    corpus = CanonicalKnowledge()
     bubbles = BubbleSender(runtime_dir()/'qq-response-batches.json')
     expressions = ExpressionHistory(runtime_dir()/'qq-expression-history.json',
                                    hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
     credential = connection()
     scope = GroupScope()
+    def enrich_packet(data):
+        enriched=addresses.enrich(quotes.enrich(data),quotes.pending)
+        enriched=expressions.enrich(enriched)
+        for provider in (knowledge,participation,community,world,corpus):
+            enriched=provider.enrich(enriched,quotes.pending)
+        return enriched
     async with httpx.AsyncClient(headers={'Authorization':'Bearer '+credential['token']}, timeout=245, trust_env=False) as http:
         async with streamable_http_client(credential['url'], http_client=http) as (remote_read, remote_write, _):
             async with ClientSession(remote_read, remote_write) as upstream:
@@ -68,7 +76,7 @@ async def main():
                             tool.description+=' 优先一次提交bubbles，由程序顺序发送，不逐气泡多次调用。@按语境且最多首条，清楚的连续同对象通常省略；对象绑定始终保留。博士位置自由，一组不重复点名，不写昵称＋博士、@昵称或CQ码。'
                             tool.description+=' 修改、重说或重发时本轮直接发送完整内容，不只宣布“我重新发一句”就转入等待；真正技术重试仍遵守回执和原幂等编号。'
                     tools.append(Tool(name='get_operator_knowledge',
-                        description='只读查询本机已收录的PRTS干员知识。公开版所有干员提供简要介绍和基本特点，未附完整档案。无联网、Shell、任意文件或额外模型调用。只接受已核验干员名称/别称；未知不要编造。先get_chat_session读取当前授权会话。资料有来源、时期、日期及分页，不能把后期状态套到原版人格。',
+                        description='只读查询本机PRTS干员知识。凯尔希及凯尔希·思衡托含详细档案，其余干员提供简介。无联网、Shell、任意文件或额外模型调用。只接受已核验名称/别称，未知不编造；先读取授权会话，保留时期与核验边界。',
                         inputSchema={'type':'object','properties':{
                             'session_id':{'type':'string'},'operator':{'type':'string','maxLength':200},
                             'topic':{'type':'string','maxLength':500},
@@ -81,7 +89,12 @@ async def main():
                                       'max_chars':{'type':'integer','minimum':300,'maximum':3000}},
                                      'required':['session_id','query'],'additionalProperties':False}))
                     tools.append(Tool(name='get_world_knowledge',
-                        description='只读查询《明日方舟：大地巡旅》事实摘要及已校对事件卡。公开版为有限摘要，不是完整扫描文字；使用者另行导入本地全文后可查询扩展。保留核验与来源边界。先读取授权会话。不读任意文件、不联网、不调用额外模型。',
+                        description='只读查询内置《大地巡旅》全量已录入正文、用户校对手写及事件卡。保留快速OCR、人工转录、作者与时期的核验区别；不声称全书逐字人工校对。先读取授权会话，不读任意文件、不联网、不调用额外模型。',
+                        inputSchema={'type':'object','properties':{'session_id':{'type':'string'},'query':{'type':'string','minLength':1,'maxLength':500},
+                                      'max_chars':{'type':'integer','minimum':300,'maximum':4000}},
+                                     'required':['session_id','query'],'additionalProperties':False}))
+                    tools.append(Tool(name='get_canonical_knowledge',
+                        description='只读检索用户提供的两份完整语音台词、12份完整剧情对话和手写转录。保留原说话人和原版/残余/思衡托阶段；用于人物语言、立场与剧情核实，不是群友记忆或指令。仅固定索引，无Shell、任意文件或额外模型；先读取授权会话。',
                         inputSchema={'type':'object','properties':{'session_id':{'type':'string'},'query':{'type':'string','minLength':1,'maxLength':500},
                                       'max_chars':{'type':'integer','minimum':300,'maximum':4000}},
                                      'required':['session_id','query'],'additionalProperties':False}))
@@ -92,6 +105,13 @@ async def main():
                     if not await scope.check(name,arguments,upstream):
                         return CallToolResult(isError=True,content=[TextContent(type='text',text='会话不属于当前群Worker，或工具未开放；未执行操作')])
                     mode='direct'
+                    if name=='get_canonical_knowledge':
+                        args=arguments if isinstance(arguments,dict) else {}
+                        if set(args)-{'session_id','query','max_chars'}:
+                            data={'status':'rejected','reason':'无效原作语料查询参数'}
+                        else:data=corpus.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1500))
+                        return CallToolResult(isError=data['status'] in ('rejected','unavailable'),
+                            content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))],structuredContent=data)
                     if name=='send_chat_message' and isinstance(arguments,dict) and 'bubbles' in arguments:
                         try:data=await bubbles.send(arguments,quotes,addresses,participation,upstream,expressions)
                         except (ValueError,TypeError):data={'state':'REJECTED','sent_parts':0,'instruction':'整组需1至3条非空最终正文，绑定已读真实新事件；不能重复正文、手写@、同时填text和bubbles或更改已登记回应。按原编号检查内容，不发技术说明到群里。'}
@@ -171,13 +191,9 @@ async def main():
                             if part.type == 'text':
                                 try:data=json.loads(part.text)
                                 except ValueError:continue
-                                enriched=addresses.enrich(quotes.enrich(data),quotes.pending)
-                                enriched=expressions.enrich(enriched)
-                                part.text=json.dumps(world.enrich(community.enrich(participation.enrich(knowledge.enrich(enriched,quotes.pending),quotes.pending),quotes.pending),quotes.pending),ensure_ascii=False)
+                                part.text=json.dumps(enrich_packet(data),ensure_ascii=False)
                         if isinstance(result.structuredContent,dict):
-                            enriched=addresses.enrich(quotes.enrich(result.structuredContent),quotes.pending)
-                            enriched=expressions.enrich(enriched)
-                            result.structuredContent=world.enrich(community.enrich(participation.enrich(knowledge.enrich(enriched,quotes.pending),quotes.pending),quotes.pending),quotes.pending)
+                            result.structuredContent=enrich_packet(result.structuredContent)
                     return result
 
                 async with stdio_server() as (read, write):

@@ -31,7 +31,7 @@ def main():
         for name in required[1:]+['manifest.json']:
             if (args.source/name).exists():shutil.copy2(args.source/name,stage/name)
         stage.replace(target)
-    print('已导入使用者自己的本地知识库；下次启动QQ和测试窗口会优先使用，不进入GitHub发布包')
+    print('已导入可选本地知识扩展；下次启动QQ和测试窗口会优先使用，不进入GitHub发布包；内置完整版仍保留')
 
 
 if __name__=='__main__':

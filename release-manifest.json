@@ -1,11 +1,16 @@
 {
-  "edition": "public-source",
+  "edition": "full-knowledge-source",
   "prepared_date": "2026-10-12",
   "model": "gpt-6-luna",
   "reasoning": "high",
   "fast": false,
   "personal_data_included": false,
-  "full_book_included": false,
+  "group_memory_included": false,
+  "full_indexed_book_text_included": true,
+  "scan_images_included": false,
+  "world_indexed_pages": 454,
+  "handwritten_regions": 24,
+  "canonical_source_files": 15,
   "manifest_self_excluded": true,
   "files": [
     {
@@ -55,8 +60,8 @@
     },
     {
       "path": "AGENTS.md",
-      "size": 713,
-      "sha256": "4e96af0a4aaf6509626e9851d819f7167f37a0f702b545cc55778ec7f545f6fa"
+      "size": 833,
+      "sha256": "1cef42431ca7a77af8a3f0e2453245a888b655c2f02f559b647c24179aca08bd"
     },
     {
       "path": "bot_config.py",
@@ -89,6 +94,11 @@
       "sha256": "bdeb8fd20fefa53adfb1a2e43436b39e7689c1df8f982a376f61e8e308338a61"
     },
     {
+      "path": "chat_corpus.py",
+      "size": 5079,
+      "sha256": "fdcfc5830b1a9f880bbf7376ae071873b92575076035a3bf0a68f9c72c37eed8"
+    },
+    {
       "path": "chat_dialogue.py",
       "size": 2166,
       "sha256": "0ba9f0d49f0f5a66d6586d581bf765a66a03f0d35ed8c131f250190f4afc21f3"
@@ -110,8 +120,8 @@
     },
     {
       "path": "chat_scope.py",
-      "size": 1247,
-      "sha256": "68123786c49e9b4c39fb68ae5fc0a9192fbba11c9d09999391ea75c7d5bb76fb"
+      "size": 1273,
+      "sha256": "e7743e162013efc26423be9fd9c04b1a540c9008a640e1cf59193dd97f5417db"
     },
     {
       "path": "chat_story.py",
@@ -125,8 +135,8 @@
     },
     {
       "path": "chat_world.py",
-      "size": 15870,
-      "sha256": "c0212f5a565446f776e058f73638559cc38cee923b2777ed819cf013235ba5c6"
+      "size": 15924,
+      "sha256": "a0b5f04fc0612f9b4086d85fcbf38181d92b98396a137ebc96babccb6e97258f"
     },
     {
       "path": "cli_config.py",
@@ -155,8 +165,8 @@
     },
     {
       "path": "dialogue-test-window/server.py",
-      "size": 11074,
-      "sha256": "892000301745f54f49259220d6a5a9d7d076d7c07dab07c7758ebae5aa3148e7"
+      "size": 11284,
+      "sha256": "1f311644c3642a850673bb18ead7359a46cf2c0f7e1659b2d780d793f4207e7d"
     },
     {
       "path": "dialogue-test-window/test-policy.txt",
@@ -165,23 +175,23 @@
     },
     {
       "path": "docs/knowledge.md",
-      "size": 1490,
-      "sha256": "aae94c3828a6f8a3b13d01b7d1a93e66eb63de6587d6c5247d594d3cfcf6b73e"
+      "size": 4056,
+      "sha256": "6fa972cfc587459013382ae2bbcdecd7499d5cb40bf32afa4363ff9ef518032f"
     },
     {
       "path": "docs/validation.md",
-      "size": 2924,
-      "sha256": "667ca3818b123f6528a44b8c918ff187dc4d83ed43867be9bd694de0d6853d75"
+      "size": 3146,
+      "sha256": "78d210309710a84935ddf34ec5eac89c4f58623d4c017d4fb0d610fc94606813"
     },
     {
       "path": "doctor.py",
-      "size": 3121,
-      "sha256": "0fb231b952eab15767f88213f0fb82ab37e9687994c432a3475a716dff08d728"
+      "size": 3286,
+      "sha256": "2592c1122c5513a200c204fb55f5972719a9d22f3e849fe804e7b6d57982ef4a"
     },
     {
       "path": "group-chat-policy.txt",
-      "size": 13646,
-      "sha256": "b4ab331be45d8c3492fd0115e688ebc4d51a5d663583a1b3ea30788621a610b2"
+      "size": 13900,
+      "sha256": "fb90abf04a26ba5eaa79508410b4347f7a7b84b5e546d79b8d1a3fb509db76d2"
     },
     {
       "path": "knowledge/arknights/operator-aliases.json",
@@ -190,8 +200,18 @@
     },
     {
       "path": "knowledge/arknights/operators.json",
-      "size": 665917,
-      "sha256": "1195e0b724672f87a71b01597965c758257b1151760a3e2543938a2fbcc876aa"
+      "size": 775241,
+      "sha256": "3560bca18d9ba8bbe8036b9c81ecd755e2e17e0dc102b784523d197ffd1073bf"
+    },
+    {
+      "path": "knowledge/arknights/凯尔希详细档案.md",
+      "size": 28565,
+      "sha256": "aa2b0a781ddf44f7ac2d78d29f4900cbf3a857a91ef6f48bae4bdf9c7c4daece"
+    },
+    {
+      "path": "knowledge/arknights/凯尔希语言提炼.md",
+      "size": 3442,
+      "sha256": "ad938582512241b58be9cc96aa7937edb9b7820d094d2c3313ebe6267e685cc9"
     },
     {
       "path": "knowledge/bilibili-arknights/cards.json",
@@ -224,24 +244,119 @@
       "sha256": "36d7e5d92baf2c8b5a9df48835070c3fb03157ba05f0a1658ddc18adb5e2ad00"
     },
     {
+      "path": "knowledge/kaltsit-corpus/index.sqlite3",
+      "size": 839680,
+      "sha256": "2a107274ca8f79c83299e4099b6d2dfa5caf452f4850df21b7efb8910e9b933a"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/manifest.json",
+      "size": 543,
+      "sha256": "c979b705761f044230217b0bd1b7a7001dc8a408add349aedbe301f812515f10"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话1.txt",
+      "size": 5214,
+      "sha256": "2837c6e05be4f16a5a28658a128ffb960b38490a09eb0c64e6b041d95ac84397"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话10.txt",
+      "size": 13621,
+      "sha256": "38215d3373351715717ffc7719e4daf16b4565e3294dd7160c9455b45090369d"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话11.txt",
+      "size": 19957,
+      "sha256": "e1c15d86e33ba959dc5592be258f0d0d0521c221a3cd342f6ddadaa1f2d796c1"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话12.txt",
+      "size": 4210,
+      "sha256": "e04b681daa552adaf4f0b83dd1b9aee7e1fbae2a494c68f450c289bc7c24ebef"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话2.txt",
+      "size": 20888,
+      "sha256": "e17a457b1e5a72f8b7e3997128a85ca8271b3a89282c69b43ad65bc33a035a56"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话3.txt",
+      "size": 16656,
+      "sha256": "83e7c183b71d698261c67ba5b22ed2eb1cb5dfdfa988fde3b14094f8cff63bf1"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话4.txt",
+      "size": 11827,
+      "sha256": "752ab642fd79095411116bb9d2dc9e5e2eddd0b986d06af2ec0f22634057f9de"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话5.txt",
+      "size": 18845,
+      "sha256": "196e1b45bed3ab5b83e2c074acf2c38eb91c51eeb90f27176e745ecc23c2142c"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话6.txt",
+      "size": 24417,
+      "sha256": "91b62a12c8b379274ea6b853c2c4869446bc20e12fb9ca60751cd3aa9307b7c8"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话7.txt",
+      "size": 9534,
+      "sha256": "205b83b2f118eaad6ed6e4dc64cb9a3166de39564927be1acab5955f9f31e66b"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话8.txt",
+      "size": 11312,
+      "sha256": "13b14c862ac7e229dd357cd964482102c02d99a8027f3a12bab079b178db98ee"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希剧情对话9.txt",
+      "size": 26462,
+      "sha256": "abffc01d5bcd5c60009d8219a192ad8e986cac7012ec81df474622e30016f695"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希台词.txt",
+      "size": 8837,
+      "sha256": "75eb9c8e835c971bf17efe2e40593e8b9eb24effa341227634c53352d1a6cbd5"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/凯尔希思衡托台词.txt",
+      "size": 5182,
+      "sha256": "bc501a36ab7eb56a1568336460155d02623841c7d6dc0eb6967de10ae736d6bd"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/originals/大地巡旅_大段手写内容补充.txt",
+      "size": 25330,
+      "sha256": "2118946db0bfaf60bee5f2dfc3bc467855fdf75bc947f3f9104abac001ff7079"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/sources.json",
+      "size": 4899,
+      "sha256": "84230c4352172779ac2d960db8a9f39e8809d2860c6f2d5f59ca8f53f7341942"
+    },
+    {
+      "path": "knowledge/kaltsit-corpus/voice-lines.json",
+      "size": 59164,
+      "sha256": "b188e7d03fc8feb66d4642fb93b3d0f1a5f7b578799fca542707c8d138dda15f"
+    },
+    {
       "path": "knowledge/terra-journey/index.sqlite3",
-      "size": 49152,
-      "sha256": "104c0ea7c9fb02c9a6efe24a666943df68ec313366b89795e573805dd2fe2c75"
+      "size": 4194304,
+      "sha256": "bc856b4bc0ec34b7605894183fb088d94a43e660c1d162235906861e43dc17e7"
     },
     {
       "path": "knowledge/terra-journey/manifest.json",
-      "size": 172,
-      "sha256": "d7e0135075094767a17a4f6fe05d78312e21d27f4b786f820c3e7e80b50f5764"
+      "size": 8014,
+      "sha256": "8f7b0f4916af45be63e1773da3d88d2a21bf261514bc8c08c6f160a6dd3bb46c"
     },
     {
       "path": "knowledge/terra-journey/story-events.json",
-      "size": 19636,
-      "sha256": "e7e91598ea7e3b8179f8f84f0cab3004e193628d7bc1136224574d09bf7aef2b"
+      "size": 17707,
+      "sha256": "24b84c4a2a1c484ac86b4841a001789a3410a82417120ff4381bd721256d36f0"
     },
     {
       "path": "knowledge/terra-journey/summary-source.json",
-      "size": 7350,
-      "sha256": "841e1839153ba86d0539a77167822a362e1bcf8ae85ab219a8d75538b89ba92e"
+      "size": 154,
+      "sha256": "2636f576ea85e9bbcad5ba2d208b2c08b83336daee120797372f55521211dcfb"
     },
     {
       "path": "knowledge/terra-journey/topic-catalog.json",
@@ -249,9 +364,19 @@
       "sha256": "e119b330d038d4140f07d287779805fca32a47a1150b33fe9f04b5d9d3d8e75d"
     },
     {
+      "path": "knowledge/terra-journey/user-transcriptions.json",
+      "size": 65100,
+      "sha256": "25a7661bec84a9c5d8a1321e90162ce39d8f93a1e0359064f00c81ad50eab657"
+    },
+    {
       "path": "knowledge/terra-journey/verified-anchors.json",
       "size": 3550,
       "sha256": "b4f894b67c4ba67ad625b1f087923184dedc68dfccec642e9d2b1eff805c46f3"
+    },
+    {
+      "path": "knowledge/terra-journey/大地巡旅_全量已录入文字.txt",
+      "size": 1336148,
+      "sha256": "62d35bca17cbd8b3aa8010247e58dfb96cbd871bb6c60f334508cc0a9d33308f"
     },
     {
       "path": "LICENSE",
@@ -270,13 +395,13 @@
     },
     {
       "path": "luna-chat-runtime.py",
-      "size": 21083,
-      "sha256": "89be6d3a764a5570120ff9974d75803b777425bddf4e6c2966182a3339932cb9"
+      "size": 21548,
+      "sha256": "a6bfcf803389537a5db3926a5c168b80ed2d2222d71b010dde70dc6acb3f72bb"
     },
     {
       "path": "mcp-stdio-proxy.py",
-      "size": 16593,
-      "sha256": "02164b6296b2cd70f414f1872486e88f4daa2a72347430fdb5caa75984d346ad"
+      "size": 17726,
+      "sha256": "31b6ea251128c4391330c699a2d7d7e3c66d4496b09e4e24b3b1c3a5ad206360"
     },
     {
       "path": "model_slots.py",
@@ -295,8 +420,8 @@
     },
     {
       "path": "README.md",
-      "size": 6781,
-      "sha256": "227b44566d0f19ea2957ca8c070c45205d7f7fcc5855991ef670e53b011f8387"
+      "size": 8394,
+      "sha256": "6906f8c2cc9b3410418129d90c86409b932ce2c80bd70bcd011baba7d0202ce6"
     },
     {
       "path": "requirements.txt",
@@ -304,9 +429,14 @@
       "sha256": "02ff7a7057856a19abdd38af9e1e68b9ce6ad19e5168a4ce6ec24152cd10257c"
     },
     {
+      "path": "scripts/build_canonical_index.py",
+      "size": 3679,
+      "sha256": "7a8f8d4128a074e73bded451fc4fd68e88f6d228b3d80197f2f2ec643d3ecdfd"
+    },
+    {
       "path": "scripts/build_source_zip.py",
-      "size": 1961,
-      "sha256": "e33aba7f1efdeeeac599bb0bc1d00da347a8b758a5a8ba1f3be2d46db3e07118"
+      "size": 2407,
+      "sha256": "9b71482bbdb4e1004a7ef8f84a3199b497e0d681af616e1e52ff075c356122ed"
     },
     {
       "path": "scripts/check_cli_transport.py",
@@ -315,13 +445,13 @@
     },
     {
       "path": "scripts/check_release.py",
-      "size": 1864,
-      "sha256": "df633b4e1b4ec7f92ca52af6ab375ec4fc3539020ac02ee1c977a4c3197985e7"
+      "size": 2096,
+      "sha256": "8b579caaf9143cae21b8e8880e760dbafb3daf15e2fda4dfbc617fbb2b7252dd"
     },
     {
       "path": "scripts/import_private_knowledge.py",
-      "size": 2327,
-      "sha256": "42651bc432a05699fa9800193fb36b6c561b79ec750885b6b0c4df8f8839dd7f"
+      "size": 2345,
+      "sha256": "77335ed8bf921f31538fe5bb56ee5b97cf7e7cc787ca1bae0ac1e1a6f14aa958"
     },
     {
       "path": "scripts/run_tests.py",
@@ -330,8 +460,8 @@
     },
     {
       "path": "scripts/smoke_fake_bridge.py",
-      "size": 9455,
-      "sha256": "2973a1f4b98a7b33d27233473bd31af0e09d6426637dd02600c2d4aa3a4ee4ad"
+      "size": 10056,
+      "sha256": "23b44bb47ee3b84acc9f8616afd094609b5fa167996f6a2ec0d916e619861af2"
     },
     {
       "path": "setup.ps1",
@@ -374,6 +504,11 @@
       "sha256": "b8351e5402de8de00aafbc272f787ff0aee9a9a79cb9509908ae87904325841c"
     },
     {
+      "path": "tests/test_full_knowledge.py",
+      "size": 4927,
+      "sha256": "71a8080c3cd1856467176d5f41f3e834823c29832e6a204602cd3e825f341718"
+    },
+    {
       "path": "tests/test_hook.cjs",
       "size": 685,
       "sha256": "abe072a22690e761ed2f177098ad83b2b6f01583385079bbd0b419038d868d53"
@@ -395,8 +530,8 @@
     },
     {
       "path": "tests/test_public_knowledge.py",
-      "size": 2069,
-      "sha256": "6988f94f88e941428439bacb3dd766589aed638c4d785a860c57d37d9353a474"
+      "size": 2231,
+      "sha256": "35f8ec39a14e628fe0921cae3476d7497d97e78364e63351830dec27e3dd04a1"
     },
     {
       "path": "tests/test_reply_routing.py",
@@ -415,18 +550,18 @@
     },
     {
       "path": "tests/test_world_completion.py",
-      "size": 4207,
-      "sha256": "ada76e6ace5069375dc4691352244fdfb048a754437533bd47fcbc12676e2818"
+      "size": 4457,
+      "sha256": "82086946c445c8dc5c64e918911c7b64b41eb7cd8ad8c78100567ff7cfaa4e21"
     },
     {
       "path": "THIRD_PARTY.md",
-      "size": 2839,
-      "sha256": "5e25b905388e666057d320cd866f1f2f3dba3eb116eeecf8cf0c75a211e26537"
+      "size": 3315,
+      "sha256": "4802db70102f2022569c0c6b638e263303750c5d44630713a937033d64cef387"
     },
     {
       "path": "tulpa-tools-only.cjs",
-      "size": 3235,
-      "sha256": "63772320958eb5b0cec54f2e57605ca903816cb5ec85c7b75b7223292a2df8bf"
+      "size": 3261,
+      "sha256": "89b439c85a8f51d35f357f887de4fc8db318348c44f1fec5a379d2fac28f875a"
     },
     {
       "path": "vendor/Tulpa/chatlocal/__init__.py",

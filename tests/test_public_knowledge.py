@@ -18,13 +18,15 @@ class PublicKnowledgeTests(unittest.TestCase):
         knowledge=OperatorKnowledge(ROOT/'knowledge/arknights/operators.json')
         self.assertEqual(knowledge.mentions('我叔叔家里养了小羊'),[])
 
-    def test_brief_edition_is_honest_and_session_scoped(self):
+    def test_detailed_kaltsit_and_brief_roster_are_session_scoped(self):
         knowledge=OperatorKnowledge(ROOT/'knowledge/arknights/operators.json')
         self.assertEqual(knowledge.lookup('s','水陈')['status'],'rejected')
         knowledge.observe({'session':{'id':'s','conversation_id':GROUP,'persona_preset':'kaltsit_arknights_standard'}})
-        result=knowledge.lookup('s','凯尔希')
-        self.assertEqual(result['status'],'ok');self.assertEqual(result['level'],'brief')
-        self.assertEqual(result['detail'],'');self.assertFalse(result['has_more'])
+        result=knowledge.lookup('s','凯尔希',max_chars=500)
+        self.assertEqual(result['status'],'ok');self.assertEqual(result['level'],'detailed')
+        self.assertTrue(result['detail']);self.assertTrue(result['has_more'])
+        other=knowledge.lookup('s','假日威龙陈')
+        self.assertEqual(other['level'],'brief');self.assertEqual(other['detail'],'')
 
     def test_primary_and_supplement_cards_have_live_references(self):
         knowledge=CommunityKnowledge(ROOT/'knowledge/bilibili-arknights')

@@ -4,7 +4,7 @@ from chat_context import GROUP
 
 CHAT_TOOLS={'get_chat_session','wait_chat_messages','send_chat_message','read_chat_image',
             'list_chat_stickers','read_chat_sticker','note_chat_sticker','send_chat_sticker',
-            'get_operator_knowledge','get_community_knowledge','get_world_knowledge'}
+            'get_operator_knowledge','get_community_knowledge','get_world_knowledge','get_canonical_knowledge'}
 
 def content(result):
     if isinstance(result.structuredContent,dict):return result.structuredContent

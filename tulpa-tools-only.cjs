@@ -3,7 +3,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 function decision(event){
   const name=event?.tool_name??'';
-  const names=['list_chat_groups','list_chat_sessions','get_chat_session','start_chat_session','wait_chat_messages','send_chat_message','stop_chat_session','read_chat_image','list_chat_stickers','read_chat_sticker','note_chat_sticker','send_chat_sticker','get_operator_knowledge','get_community_knowledge','get_world_knowledge'];
+  const names=['list_chat_groups','list_chat_sessions','get_chat_session','start_chat_session','wait_chat_messages','send_chat_message','stop_chat_session','read_chat_image','list_chat_stickers','read_chat_sticker','note_chat_sticker','send_chat_sticker','get_operator_knowledge','get_community_knowledge','get_world_knowledge','get_canonical_knowledge'];
   const allowed=new Set(names.map(n=>'mcp__kaltsit_bot__'+n));
   if(allowed.has(name))return {allow:true,web:false,reason:'Authorized Tulpa live chat tool'};
   if(!['web.run','web_search','web__run'].includes(name))return {allow:false,reason:'Only chat tools and public web reading are permitted'};

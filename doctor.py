@@ -25,10 +25,12 @@ def main():
     read_dialogue_skill();read_coherence_skill()
     from chat_knowledge import OperatorKnowledge
     knowledge=OperatorKnowledge(ROOT/'knowledge/arknights/operators.json');print('干员条目：',len(knowledge.operators))
+    from chat_corpus import CanonicalKnowledge
+    corpus=CanonicalKnowledge().retrieve('任命助理',500);print('原作语料：',corpus['status'])
     from chat_world import TerraKnowledge
     result=TerraKnowledge().retrieve('萨科塔故事',1600)
-    if result['status']!='ok':raise ValueError('世界观摘要索引未就绪')
-    print('世界观摘要、故事事件卡、两份表达Skill检查通过')
+    if result['status']!='ok':raise ValueError('世界观全文索引未就绪')
+    print('世界观全文、原作语料、故事事件卡、两份表达Skill检查通过')
     if args.model_test:
         spec=importlib.util.spec_from_file_location('model_smoke',ROOT/'luna-chat-runtime.py')
         worker=importlib.util.module_from_spec(spec);spec.loader.exec_module(worker)

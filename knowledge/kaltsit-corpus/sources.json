@@ -1,0 +1,141 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "file": "凯尔希剧情对话1.txt",
+      "bytes": 5214,
+      "sha256": "2837c6e05be4f16a5a28658a128ffb960b38490a09eb0c64e6b041d95ac84397",
+      "characters": 2026,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话2.txt",
+      "bytes": 20888,
+      "sha256": "e17a457b1e5a72f8b7e3997128a85ca8271b3a89282c69b43ad65bc33a035a56",
+      "characters": 7959,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话3.txt",
+      "bytes": 16656,
+      "sha256": "83e7c183b71d698261c67ba5b22ed2eb1cb5dfdfa988fde3b14094f8cff63bf1",
+      "characters": 6080,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话4.txt",
+      "bytes": 11827,
+      "sha256": "752ab642fd79095411116bb9d2dc9e5e2eddd0b986d06af2ec0f22634057f9de",
+      "characters": 4344,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话5.txt",
+      "bytes": 18845,
+      "sha256": "196e1b45bed3ab5b83e2c074acf2c38eb91c51eeb90f27176e745ecc23c2142c",
+      "characters": 6838,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话6.txt",
+      "bytes": 24417,
+      "sha256": "91b62a12c8b379274ea6b853c2c4869446bc20e12fb9ca60751cd3aa9307b7c8",
+      "characters": 8978,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话7.txt",
+      "bytes": 9534,
+      "sha256": "205b83b2f118eaad6ed6e4dc64cb9a3166de39564927be1acab5955f9f31e66b",
+      "characters": 3486,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话8.txt",
+      "bytes": 11312,
+      "sha256": "13b14c862ac7e229dd357cd964482102c02d99a8027f3a12bab079b178db98ee",
+      "characters": 4152,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话9.txt",
+      "bytes": 26462,
+      "sha256": "abffc01d5bcd5c60009d8219a192ad8e986cac7012ec81df474622e30016f695",
+      "characters": 9825,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话10.txt",
+      "bytes": 13621,
+      "sha256": "38215d3373351715717ffc7719e4daf16b4565e3294dd7160c9455b45090369d",
+      "characters": 5031,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话11.txt",
+      "bytes": 19957,
+      "sha256": "e1c15d86e33ba959dc5592be258f0d0d0521c221a3cd342f6ddadaa1f2d796c1",
+      "characters": 7415,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希剧情对话12.txt",
+      "bytes": 4210,
+      "sha256": "e04b681daa552adaf4f0b83dd1b9aee7e1fbae2a494c68f450c289bc7c24ebef",
+      "characters": 1567,
+      "kind": "story_dialogue",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希台词.txt",
+      "bytes": 8837,
+      "sha256": "75eb9c8e835c971bf17efe2e40593e8b9eb24effa341227634c53352d1a6cbd5",
+      "characters": 3217,
+      "kind": "voice",
+      "stage": "original_and_residual",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "凯尔希思衡托台词.txt",
+      "bytes": 5182,
+      "sha256": "bc501a36ab7eb56a1568336460155d02623841c7d6dc0eb6967de10ae736d6bd",
+      "characters": 1936,
+      "kind": "voice",
+      "stage": "esperanta",
+      "source_type": "user_supplied_original_text"
+    },
+    {
+      "file": "大地巡旅_大段手写内容补充.txt",
+      "bytes": 25330,
+      "sha256": "2118946db0bfaf60bee5f2dfc3bc467855fdf75bc947f3f9104abac001ff7079",
+      "characters": 8906,
+      "kind": "handwriting",
+      "stage": "source_context_required",
+      "source_type": "user_supplied_original_text"
+    }
+  ],
+  "group_memory_included": false
+}

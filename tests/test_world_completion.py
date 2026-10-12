@@ -12,11 +12,13 @@ from chat_world import TerraKnowledge, chat_query
 ROOT=Path(__file__).resolve().parent.parent
 
 class WorldTests(unittest.TestCase):
-    def test_summary_is_not_claimed_to_be_full_original(self):
+    def test_full_index_retains_actual_verification_states(self):
         with sqlite3.connect(ROOT/'knowledge/terra-journey/index.sqlite3') as db:
             rows=db.execute('SELECT text,verification,scope FROM pages').fetchall()
-        self.assertEqual(len(rows),16)
-        self.assertTrue(all(v=='curated_summary' and s=='curated_summary_only' for _,v,s in rows))
+        self.assertEqual(len(rows),454)
+        self.assertEqual(sum(v=='automatic_ocr_crosschecked' for _,v,_ in rows),426)
+        self.assertEqual(sum(v=='user_transcribed' for _,v,_ in rows),7)
+        self.assertFalse(any(v=='curated_summary' for _,v,_ in rows))
 
     def test_all_event_facts_have_actual_bounded_evidence(self):
         catalog=json.loads((ROOT/'knowledge/terra-journey/story-events.json').read_text('utf-8'))
@@ -24,9 +26,10 @@ class WorldTests(unittest.TestCase):
             for card in catalog['events']:
                 sources={}
                 for source in card['sources']:
-                    text=db.execute('SELECT text FROM pages WHERE page=?',(source['scan_page'],)).fetchone()[0]
+                    table='handwritten_regions' if source['scope']=='handwritten_annotation_only' else 'pages'
+                    text=db.execute(f'SELECT text FROM {table} WHERE page=?',(source['scan_page'],)).fetchone()[0]
                     self.assertEqual(hashlib.sha256(text.encode()).hexdigest(),source['text_sha256'])
-                    self.assertEqual(source['scope'],'curated_summary_only')
+                    self.assertNotEqual(source['scope'],'curated_summary_only')
                     sources[source['scan_page']]=text
                 self.assertEqual(set(card['sequence']),{f['id'] for f in card['facts']})
                 for fact in card['facts']:self.assertIn(fact['support_quote'],sources[fact['scan_page']])
@@ -38,7 +41,7 @@ class WorldTests(unittest.TestCase):
             self.assertEqual(result['status'],'ok')
             self.assertEqual(result['mode'],'documented_story')
             self.assertTrue(result['event_card']['facts'])
-            self.assertTrue(all(p['verification']=='curated_summary' for p in result['pages']))
+            self.assertTrue(all(p['verification']!='curated_summary' for p in result['pages']))
         self.assertEqual(reader.retrieve('auth.json; DROP TABLE pages; $(whoami)')['status'],'not_found')
 
     def test_authorization_and_budget(self):

@@ -1,0 +1,11 @@
+{
+  "schema_version": 1,
+  "edition": "full-user-supplied-text",
+  "source_files": 15,
+  "original_characters": 81760,
+  "indexed_passages": 235,
+  "structured_voice_entries": 114,
+  "index_sha256": "2a107274ca8f79c83299e4099b6d2dfa5caf452f4850df21b7efb8910e9b933a",
+  "group_memory_included": false,
+  "verification": "原件保留完整字节与哈希。结构化语音有独立时期标记；剧情分块保留全部说话人标签，不把全部对白归给凯尔希。部分剧情场景时间未知，不凭文件名猜测。"
+}

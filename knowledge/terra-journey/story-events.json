@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source": "已校对《大地巡旅》片段的事实摘要与短摘录；非全书或整页原文",
+  "source": "User-proofread Terra Journey passages; paraphrased event units",
   "events": [
     {
       "id": "faceless-saints",
@@ -62,21 +62,17 @@
       "sources": [
         {
           "scan_page": 176,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "a5c2e4351118304f6a60717742b7500d7b0d7105621ccab82a67be4f24d34d2e",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "d87d6ba34d3df65906fcb231a3c5ce0b3ea6e2b6eff56ce70eff0283b2245267"
+          "text_sha256": "a5c2e4351118304f6a60717742b7500d7b0d7105621ccab82a67be4f24d34d2e"
         },
         {
           "scan_page": 177,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "6238f71c496aa4699e1d814dec540113d241f9a0b87c6be42691115bfa3ef754",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "f1ac375bbf5699c3703b2a751c812e25b0191d3baff190bbefbbca0cd203252e"
+          "text_sha256": "6238f71c496aa4699e1d814dec540113d241f9a0b87c6be42691115bfa3ef754"
         }
       ]
     },
@@ -131,21 +127,17 @@
       "sources": [
         {
           "scan_page": 193,
-          "scope": "curated_summary_only",
+          "scope": "page_body",
           "verification": "user_transcribed",
           "speaker": null,
-          "original_text_sha256": "10540741e7b318023fe271325a0a7a48ad8165e8c747bc74dc525f719172a0d3",
-          "original_scope": "page_body",
-          "text_sha256": "7c4e3777a5a8ee29304057a2adb0d31d63fca2e39bb5b4a71808a09179f7f197"
+          "text_sha256": "10540741e7b318023fe271325a0a7a48ad8165e8c747bc74dc525f719172a0d3"
         },
         {
           "scan_page": 194,
-          "scope": "curated_summary_only",
+          "scope": "page_body",
           "verification": "user_transcribed",
           "speaker": null,
-          "original_text_sha256": "bb376a75baa9b27bb756f2bff08b951af145d911f35ff381768226131fadbff4",
-          "original_scope": "page_body",
-          "text_sha256": "4bcbddc5461982bc19546e9cd2fbe9c89d3637d1c63edb14eab682445712cdfa"
+          "text_sha256": "bb376a75baa9b27bb756f2bff08b951af145d911f35ff381768226131fadbff4"
         }
       ]
     },
@@ -200,21 +192,17 @@
       "sources": [
         {
           "scan_page": 157,
-          "scope": "curated_summary_only",
+          "scope": "page_body",
           "verification": "user_transcribed",
           "speaker": null,
-          "original_text_sha256": "592a761d84be75eb9ab9eb8303cca00363a6d6886a53b2c01292171e93f94c98",
-          "original_scope": "page_body",
-          "text_sha256": "9d40d34569ca7d44eb66a4dbbd614021a894a4cdaeb37d09f75cbf7dede12e4a"
+          "text_sha256": "592a761d84be75eb9ab9eb8303cca00363a6d6886a53b2c01292171e93f94c98"
         },
         {
           "scan_page": 158,
-          "scope": "curated_summary_only",
+          "scope": "page_body",
           "verification": "user_transcribed",
           "speaker": null,
-          "original_text_sha256": "dc5cb13aeafb11c8f5e0104a0c44eef55aacb682133ae32cdd44314599349c6e",
-          "original_scope": "page_body",
-          "text_sha256": "5ef0dcc39d1c930aacc7eee88c5ae7943192700e798e832a0d26932fdc64d880"
+          "text_sha256": "dc5cb13aeafb11c8f5e0104a0c44eef55aacb682133ae32cdd44314599349c6e"
         }
       ]
     },
@@ -270,12 +258,10 @@
       "sources": [
         {
           "scan_page": 138,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "412481ece6260d9d0f63da3d0673e005dd2d72f8762969d252465d43f46209db",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "70f254a077845ac47382139dd6c9cbbc1a7c69702c48a612272aa2bab40f2aa5"
+          "text_sha256": "412481ece6260d9d0f63da3d0673e005dd2d72f8762969d252465d43f46209db"
         }
       ]
     },
@@ -337,21 +323,17 @@
       "sources": [
         {
           "scan_page": 329,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "de6dfdf830081c17d51299ab3107952278741ca36bdfef12707c658488c78b66",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "4b0a30b8146d05e751845e03074ac2f5e22a4988b861b1eb38d0b1edb8f5b085"
+          "text_sha256": "de6dfdf830081c17d51299ab3107952278741ca36bdfef12707c658488c78b66"
         },
         {
           "scan_page": 331,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "2431b678a4510471ea9f21e4effb0e661341c59ce27b29dad2e4bed2d8a4fc12",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "e92bd803a4acde226c9c131d7207222436a42e8c142ea6292fbdc4cc061e0384"
+          "text_sha256": "2431b678a4510471ea9f21e4effb0e661341c59ce27b29dad2e4bed2d8a4fc12"
         }
       ]
     },
@@ -405,21 +387,17 @@
       "sources": [
         {
           "scan_page": 189,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "1e9201a111a4ca6db555d6a721ce4ff51f5210686aca42b6ad45d593099e09bc",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "b8f8b6d89270b8ec82b164497ff9de549571dfc7a34727e57da5a47f221ae4a3"
+          "text_sha256": "1e9201a111a4ca6db555d6a721ce4ff51f5210686aca42b6ad45d593099e09bc"
         },
         {
           "scan_page": 197,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "958641d1bff80790bf2749cdcf6ee1d99793ca4310dc987dc513e172a2417255",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "024b774063df929189f280df8b217a29d1d27a8ee6716394b7d46e887861ecd6"
+          "text_sha256": "958641d1bff80790bf2749cdcf6ee1d99793ca4310dc987dc513e172a2417255"
         }
       ]
     },
@@ -472,15 +450,12 @@
       "sources": [
         {
           "scan_page": 241,
-          "scope": "curated_summary_only",
+          "scope": "handwritten_annotation_only",
           "verification": "user_transcribed_handwriting",
           "speaker": "凯尔希",
-          "original_text_sha256": "fc9f811be7f948cd9f7bf4a7c7edc674df0d3aaa1bbd4436983f5c3b43e167f1",
-          "original_scope": "handwritten_annotation_only",
-          "text_sha256": "96356551d0b71c9dc25e03ec8338cb715473ca0d5fb80a41bd3580d7232e7058"
+          "text_sha256": "fc9f811be7f948cd9f7bf4a7c7edc674df0d3aaa1bbd4436983f5c3b43e167f1"
         }
       ]
     }
-  ],
-  "edition": "public_summary"
+  ]
 }
