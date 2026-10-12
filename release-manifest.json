@@ -170,8 +170,8 @@
     },
     {
       "path": "dialogue-test-window/test-policy.txt",
-      "size": 1379,
-      "sha256": "7bcdf1a08ed7be220de165a0cdd94e8696ca59ee35f9d4803ad3d801154c8a9f"
+      "size": 1721,
+      "sha256": "3e72b55b24e9b0378ed7117faff7a02e1c51379ad153ff592659f54162aa9c63"
     },
     {
       "path": "docs/knowledge.md",
@@ -180,8 +180,8 @@
     },
     {
       "path": "docs/validation.md",
-      "size": 3146,
-      "sha256": "78d210309710a84935ddf34ec5eac89c4f58623d4c017d4fb0d610fc94606813"
+      "size": 4451,
+      "sha256": "e780c1ff6b28b178ab5f56fc209b67d6cb1a2a6149bafa7bf6147c44e2cbc568"
     },
     {
       "path": "doctor.py",
@@ -190,8 +190,8 @@
     },
     {
       "path": "group-chat-policy.txt",
-      "size": 13900,
-      "sha256": "fb90abf04a26ba5eaa79508410b4347f7a7b84b5e546d79b8d1a3fb509db76d2"
+      "size": 14270,
+      "sha256": "3df919e418220c4b0f6104ed82eb6c2c51877a12175da921740e42ba6004e600"
     },
     {
       "path": "knowledge/arknights/operator-aliases.json",
@@ -420,8 +420,8 @@
     },
     {
       "path": "README.md",
-      "size": 8394,
-      "sha256": "6906f8c2cc9b3410418129d90c86409b932ce2c80bd70bcd011baba7d0202ce6"
+      "size": 8900,
+      "sha256": "62492b79de15ffdb110c873a6085f0e58e6db06a4b17458fcb9b45401a3f2942"
     },
     {
       "path": "requirements.txt",
@@ -480,8 +480,8 @@
     },
     {
       "path": "skills/kaltsit-dialogue-output/SKILL.md",
-      "size": 6222,
-      "sha256": "cb3cf81335140b24437c1f682f65342bf1bfbd0b8aae5d488b70d64b425ad731"
+      "size": 6204,
+      "sha256": "cae6505c69e01be1ba0413d72a990f90bf2af7685636f155fe09bb0a32477a1b"
     },
     {
       "path": "tests/test_chat_bubbles.py",
