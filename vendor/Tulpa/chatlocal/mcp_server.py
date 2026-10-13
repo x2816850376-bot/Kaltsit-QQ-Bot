@@ -122,14 +122,19 @@ class MCPService:
                         return await rejected(400)(scope, receive, send)
                 else:
                     payload = {}
-                key = (grant['id'], json.dumps(payload.get('id'), sort_keys=True))
+                # Request IDs are local to a client, not globally unique per grant.
+                # Independent workers legitimately issue concurrent request 2.
+                client_id=request.headers.get('x-tulpa-client-id','legacy')
+                if not 1<=len(client_id)<=96 or not all(c.isascii() and (c.isalnum() or c in '-_') for c in client_id):
+                    return await rejected(400)(scope, receive, send)
+                key = (grant['id'], client_id, json.dumps(payload.get('id'), sort_keys=True))
                 cancel = threading.Event()
                 scope.setdefault('state', {})['mcp_cancel'] = cancel
                 method = payload.get('method')
                 if method == 'notifications/cancelled':
                     params = payload.get('params')
                     if isinstance(params, dict):
-                        cancelled_key = (grant['id'], json.dumps(params.get('requestId'), sort_keys=True))
+                        cancelled_key = (grant['id'], client_id, json.dumps(params.get('requestId'), sort_keys=True))
                         with service.pending_lock:
                             found = service.pending.get(cancelled_key)
                             if found:
@@ -208,7 +213,7 @@ class MCPService:
 
     def cancel(self, gid=None):
         with self.pending_lock:
-            for (owner, _), event in self.pending.items():
+            for (owner, _, _), event in self.pending.items():
                 if gid is None or gid == owner:
                     event.set()
 

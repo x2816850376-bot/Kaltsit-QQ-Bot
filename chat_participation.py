@@ -41,7 +41,7 @@ class ChatParticipation:
     @staticmethod
     def direct(message):
         evidence = (message.get('reply_routing') or {}).get('address_evidence')
-        if evidence in ('explicit_at_bot', 'reply_to_bot'):
+        if evidence in ('explicit_at_bot', 'reply_to_bot', 'private_to_bot'):
             return True
         if evidence in ('explicit_at_other', 'reply_to_other', 'unresolved_reply', 'self_echo'):
             return False

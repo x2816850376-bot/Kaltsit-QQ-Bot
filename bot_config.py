@@ -28,11 +28,13 @@ def local_url(value, schemes, label):
 def validate(data):
     if not isinstance(data,dict):raise ValueError('配置必须是JSON对象')
     data=dict(data)
-    allowed={'account','groups','onebot_http_url','onebot_ws_url','onebot_token','mcp_port','test_port','model','reasoning','fast','max_parallel_groups','codex_path','node_path'}
+    allowed={'account','groups','onebot_http_url','onebot_ws_url','onebot_token','mcp_port','test_port','model','reasoning','fast','max_parallel_groups','codex_path','node_path','all_groups','private_chats'}
     if set(data)-allowed:raise ValueError('存在未知配置字段')
     decimal(data.get('account'),'QQ账号')
-    groups=data.get('groups')
-    if not isinstance(groups,list) or not 1<=len(groups)<=8:raise ValueError('请选择1至8个群号')
+    for flag in ('all_groups','private_chats'):
+        if type(data.setdefault(flag,False)) is not bool:raise ValueError('Invalid scope flag')
+    groups=data.get('groups',[])
+    if not isinstance(groups,list) or len(groups)>500 or (not groups and not data['all_groups'] and not data['private_chats']):raise ValueError('Select a conversation scope')
     data['groups']=list(dict.fromkeys(decimal(v,'群号') for v in groups))
     for key,schemes in [('onebot_http_url',('http','https')),('onebot_ws_url',('ws','wss'))]:
         data[key]=local_url(data.get(key),schemes,key)
@@ -60,22 +62,31 @@ def load(required=True):
 
 def group_id(config=None):
     config=load(False) if config is None else config
+    cid=os.environ.get('KALTSIT_CONVERSATION')
+    if cid:
+        parts=cid.split(':')
+        if len(parts)!=3 or parts[0]!=config.get('account') or parts[1] not in ('group','direct'):raise ValueError('Invalid conversation account or kind')
+        decimal(parts[2],'Peer')
+        if parts[1]=='group' and not config.get('all_groups') and parts[2] not in config.get('groups',[]):raise ValueError('Group not authorized')
+        if parts[1]=='direct' and not config.get('private_chats'):raise ValueError('Private chats not authorized')
+        return cid
     requested=os.environ.get('KALTSIT_GROUP')
     if not config:
         if requested:raise ValueError('没有已核验配置，不能选择聊天群')
         return '0:group:0'  # Disabled import-only state, never an authorized QQ target.
-    requested=requested or config['groups'][0]
+    requested=requested or (config['groups'][0] if config['groups'] else '0')
+    if requested=='0':return f"{config['account']}:group:0"
     if requested not in config['groups']:raise ValueError('此群不在配置的白名单内')
     return f"{config['account']}:group:{requested}"
 
 
 def runtime_dir():
-    scope=group_id().split(':')[-1]
-    return ROOT/'runtime'/('group-'+scope)
+    _,kind,peer=group_id().split(':')
+    return ROOT/'runtime'/(kind+'-'+peer)
 
 
 def connection():
     data=json.loads((ROOT/'runtime/connection.private.json').read_text('utf-8'))
     expected=load()
-    if data.get('account')!=expected['account'] or data.get('groups')!=expected['groups']:raise ValueError('配置已变化，请重新配置授权，不能沿用旧账号或旧群权限')
+    if data.get('account')!=expected['account'] or data.get('groups')!=expected['groups'] or data.get('all_groups',False)!=expected['all_groups'] or data.get('private_chats',False)!=expected['private_chats']:raise ValueError('配置已变化，请重新配置授权，不能沿用旧账号或旧群权限')
     return data

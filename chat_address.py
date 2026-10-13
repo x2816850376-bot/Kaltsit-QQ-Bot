@@ -57,6 +57,8 @@ class DoctorAddress:
         switch=bool(previous.get('recipient') and recipient!=previous['recipient'] and gap<300)
         mention_required=enabled and numeric_recipient and (switch or len(active_people)>1)
         mention_recommended=enabled and numeric_recipient and (mention_required or not previous or gap>=300)
+        if GROUP.split(':')[1]=='direct':
+            mention_required=mention_recommended=False
         return dict(enabled=enabled, required=False, recommended=recommended, recipient=recipient,
                     consecutive_omissions=omitted,
                     title=title, named_title=named if nickname else '',

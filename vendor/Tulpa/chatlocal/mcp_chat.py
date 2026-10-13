@@ -128,8 +128,15 @@ class MCPChat:
         target = dict(platform='qq', conversation_id=cid, conversation=cid)
         account, category, peer = qq_address(target)
         scope = grant['scope']
+        if category=='direct' and not scope.get('chat_private',False):
+            raise AccessDenied('此连接未明确授权私聊自动回复，请重新配置。')
+        if 'chat_groups' in scope:
+            if category=='group' and not scope.get('chat_all_groups') and peer not in scope['chat_groups']:
+                raise AccessDenied('该群不在持续聊天授权范围内。')
+            if category=='direct' and not scope.get('chat_private'):
+                raise AccessDenied('此连接未授权私聊自动回复。')
         authorized_account = scope.get('chat_account') or json.loads(grant['accounts']).get('qq')
-        if 'qq' not in scope['platforms'] or category != 'group' or authorized_account != account:
+        if 'qq' not in scope['platforms'] or category not in ('group','direct') or authorized_account != account:
             raise AccessDenied('目标 QQ 账号不在持续聊天授权中，请核对账号或重新创建连接。')
         if scope['conversations'] and ['qq',cid] not in [json.loads(pair) for pair in scope['conversations']]:
             raise AccessDenied('该群不在连接授权范围内。')
@@ -219,11 +226,13 @@ class MCPChat:
                               stickers=stickers,scope=grant['scope'],full=full)
 
     def receive(self, event):
-        if not self.available or event.get('post_type') not in ('message','message_sent') or event.get('message_type')!='group':return
-        account, group = str(event.get('self_id','')), str(event.get('group_id',''))
+        if not self.available or event.get('post_type') not in ('message','message_sent') or event.get('message_type') not in ('group','private'):return
+        account=str(event.get('self_id',''))
+        category='group' if event.get('message_type')=='group' else 'direct'
+        group=str(event.get('group_id','')) if category=='group' else str(event.get('target_id') if str(event.get('user_id',''))==account else event.get('user_id',''))
         mid = str(event.get('message_id',''))
         if not account.isdecimal() or not group.isdecimal() or not mid or len(mid)>100:return
-        cid = f'{account}:group:{group}'
+        cid = f'{account}:{category}:{group}'
         with self.access.connect() as db:
             row = db.execute('SELECT * FROM chat_sessions WHERE active=1 AND conversation_id=?',(cid,)).fetchone()
         if not row:return
@@ -302,12 +311,12 @@ class MCPChat:
         persona=resolved['prompt']
         target=self.live_target(grant,cid)
         from .message_sender import qq_address
-        if qq_address(target)[1]!='group':raise ValueError('持续聊天目前只支持 QQ 群。')
+        if qq_address(target)[1] not in ('group','direct'):raise ValueError('Unsupported conversation')
         plan=self.access.plan(grant)
         if plan.end is not None and time.time()*1000>=plan.end:raise ValueError('授权截止日期已过去，请使用包含未来消息的连接。')
         # Verify the live sender/account, but never send or launch an LLM here.
         address=self.actions.sender_factory().prepare(target,False)
-        if address['kind']!='group':raise ValueError('目标不是 QQ 群。')
+        if address['kind'] not in ('group','direct'):raise ValueError('Unsupported conversation')
         self.access.by_id(grant['id'], source=False)
         if cancel.is_set():raise ValueError('开始已取消。')
         sid=uuid.uuid4().hex;now=time.time()
@@ -324,7 +333,7 @@ class MCPChat:
         with self.lock:
             try:
                 with self.access.connect() as db:
-                    if db.execute('SELECT count(*) FROM chat_sessions WHERE active=1').fetchone()[0]>=8:
+                    if db.execute('SELECT count(*) FROM chat_sessions WHERE active=1').fetchone()[0]>=512:
                         raise ValueError('最多同时开启8个群聊，请先停止不使用的会话。')
                     db.execute("INSERT INTO chat_sessions(id,grant_id,conversation_id,name,persona,participation,request_key,signature,created,updated,cursor,offered,last_contact,source,persona_preset,persona_name) VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,'onebot',?,?)",
                                (sid,grant['id'],cid,address['name'],persona,participation,args['idempotency_key'],signature,now,now,cursor,cursor,now,preset,resolved['name']))
@@ -457,14 +466,14 @@ class MCPChat:
             if (source.get('conversation_id')!=row['conversation_id'] or source.get('is_self') or
                     not uid.isascii() or not uid.isdigit() or not 0<int(uid)<10**16):
                 raise ValueError('未找到可靠的本群发言者，未发送@。')
-            send_args['mention_user_id']=uid
+            if row['conversation_id'].split(':')[1]=='group':send_args['mention_user_id']=uid
         result=self.actions.execute(grant,'send',send_args,cancel,
                                     guard=guard,target_resolver=self.live_target)
         if result['state']=='SUCCEEDED':
-            receipt=result['result'];account,_,group=row['conversation_id'].split(':')
+            receipt=result['result'];account,category,group=row['conversation_id'].split(':')
             # Some adapters don't echo own sends. A confirmed receipt is enough
             # to remember our own text; identical WS message IDs deduplicate it.
-            self.receive(dict(post_type='message_sent',message_type='group',self_id=account,group_id=group,
+            self.receive(dict(post_type='message_sent',message_type='group' if category=='group' else 'private',self_id=account,group_id=group,target_id=group,
                               user_id=account,sender={'nickname':'本人'},message_id=receipt['message_id'],
                               time=receipt['timestamp'],message=(
                                   [dict(type='at',data={'qq':receipt['mention_user_id']})] if receipt.get('mention_user_id') else []

@@ -74,7 +74,7 @@ class MCPAccess:
         return {p: bound_account(self.store, p) or '' for p in platforms}
 
     def create(self, body):
-        fields = {'name', 'platforms', 'conversations', 'all_conversations', 'start', 'end', 'media', 'prepare', 'voice', 'onebot', 'send', 'manage', 'chat', *CHAT_MEDIA_FLAGS}
+        fields = {'name', 'platforms', 'conversations', 'all_conversations', 'start', 'end', 'media', 'prepare', 'voice', 'onebot', 'send', 'manage', 'chat', 'chat_groups', 'chat_all_groups', 'chat_private', *CHAT_MEDIA_FLAGS}
         if not isinstance(body, dict) or set(body) - fields:
             raise ValueError('连接配置字段无效。')
         name = body.get('name', '')
@@ -140,6 +140,13 @@ class MCPAccess:
         if (scope['chat_sticker_send'] or scope['chat_sticker_collect']) and not scope['chat_images']:
             raise ValueError('发送和收藏表情需要先允许持续聊天看图。')
         if chat_account:scope['chat_account'] = chat_account
+        if any(k in body for k in ('chat_groups','chat_all_groups','chat_private')):
+            selected=body.get('chat_groups',[])
+            if not isinstance(selected,list) or len(selected)>500 or any(not isinstance(g,str) or not g.isascii() or not g.isdigit() or not 0<int(g)<10**16 for g in selected):
+                raise ValueError('持续聊天群范围无效。')
+            if type(body.get('chat_all_groups',False)) is not bool or type(body.get('chat_private',False)) is not bool:
+                raise ValueError('持续聊天范围开关无效。')
+            scope.update(chat_groups=list(dict.fromkeys(selected)),chat_all_groups=body.get('chat_all_groups',False),chat_private=body.get('chat_private',False))
         token = secrets.token_urlsafe(32)
         gid = uuid.uuid4().hex
         with self.connect() as db:

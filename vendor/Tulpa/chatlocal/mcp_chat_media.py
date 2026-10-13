@@ -380,7 +380,8 @@ class ChatMedia:
             if self.chat.receiver.status().get('state')!='connected':raise ValueError('实时消息已断开，未执行。')
             dispatched=True
             if sender:
-                receipt=sender.call('send_group_msg',{'group_id':int(row['conversation_id'].split(':')[-1]),'message':[{'type':'image','data':payload}]},sending=True)
+                category=row['conversation_id'].split(':')[1]
+                receipt=sender.call('send_group_msg' if category=='group' else 'send_private_msg',{'group_id' if category=='group' else 'user_id':int(row['conversation_id'].split(':')[-1]),'message':[{'type':'image','data':payload}]},sending=True)
                 mid=receipt.get('message_id') if isinstance(receipt,dict) else None
                 if type(mid) is not int or not mid:raise SendUncertain('没有可靠消息编号。')
                 result=dict(message_id=str(mid),conversation_id=row['conversation_id'],timestamp=time.time(),sha256=asset['digest'],bytes=len(raw),animated_original=True)

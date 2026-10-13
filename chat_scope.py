@@ -19,6 +19,12 @@ class GroupScope:
 
     async def check(self,name,arguments,upstream):
         if name not in CHAT_TOOLS or not isinstance(arguments,dict):return False
+        import os
+        allowed=os.environ.get('KALTSIT_REPLY_IDS')
+        if name=='send_chat_message' and allowed is not None:
+            try:
+                if arguments.get('respond_to_event_id') not in json.loads(allowed):return False
+            except (ValueError,TypeError):return False
         sid=arguments.get('session_id')
         if not isinstance(sid,str) or not sid:return False
         if sid in self.confirmed:return True

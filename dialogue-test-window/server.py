@@ -125,25 +125,16 @@ def generate(data):
         if 'API_KEY' in key.upper() or key.startswith(('CODEX_THREAD', 'CODEX_TURN', 'CODEX_TASK', 'CODEX_RUN', 'CODEX_DAEMON')):
             env.pop(key, None)
     env.update(PYTHONIOENCODING='utf-8', PYTHONUTF8='1')
-    started = time.monotonic()
-    result = subprocess.run(args, input=prompt.encode('utf-8'), stdout=subprocess.PIPE,
-                            stderr=subprocess.PIPE, cwd=prepare_test_work(), env=env,
-                            timeout=150, shell=False, creationflags=subprocess.CREATE_NO_WINDOW)
-    events = []
-    for line in result.stdout.decode('utf-8', 'replace').splitlines():
-        try: events.append(json.loads(line))
-        except ValueError: pass
-    messages = [e['item']['text'] for e in events if e.get('type') == 'item.completed'
-                and e.get('item', {}).get('type') == 'agent_message']
-    if result.returncode or not messages:
-        raise RuntimeError('本次没有收到回复，可能是模型暂不可用或额度不足；没有切换模型')
+    runner = load_module('test_model_stream', HERE/'model_stream.py')
+    text,events,elapsed = runner.run_turn(args,prompt,cwd=prepare_test_work(),env=env,
+                                       log_dir=ROOT/'runtime/test/model-logs',timeout=150)
     formatter=load_module('test_bubbles',ROOT/'chat_bubbles.py')
-    bubbles=formatter.parse_window_bubbles(messages[-1])
+    bubbles=formatter.parse_window_bubbles(text)
     return {'reply': '\n\n'.join(bubbles),'bubbles':bubbles,
             'web_search_calls': sum(e.get('type') == 'item.completed'
                                     and e.get('item', {}).get('type') == 'web_search'
                                     for e in events),
-            'seconds': round(time.monotonic()-started, 1), **current_metadata(worker)}
+            'seconds': round(elapsed, 1), **current_metadata(worker)}
 
 
 class Handler(BaseHTTPRequestHandler):

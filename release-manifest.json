@@ -1,6 +1,6 @@
 {
   "edition": "full-knowledge-source",
-  "prepared_date": "2026-10-12",
+  "prepared_date": "2026-10-13",
   "model": "gpt-6-luna",
   "reasoning": "high",
   "fast": false,
@@ -59,19 +59,24 @@
       "sha256": "ed2ff5ed8daf24a2ed1cc40e7951645c573dbb548bfbae4ed83e7ac449df1886"
     },
     {
+      "path": "account_runtime.py",
+      "size": 6489,
+      "sha256": "189b3ce94349694e47305731e2b45187bfe8d4521b44a7e16e3d2771c4c50351"
+    },
+    {
       "path": "AGENTS.md",
-      "size": 833,
-      "sha256": "1cef42431ca7a77af8a3f0e2453245a888b655c2f02f559b647c24179aca08bd"
+      "size": 1010,
+      "sha256": "29bd52d6d94c0301f32dc4685bc910c808ba9d7326b9dd0d5eafef99065cb0ec"
     },
     {
       "path": "bot_config.py",
-      "size": 4276,
-      "sha256": "60a7bba6179d3781ac051427fad9a515e1d117944ded1dbecfa298890891eb6a"
+      "size": 5290,
+      "sha256": "02aa555be5d6a6a67c05fa333f16d6d2842f2f067425d1c2dec46a5fb15e71da"
     },
     {
       "path": "chat_address.py",
-      "size": 9536,
-      "sha256": "9d46a7742def2f167527aa1ee26c86cca8404c8109f596fe3a7bc305da0ab985"
+      "size": 9633,
+      "sha256": "08da038eb08695ae9a7fd291405fe11a2fc0ff971d75d65a957f94938ce534bc"
     },
     {
       "path": "chat_bubbles.py",
@@ -90,8 +95,8 @@
     },
     {
       "path": "chat_context.py",
-      "size": 9148,
-      "sha256": "bdeb8fd20fefa53adfb1a2e43436b39e7689c1df8f982a376f61e8e308338a61"
+      "size": 9216,
+      "sha256": "8c1d1e81595d432385e62ddd10c99d76b6a607ddfd0bddedaa2e2e9533707d2f"
     },
     {
       "path": "chat_corpus.py",
@@ -115,13 +120,13 @@
     },
     {
       "path": "chat_participation.py",
-      "size": 7591,
-      "sha256": "42eb56637b2108bd50fa9f15001a76ebcfda225fc842939072374a209bd940fb"
+      "size": 7609,
+      "sha256": "843711f781c066fa3b3fb212969fac0c69740e2bb224b8c06ae17254aff77b01"
     },
     {
       "path": "chat_scope.py",
-      "size": 1273,
-      "sha256": "e7743e162013efc26423be9fd9c04b1a540c9008a640e1cf59193dd97f5417db"
+      "size": 1573,
+      "sha256": "85994cc4f3a1009e6e79e70d6a8abb8e658500ec7d41750485ab1ea37774477f"
     },
     {
       "path": "chat_story.py",
@@ -140,23 +145,33 @@
     },
     {
       "path": "cli_config.py",
-      "size": 2592,
-      "sha256": "5188db4768261d7befa5dd9eee99d736c6c0f6a4e90262d8ac94908aba98d6a0"
+      "size": 3023,
+      "sha256": "3dbc5288b2cc75328e35ff5eebda91c24d861451ce8a9b8f5eff6a9c134f7021"
     },
     {
       "path": "config/config.example.json",
-      "size": 334,
-      "sha256": "1b00451f7f049539040bdd3f26649cd90990fc64ea3dafa29421d0a703ba086c"
+      "size": 370,
+      "sha256": "e411b4126451a85b057f7528a424a08ea1d3c47ccff6cd02814fa88a7e5e1df1"
     },
     {
       "path": "configure.py",
-      "size": 3257,
-      "sha256": "cea47b21f3b3506e763e7d2f25a0792397b3796097d8534c0c30dcc0c6937d35"
+      "size": 4241,
+      "sha256": "177dc46cfb44aa4134c19f52d731f570a8b764082698f7662bf026922532994c"
     },
     {
       "path": "control.py",
-      "size": 6323,
-      "sha256": "79b61e6b6bbeae5964d18a15bc86a247fa6c1f20ba6a15c5164f5907f0de3142"
+      "size": 2901,
+      "sha256": "0a053065be144f6efbd4dc13460b3e243f90bf48c748227f98699269453ceb4b"
+    },
+    {
+      "path": "conversation_decision.py",
+      "size": 1272,
+      "sha256": "c9f9d3835aacecdb629349a7ff3c88ea04d947d4de35adb10ca2310c80210488"
+    },
+    {
+      "path": "conversation_packet.py",
+      "size": 2345,
+      "sha256": "9c257d050dc1aeb0ad87304de530ac598f71c95b4c918ca7bd708253957a5045"
     },
     {
       "path": "dialogue-test-window/index.html",
@@ -164,14 +179,24 @@
       "sha256": "434da475f119f675b4dc281f605f8406cb34231723ae2f100738be422a952cbe"
     },
     {
+      "path": "dialogue-test-window/model_stream.py",
+      "size": 3400,
+      "sha256": "792e19f6c840068e8bd15c6e8c5be7de630302af10367c2ab1f84fb371dca485"
+    },
+    {
       "path": "dialogue-test-window/server.py",
-      "size": 11284,
-      "sha256": "1f311644c3642a850673bb18ead7359a46cf2c0f7e1659b2d780d793f4207e7d"
+      "size": 10707,
+      "sha256": "61aa21061988d3fc4cdafe6521a1d9dd9009aee0f0c577485a99569ac0a50669"
     },
     {
       "path": "dialogue-test-window/test-policy.txt",
       "size": 2935,
       "sha256": "d27cd57594d012a51cbbc60a3f267bd9ff633a46127a13135b37752151669538"
+    },
+    {
+      "path": "docs/configuration.md",
+      "size": 2407,
+      "sha256": "3c018e66dfb09a24719f84bafa2c844d2f621c940526e9507b4c9b2f149def21"
     },
     {
       "path": "docs/knowledge.md",
@@ -180,8 +205,8 @@
     },
     {
       "path": "docs/validation.md",
-      "size": 9153,
-      "sha256": "c48cfb960bc668422b1b1f7b87a4ea4452e914e9ea1aa716be0e653b4c13147f"
+      "size": 11729,
+      "sha256": "bebba17ebdd4686e6bbd5b4d68b3b151808259b82fcbe7302b72e0e9a5de0d00"
     },
     {
       "path": "doctor.py",
@@ -395,13 +420,13 @@
     },
     {
       "path": "luna-chat-runtime.py",
-      "size": 21548,
-      "sha256": "a6bfcf803389537a5db3926a5c168b80ed2d2222d71b010dde70dc6acb3f72bb"
+      "size": 25169,
+      "sha256": "b0277292ec5baf7253e0e91f15c136abc9aae66e97a1bd87fd2c7b9938dd527c"
     },
     {
       "path": "mcp-stdio-proxy.py",
-      "size": 17726,
-      "sha256": "31b6ea251128c4391330c699a2d7d7e3c66d4496b09e4e24b3b1c3a5ad206360"
+      "size": 18976,
+      "sha256": "5dd8e0798cb7cf945124dcbf2eb424b718abae7476b5ebdee3f1a3338d1173a7"
     },
     {
       "path": "model_slots.py",
@@ -420,8 +445,8 @@
     },
     {
       "path": "README.md",
-      "size": 10020,
-      "sha256": "fbb71f727322ed04a07401eb38ac32bcf7fa61b856728c14435bc7ba762a6983"
+      "size": 11775,
+      "sha256": "58b66bb39e7440c5a7cf3abc925ad4b1a6a0f09d5027ea8632d538eb01a337a8"
     },
     {
       "path": "requirements.txt",
@@ -435,8 +460,8 @@
     },
     {
       "path": "scripts/build_source_zip.py",
-      "size": 2407,
-      "sha256": "9b71482bbdb4e1004a7ef8f84a3199b497e0d681af616e1e52ff075c356122ed"
+      "size": 3045,
+      "sha256": "20d58b826ea5b539457af8c88dc8fc3d656c78fc0465c6d6026d2b04b69123a0"
     },
     {
       "path": "scripts/check_cli_transport.py",
@@ -462,6 +487,31 @@
       "path": "scripts/smoke_fake_bridge.py",
       "size": 10056,
       "sha256": "23b44bb47ee3b84acc9f8616afd094609b5fa167996f6a2ec0d916e619861af2"
+    },
+    {
+      "path": "scripts/smoke_private_bridge.py",
+      "size": 12921,
+      "sha256": "d16434ba1cc5c45eb8472f03d092a6428254ec3bdd4314b2105bea395c27ce05"
+    },
+    {
+      "path": "scripts/test_auto_receive.py",
+      "size": 2074,
+      "sha256": "ce63f310622c9a3d03e1f3041b64a15193c7ae7e4fda472096deb5228dba6b42"
+    },
+    {
+      "path": "scripts/test_parallel_waits.py",
+      "size": 1363,
+      "sha256": "f0ff6eb1e1b48acad571db25babdcd57f88a199a80162c8ac8edbdc012bdae63"
+    },
+    {
+      "path": "scripts/test_prefetched_context.py",
+      "size": 2675,
+      "sha256": "d891d0ece896d8aedead8f0047af31cc9005122a5e0bb86c8b3b3915a0777d2b"
+    },
+    {
+      "path": "scripts/test_window_delivery.py",
+      "size": 2362,
+      "sha256": "fc71433d2aa2bf27de55a4f01b0aa659b8169744f7952f75755c8dba1d466908"
     },
     {
       "path": "setup.ps1",
@@ -542,6 +592,11 @@
       "path": "tests/test_role_address.py",
       "size": 8975,
       "sha256": "7807fef7055128cc5bb041817d189e83d5b57449f0615580b91ff8d19759feb9"
+    },
+    {
+      "path": "tests/test_runtime_scope.py",
+      "size": 3678,
+      "sha256": "62efb6d73728bf6a875c7b1d3f6a81efb14213423fb241c7ddb9c1eb26d079c4"
     },
     {
       "path": "tests/test_web_fallback.py",
@@ -740,8 +795,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_access.py",
-      "size": 13016,
-      "sha256": "76bd65ebbbc8cdfde8f8fd7cf91c14b36caaf546bebb0ed6b74ce6b012c33b51"
+      "size": 13793,
+      "sha256": "93a5e975f894540c4a62e17649973074f70e8e1dc3fb1caa2404aa6da6e444dd"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_actions.py",
@@ -750,13 +805,13 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat.py",
-      "size": 37311,
-      "sha256": "475c7e446399839b12401cfa2d24e1f51fee3e81d1ff9be7f8d9533ee15003d5"
+      "size": 38218,
+      "sha256": "c63fce66bae671c345e5446268a362a529a6ba0ba50715217dee0c106e5afc25"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat_media.py",
-      "size": 27098,
-      "sha256": "18e02e1f3a84efe0f71d4d98c7064d59772edab3f6ba57bc110e440076d20e23"
+      "size": 27240,
+      "sha256": "a9fd6b937c41895cf7a4a6db14f0540290df8426754a767f80bfd12a1c611ff5"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat_prompts.py",
@@ -775,8 +830,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_server.py",
-      "size": 11798,
-      "sha256": "bea6c18ea0fe270a685d814085ad635728a1dee1ff9524ec79d024f0fcb3b85e"
+      "size": 12248,
+      "sha256": "352594416b7409aa1a3e3acde7b93bb529ee5dbba8bc1ea8146d2e1309366606"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_tools.py",

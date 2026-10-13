@@ -45,11 +45,17 @@ def toml(value):
     return json.dumps(value,ensure_ascii=False)
 
 
-def settings_args(tools):
+def settings_args(tools,global_servers=None,runtime_env=None):
     stanza={'command':sys.executable,'args':[str(ROOT/'mcp-stdio-proxy.py')],
             'enabled':True,'enabled_tools':tools,'startup_timeout_sec':30,'tool_timeout_sec':240,
-            'env':{'KALTSIT_GROUP':group_id().split(':')[-1],'KALTSIT_CONFIG':str(CONFIG_PATH)}}
+            'env':{'KALTSIT_CONVERSATION':group_id(),'KALTSIT_CONFIG':str(CONFIG_PATH)}}
     # Codex overrides merge maps. A separate name avoids inheriting the user's
     # existing Tulpa HTTP transport; cli_args rejects collisions with this name.
     stanza['tools']={name:{'approval_mode':'approve'} for name in tools}
-    return ['-c','mcp_servers='+toml({SERVER_NAME:stanza})]
+    # MCP subprocesses do not inherit arbitrary environment variables from CLI.
+    # Explicitly pass only this worker's immutable batch/path bindings.
+    for key in ('KALTSIT_REPLY_IDS','KALTSIT_SEED_PACKET_FILE'):
+        if key in (runtime_env or {}):stanza['env'][key]=runtime_env[key]
+    servers={name:dict(spec,enabled=False) for name,spec in (global_servers or {}).items()}
+    servers[SERVER_NAME]=stanza
+    return ['-c','mcp_servers='+toml(servers)]

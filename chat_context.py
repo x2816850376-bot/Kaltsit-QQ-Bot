@@ -117,6 +117,7 @@ class ReplyContextCache:
             hits=[v for v in candidates if 2<=len(v)<=64 and v.casefold() in text.casefold()]
             if hits:names.append({'sender_id':person['sender_id'],'matched_display_name':max(hits,key=len)})
         if message.get('is_self'):address='self_echo'
+        elif GROUP.split(':')[1]=='direct':address='private_to_bot'
         elif account in ats:address='explicit_at_bot'
         elif ats:address='explicit_at_other'
         elif target:address='reply_to_bot' if target.get('is_self') else 'reply_to_other'
