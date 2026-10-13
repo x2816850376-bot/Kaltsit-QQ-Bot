@@ -10,6 +10,7 @@ from chat_participation import ChatParticipation
 from chat_community import CommunityKnowledge
 from chat_world import TerraKnowledge
 from chat_corpus import CanonicalKnowledge
+from chat_social import ConversationSocial
 
 def enrich_snapshot(root,directory,packet):
     root=Path(root);directory=Path(directory)
@@ -23,6 +24,11 @@ def enrich_snapshot(root,directory,packet):
                      ChatParticipation(directory/'group-participation-state.json'),
                      CommunityKnowledge(root/'knowledge/bilibili-arknights'),TerraKnowledge(),CanonicalKnowledge()):
         out=provider.enrich(out,quotes.pending)
+    cid=(packet.get('session') or {}).get('conversation_id')
+    if cid:
+        social=ConversationSocial(directory/'conversation-social.private.json',cid,
+                                  hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
+        out=social.enrich(out)
     return out
 
 def combine(snapshot,incoming):

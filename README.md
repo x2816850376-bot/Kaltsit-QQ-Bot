@@ -16,6 +16,8 @@ Windows 源码发行版。使用当前凯尔希·思衡托角色卡，在 QQ 群
 
 2026-10-13运行优化：修复多会话共享授权时的MCP请求编号冲突；模型只处理本批消息，等待和游标确认交回本机；上下文由宿主预读，沿用同一套对象、人格及知识语境检查，减少重复工具往返。测试窗口在完整模型回复到达后立即显示，CLI退出清理由后台完成。人格、两份Skill和完整知识库不因提速而删除。网络与模型响应仍会波动，联网核实比普通问候更慢，不保证固定秒数。
 
+2026-10-13用户验收更新：新增交流选择Skill，先确定当前回应目的，再由表达重组和气泡检查共同完成回复。短期话题按对象隔离、30分钟过期；群内用语先候选、后由本机审核确认，不启动学习Agent或自动研究。仅明显未完成的短片段额外合批，完整问候不增加固定等待。进一步依据两份原生语音重写对博士的态度：本项目采用博士首要个人牵挂、阿米娅其次的关系解释；信任、保护、感谢和接受分担可以明确表达，保留克制与独立判断，原文知识不改。讲泰拉往事按行动和经历叙述，讨论编剧与演出仍可说“剧情”。没有新增可检索正面聊天示例库。详见[交流运行说明](docs/conversation-runtime.md)和[原生语音提炼](docs/doctor-voice-refinement.md)。
+
 推理链：**QQ → 独立安装的 OneBot v11 桥接 → 内置 Tulpa MCP 源码 → 本机 Codex CLI → GPT-6 Luna**。
 
 不需要 OpenAI API Key。使用者须登录自己的 Codex 账号并能使用 GPT-6 Luna；仍会消耗该账号的 Codex 额度。模型不可用或额度不足时暂停，不自动切换模型。源码包不是 Windows 成品安装包，不带 QQ 登录态、模型账号或 Python 环境。
@@ -34,15 +36,16 @@ Windows 源码发行版。使用当前凯尔希·思衡托角色卡，在 QQ 群
 ## 人格与测试
 
 - `prompts/persona_full.txt`：完整角色卡；`prompts/persona_runtime.txt`：每次推理实际使用的卡。
+- `skills/kaltsit-conversation-action/`：确定当前交流目的，服从角色卡与本地触发。
 - `skills/kaltsit-dialogue-output/`：发送前整体表达重组。
 - `skills/kaltsit-bubble-coherence/`：整组气泡承接及跨轮模板检查。
-- 两份 Skill 都在同一次 Luna 生成中指导表达，没有第二轮润色模型，也不代表微调权重或保证每次都完全符合角色。
+- 三份 Skill 都在同一次 Luna 生成中指导表达，没有第二轮润色模型，也不代表微调权重或保证每次都完全符合角色。
 - 默认 Luna high、Fast 关闭；普通回复 1 条，按独立意思自然分成 2～3 条。@ 按对象交错和切换使用，最多首条，博士称呼位置自由。
 - 成功发送的最近 8 次回应用于避免句式重复，不把 UNKNOWN/失败草稿当已说过的话，不跨群混用。
 - 短消息澄清与正常回复共用表达 Skill，不设置固定问句、不额外调用模型判断；“博士”的位置仍随语义变化。问号也可能是在玩梗、惊讶或纠错，不一律追问。
-- 双击 `06-人格测试窗口.cmd` 打开文字测试；源码包默认端口 **18883**，用于避免与已有本机测试窗口冲突，可在配置中调整。窗口与群聊使用同一人格、Skill及知识库；测试不发送QQ群消息，历史保存在浏览器本地。
+- 双击 `06-人格测试窗口.cmd` 打开文字测试；源码包默认端口 **18883**，用于避免与已有本机测试窗口冲突，可在配置中调整。窗口与群聊使用同一人格、三份Skill及知识库；测试不发送QQ群消息，历史保存在浏览器本地，短期话题和审核用语保存在本副本独立测试目录。窗口的“话题与用语库”入口可查看并确认用语候选，默认地址为 http://127.0.0.1:18883/slang.html ，修改测试端口后随之变化。
 
-修改账号、群范围或私聊开关，需停止并重新配置授权，再启动；旧授权不会自动获得私聊权限。修改运行人格后也应重新配置/启动，使旧会话快照更新；只改两份表达Skill时重启即可。停止不退出QQ、不清空记忆。
+修改账号、群范围或私聊开关，需停止并重新配置授权，再启动；旧授权不会自动获得私聊权限。修改运行人格后也应重新配置/启动，使旧会话快照更新；只改Skill时重启即可；新规则验收时在窗口点击“重新开始”，避免旧历史影响。停止不退出QQ、不清空记忆。
 
 ## 内置完整知识库
 
@@ -78,6 +81,7 @@ node tests/test_hook.cjs
 .venv/Scripts/python.exe scripts/test_prefetched_context.py
 .venv/Scripts/python.exe scripts/test_auto_receive.py
 .venv/Scripts/python.exe scripts/test_window_delivery.py
+.venv/Scripts/python.exe scripts/test_social_transport.py
 .venv/Scripts/python.exe scripts/check_cli_transport.py
 .venv/Scripts/python.exe scripts/check_release.py
 ```
@@ -88,6 +92,6 @@ node tests/test_hook.cjs
 
 将此目录的源码内容提交到新仓库即可。未提供自动推送脚本。先运行发布检查；不上传 `.venv/`、`config/config.json`、`runtime/`、私有知识扩展、登录文件或完整使用过的目录。`.gitignore` 只能防止新的误提交，不能清除已提交过的秘密。
 
-本项目新增程序与 Skill 使用 [MIT](LICENSE)；Tulpa源码保留其 [MIT](vendor/Tulpa/LICENSE)。书籍、台词、剧情等原文保留原权利归属，不属于代码MIT；提供文件不代表获得官方授权或允许任意用途，见[来源与许可](THIRD_PARTY.md)。
+本项目新增程序与 Skill 使用 [MIT](LICENSE)；Tulpa源码保留其 [MIT](vendor/Tulpa/LICENSE)。交流行为与用语审核设计借鉴qq-bridge，来源、适配范围及MIT声明见[借鉴说明](docs/qq-bridge-notice.md)。书籍、台词、剧情等原文保留原权利归属，不属于代码MIT；提供文件不代表获得官方授权或允许任意用途，见[来源与许可](THIRD_PARTY.md)。
 
 本源码版支持指定群、全部群和好友私聊。微信自动投放、陌生人临时会话及定时故事任务未包含。好友私聊不需要@；群聊继续按角色和实际话头选择性接话。

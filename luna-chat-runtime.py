@@ -18,7 +18,7 @@ from mcp import ClientSession
 from mcp.client.streamable_http import streamable_http_client
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from bot_config import ROOT, load, group_id, runtime_dir, connection
-from chat_dialogue import build_developer_instructions, dialogue_sha256, coherence_sha256
+from chat_dialogue import build_developer_instructions, dialogue_sha256, coherence_sha256, action_sha256
 
 SETTINGS = load(False)
 WORK_ROOT = runtime_dir()
@@ -52,6 +52,7 @@ def state(**values):
         values['persona_sha256']=hashlib.sha256(PERSONA_RUNTIME.read_bytes()).hexdigest()
     values['dialogue_skill_sha256']=dialogue_sha256()
     values['bubble_skill_sha256']=coherence_sha256()
+    values['conversation_skill_sha256']=action_sha256()
     STATE.parent.mkdir(parents=True,exist_ok=True)
     STATE.write_text(json.dumps(values,ensure_ascii=False,indent=2),'utf-8')
 
@@ -88,11 +89,12 @@ async def chat_session(existing=None):
                         return payload(await client.call_tool('get_chat_session',{'session_id':candidate['id']}))
                 return payload(await client.call_tool('start_chat_session',{'conversation_id':group_id(),'persona_preset':PERSONA_PRESET,'participation':'quiet','idempotency_key':PERSONA_PRESET+'-'+str(time.time_ns())}))
 
-async def wait_for_input(sid, acknowledge=None):
+async def wait_for_input(sid, acknowledge=None, *, fragment=False):
     """Wait locally, not in an LLM turn. Leave real messages unacknowledged so
     the model reads the same batch through its normal, binding-aware proxy."""
     credential=connection();token=credential['token']
     args={'session_id':sid,'timeout_seconds':20,'quiet_seconds':0.2,'limit':15}
+    if fragment:args.update(timeout_seconds=2,quiet_seconds=1)
     if acknowledge is not None:args['acknowledge_through_id']=acknowledge
     async with httpx.AsyncClient(headers={'Authorization':'Bearer '+token,'X-Tulpa-Client-ID':uuid.uuid4().hex},timeout=30,trust_env=False) as http:
         async with streamable_http_client(credential['url'],http_client=http) as (read,write,_):
@@ -189,6 +191,20 @@ def main():
             state(status='idle',session_id=sid,runtime_starts=total_starts,waiting_without_model=True);return
         if action=='ready':
             last_activity=time.monotonic()
+            from chat_social import should_coalesce
+            if should_coalesce(incoming):
+                try:extra=asyncio.run(wait_for_input(sid,fragment=True))
+                except Exception as exc:
+                    state(status='source_unavailable',session_id=sid,runtime_starts=total_starts,
+                          reason='temporary_local_transport_error',error_type=type(exc).__name__)
+                    time.sleep(.3);continue
+                extra_action=input_wait_action(extra)
+                if extra_action=='stopped':
+                    state(status='stopped',session_id=sid);return
+                if extra_action=='source_unavailable':
+                    state(status='source_unavailable',session_id=sid,runtime_starts=total_starts);continue
+                if extra_action=='ready':incoming=extra
+                if STOP.exists():break
             from conversation_decision import needs_generation
             if not needs_generation(incoming,WORK_ROOT):
                 acknowledge=incoming.get('read_through_id');continue

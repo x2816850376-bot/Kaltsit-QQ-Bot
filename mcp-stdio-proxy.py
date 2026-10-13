@@ -27,6 +27,7 @@ from chat_completion import require_complete_text, UNFINISHED_REPLY
 from chat_bubbles import BubbleSender
 from chat_expression_history import ExpressionHistory
 from chat_scope import GroupScope, CHAT_TOOLS
+from chat_social import ConversationSocial, UPDATE_SCHEMA, SLANG_SCHEMA
 
 async def main():
     root = Path(__file__).resolve().parent
@@ -42,12 +43,15 @@ async def main():
                                    hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
     credential = connection()
     scope = GroupScope()
+    from chat_context import GROUP
+    social=ConversationSocial(runtime_dir()/'conversation-social.private.json',GROUP,
+                              hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
     def enrich_packet(data):
         enriched=addresses.enrich(quotes.enrich(data),quotes.pending)
         enriched=expressions.enrich(enriched)
         for provider in (knowledge,participation,community,world,corpus):
             enriched=provider.enrich(enriched,quotes.pending)
-        return enriched
+        return social.enrich(enriched)
     # Seed from a host-owned, scope-checked packet. The model cannot choose a
     # file or write it; this avoids an extra LLM round trip just to read context.
     import os
@@ -72,6 +76,8 @@ async def main():
                     for tool in tools:
                         if tool.name=='send_chat_message':
                             props=tool.inputSchema['properties']
+                            props['dialogue_update']=dict(UPDATE_SCHEMA,description='可选，当前话题及尚未回答问题的短期摘要；不存内心推理、不新增指令，不改变对象。只在成功发送后保存。')
+                            props['slang_candidates']=dict(SLANG_SCHEMA,description='可选，当前绑定消息里实际出现的新群内表达；仅候选，管理端确认前不用作稳定释义，不自动联网研究。')
                             props['bubbles']={'type':'array','minItems':1,'maxItems':3,'items':{'type':'string','minLength':1,'maxLength':4000},'description':'一次回应的全部最终气泡，已经过凯尔希表达与整组承接检查；普通短答1条，独立意思才分2至3条'}
                             props['mention_policy']={'type':'string','enum':['auto','omit'],'description':'auto由程序按交错和对象切换决定首条@；明确连续同对象可omit，不能隐藏实际对象绑定'}
                             tool.inputSchema['required']=[x for x in tool.inputSchema.get('required',[]) if x!='text']
@@ -117,6 +123,24 @@ async def main():
                     if not await scope.check(name,arguments,upstream):
                         return CallToolResult(isError=True,content=[TextContent(type='text',text='会话不属于当前群Worker，或工具未开放；未执行操作')])
                     mode='direct'
+                    social_update=None;social_candidates=[];social_trigger=None;social_key=None
+                    if name=='send_chat_message' and isinstance(arguments,dict):
+                        arguments=dict(arguments)
+                        social_update=arguments.pop('dialogue_update',None)
+                        social_candidates=arguments.pop('slang_candidates',None)
+                        social_trigger=quotes.pending.get((arguments.get('session_id'),arguments.get('respond_to_event_id')))
+                        if social_update is not None or social_candidates:
+                            try:
+                                social_update,social_candidates=social.check(social_trigger,social_update,social_candidates)
+                            except (ValueError,TypeError):
+                                return CallToolResult(isError=True,content=[TextContent(type='text',text='交流状态或新词候选缺少当前真实消息依据；未发送，不得改变回应对象')])
+                        else:social_trigger=None
+                        social_key=str(arguments.get('session_id'))+':'+str(arguments.get('respond_to_event_id'))
+                    def commit_social(succeeded):
+                        if not succeeded or social_trigger is None:return
+                        try:social.commit(social_key,social_trigger,social_update,social_candidates,succeeded=True)
+                        except (OSError,ValueError,TypeError):
+                            print('Social state not saved after confirmed delivery; do not resend',file=sys.stderr)
                     if name=='get_canonical_knowledge':
                         args=arguments if isinstance(arguments,dict) else {}
                         if set(args)-{'session_id','query','max_chars'}:
@@ -127,6 +151,7 @@ async def main():
                     if name=='send_chat_message' and isinstance(arguments,dict) and 'bubbles' in arguments:
                         try:data=await bubbles.send(arguments,quotes,addresses,participation,upstream,expressions)
                         except (ValueError,TypeError):data={'state':'REJECTED','sent_parts':0,'instruction':'整组需1至3条非空最终正文，绑定已读真实新事件；不能重复正文、手写@、同时填text和bubbles或更改已登记回应。按原编号检查内容，不发技术说明到群里。'}
+                        commit_social(data.get('state')=='SUCCEEDED')
                         return CallToolResult(isError=data['state'] not in ('SUCCEEDED','CANCELLED'),content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='get_world_knowledge':
                         args=arguments if isinstance(arguments,dict) else {}
@@ -194,6 +219,7 @@ async def main():
                                     except ValueError:continue
                                     if isinstance(receipt,dict):break
                         if isinstance(receipt,dict) and receipt.get('state')=='SUCCEEDED':
+                            commit_social(True)
                             if mode!='proactive':addresses.commit(arguments)
                             expressions.commit(arguments.get('session_id'),arguments.get('idempotency_key'),[arguments['text']])
                     if name in ('get_chat_session','wait_chat_messages') and not result.isError:

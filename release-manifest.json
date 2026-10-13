@@ -65,8 +65,8 @@
     },
     {
       "path": "AGENTS.md",
-      "size": 1010,
-      "sha256": "29bd52d6d94c0301f32dc4685bc910c808ba9d7326b9dd0d5eafef99065cb0ec"
+      "size": 1293,
+      "sha256": "ef9bdcc947fa26f5c4b3d1f8009e1fe3783e4f414369e32800e4d98b937b328d"
     },
     {
       "path": "bot_config.py",
@@ -105,8 +105,8 @@
     },
     {
       "path": "chat_dialogue.py",
-      "size": 2166,
-      "sha256": "0ba9f0d49f0f5a66d6586d581bf765a66a03f0d35ed8c131f250190f4afc21f3"
+      "size": 2962,
+      "sha256": "17b4cde76171cbed69784c8fba6ad6ebc234c30f32b125e132ed38e49cf7ddf4"
     },
     {
       "path": "chat_expression_history.py",
@@ -127,6 +127,11 @@
       "path": "chat_scope.py",
       "size": 1573,
       "sha256": "85994cc4f3a1009e6e79e70d6a8abb8e658500ec7d41750485ab1ea37774477f"
+    },
+    {
+      "path": "chat_social.py",
+      "size": 10799,
+      "sha256": "8a1d964ab9ff88249f568728490e81d2d8786a84b81f625f6dd449fd96422b6a"
     },
     {
       "path": "chat_story.py",
@@ -170,23 +175,28 @@
     },
     {
       "path": "conversation_packet.py",
-      "size": 2345,
-      "sha256": "9c257d050dc1aeb0ad87304de530ac598f71c95b4c918ca7bd708253957a5045"
+      "size": 2689,
+      "sha256": "ee989a55a356f1e3ead1f0e73f3e6d182f36548b07be38a6744ef6246a6fb341"
     },
     {
       "path": "dialogue-test-window/index.html",
-      "size": 6710,
-      "sha256": "434da475f119f675b4dc281f605f8406cb34231723ae2f100738be422a952cbe"
+      "size": 7247,
+      "sha256": "0e8d8caa7ee9d0957361454e0e9ed5c1b0ca322a38a3d60efd8650b51b0255dd"
     },
     {
       "path": "dialogue-test-window/model_stream.py",
-      "size": 3400,
-      "sha256": "792e19f6c840068e8bd15c6e8c5be7de630302af10367c2ab1f84fb371dca485"
+      "size": 3568,
+      "sha256": "b89abdd54183aba27228ea5cae24324c103d5a332443c2359cb55ba2ca74d8e7"
     },
     {
       "path": "dialogue-test-window/server.py",
-      "size": 10707,
-      "sha256": "61aa21061988d3fc4cdafe6521a1d9dd9009aee0f0c577485a99569ac0a50669"
+      "size": 15706,
+      "sha256": "e8d339958f024b55ef1b5353cd133769606942bde23f70c877c541647a688687"
+    },
+    {
+      "path": "dialogue-test-window/slang.html",
+      "size": 3321,
+      "sha256": "3f2b45d9c3cc494c14c6ff97fe262defd3bc50152c9cdd21ff7e3b8b63cc0e15"
     },
     {
       "path": "dialogue-test-window/test-policy.txt",
@@ -199,14 +209,29 @@
       "sha256": "3c018e66dfb09a24719f84bafa2c844d2f621c940526e9507b4c9b2f149def21"
     },
     {
+      "path": "docs/conversation-runtime.md",
+      "size": 3164,
+      "sha256": "54479f7113d1133966c7887293739c172bc9b854f02f45740dca243c58a30bb9"
+    },
+    {
+      "path": "docs/doctor-voice-refinement.md",
+      "size": 4643,
+      "sha256": "7005f721da42e9077cd864a90d319c610cba5a55a417be4e3ce393b505402352"
+    },
+    {
       "path": "docs/knowledge.md",
       "size": 4655,
       "sha256": "5270e08bc3c4e5c99697008eea286810900e54d04b7cc553412a21e92a1b8fa6"
     },
     {
+      "path": "docs/qq-bridge-notice.md",
+      "size": 1475,
+      "sha256": "63ae3cbb4c3c01f4f7d2d7378540ec29a20473273e9c3a10b4e33fe62aba8db7"
+    },
+    {
       "path": "docs/validation.md",
-      "size": 11729,
-      "sha256": "bebba17ebdd4686e6bbd5b4d68b3b151808259b82fcbe7302b72e0e9a5de0d00"
+      "size": 13595,
+      "sha256": "75a852c73f3fadf6af20656cb1ca057a0fe5785d0bb4eb2ebcca81389980868f"
     },
     {
       "path": "doctor.py",
@@ -420,13 +445,13 @@
     },
     {
       "path": "luna-chat-runtime.py",
-      "size": 25169,
-      "sha256": "b0277292ec5baf7253e0e91f15c136abc9aae66e97a1bd87fd2c7b9938dd527c"
+      "size": 26189,
+      "sha256": "c5036efd668e906ee135b635e1027e7df3e999dcea8428d7d9b5e9bf54331f28"
     },
     {
       "path": "mcp-stdio-proxy.py",
-      "size": 18976,
-      "sha256": "5dd8e0798cb7cf945124dcbf2eb424b718abae7476b5ebdee3f1a3338d1173a7"
+      "size": 21465,
+      "sha256": "8ddaec9f99caac5fd776c0d56f92640eee83a50577f22ef009b0dab21cd86a82"
     },
     {
       "path": "model_slots.py",
@@ -435,18 +460,18 @@
     },
     {
       "path": "prompts/persona_full.txt",
-      "size": 17554,
-      "sha256": "9292c97b721b1010941b9455d95c720f6306e260b60157df0f7f4c3de5382da4"
+      "size": 20123,
+      "sha256": "3ea9033ceb07e9e5687a1f800252449dbdf0a051a42e44d5a7c547113977f9ac"
     },
     {
       "path": "prompts/persona_runtime.txt",
-      "size": 15291,
-      "sha256": "b18256f5076365ba324f038605a7a1328ea76effa19c925e6c295d746038bf2d"
+      "size": 17770,
+      "sha256": "30d6abd5d4b4e821d2a876d70b9f4319b0e95edfc7c22d3dd585e6074c2a77d3"
     },
     {
       "path": "README.md",
-      "size": 11775,
-      "sha256": "58b66bb39e7440c5a7cf3abc925ad4b1a6a0f09d5027ea8632d538eb01a337a8"
+      "size": 13218,
+      "sha256": "c88a4f3814cf9bb15e9b0fcef56ca50766fb7544b8b6cd6623d7aa40350f46c4"
     },
     {
       "path": "requirements.txt",
@@ -509,6 +534,11 @@
       "sha256": "d891d0ece896d8aedead8f0047af31cc9005122a5e0bb86c8b3b3915a0777d2b"
     },
     {
+      "path": "scripts/test_social_transport.py",
+      "size": 3683,
+      "sha256": "661db486558c86e98faac9e618140a6ea3478a5c9d7ac54ca2d6abf5937c27f9"
+    },
+    {
       "path": "scripts/test_window_delivery.py",
       "size": 2362,
       "sha256": "fc71433d2aa2bf27de55a4f01b0aa659b8169744f7952f75755c8dba1d466908"
@@ -524,14 +554,19 @@
       "sha256": "8ef8586f634a3bb78435ae5646bf608b9460f19236e13a95225e418005013709"
     },
     {
+      "path": "skills/kaltsit-conversation-action/SKILL.md",
+      "size": 2861,
+      "sha256": "a1aa8de4eaeb69d0b659fbbfb517410d274cc7d6a28718e3a4f43bc03d57ec5a"
+    },
+    {
       "path": "skills/kaltsit-dialogue-output/references/feedback-20261009.md",
       "size": 10630,
       "sha256": "f59eccd25ea19e8badc3c0638d2b5da10cc386fcca43ff3becbc36bf27e26a54"
     },
     {
       "path": "skills/kaltsit-dialogue-output/SKILL.md",
-      "size": 6141,
-      "sha256": "5beb3a09b3969ee957e0179730ae48e1df095c82cd3bbf5bdb9cd32eab727acb"
+      "size": 7474,
+      "sha256": "640bc2502dd7340f978769b2f97fb5fa3ea48f7479b5a6ad517b43b7041dd6f5"
     },
     {
       "path": "tests/test_chat_bubbles.py",
@@ -544,9 +579,14 @@
       "sha256": "82c389d2167dee67f15007251165738873e718af0e1f9cab7a3a6a8a5fc28aa7"
     },
     {
+      "path": "tests/test_conversation_social.py",
+      "size": 9544,
+      "sha256": "6ff7df727799aa06e47a9431c7e3ed29e636d6c8f7136fbfda161d9839b22433"
+    },
+    {
       "path": "tests/test_dialogue_output.py",
-      "size": 3412,
-      "sha256": "81c0b11554713c412f571cb2bb288326d08775bdde0e73ea99d4dc3bab5f2f5d"
+      "size": 3530,
+      "sha256": "b348c4ec29422f444617114490b534da34bf8ab3aa0a690f9a22ca0dbce1cc06"
     },
     {
       "path": "tests/test_expression_history.py",
@@ -615,8 +655,8 @@
     },
     {
       "path": "THIRD_PARTY.md",
-      "size": 3315,
-      "sha256": "4802db70102f2022569c0c6b638e263303750c5d44630713a937033d64cef387"
+      "size": 3600,
+      "sha256": "ae2c7df671e8f541b6dd9ec33f1d57c94da71e0d9ad3551f09b3a95376f2d2ef"
     },
     {
       "path": "tulpa-tools-only.cjs",
@@ -890,8 +930,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/kaltsit_arknights_standard.md",
-      "size": 15291,
-      "sha256": "b18256f5076365ba324f038605a7a1328ea76effa19c925e6c295d746038bf2d"
+      "size": 17770,
+      "sha256": "30d6abd5d4b4e821d2a876d70b9f4319b0e95edfc7c22d3dd585e6074c2a77d3"
     },
     {
       "path": "vendor/Tulpa/chatlocal/qq_labels.py",

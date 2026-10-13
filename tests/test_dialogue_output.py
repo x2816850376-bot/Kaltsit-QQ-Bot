@@ -9,7 +9,7 @@ import unittest
 
 ROOT = Path(__file__).resolve().parent.parent
 sys.path.insert(0, str(ROOT))
-from chat_dialogue import build_developer_instructions, dialogue_sha256, read_dialogue_skill, read_coherence_skill
+from chat_dialogue import build_developer_instructions, dialogue_sha256, read_dialogue_skill, read_coherence_skill, read_action_skill
 
 spec = importlib.util.spec_from_file_location('dialogue_runtime', ROOT/'luna-chat-runtime.py')
 worker = importlib.util.module_from_spec(spec)
@@ -41,7 +41,7 @@ class DialogueOutputTests(unittest.TestCase):
             path = Path(folder)/'SKILL.md'
             path.write_text('---\nname: kaltsit-dialogue-output\n---\n可信指导', 'utf-8')
             self.assertEqual(build_developer_instructions('角色卡', path),
-                             '角色卡\n\n【发送前表达辅助：服从上面的当前角色卡，不另设人格】\n可信指导\n\n【表达重组后：检查整组气泡承接，仍服从角色卡】\n'+read_coherence_skill())
+                             '角色卡\n\n【交流选择：先承接当下，再组织表达，服从角色卡】\n'+read_action_skill()+'\n\n【发送前表达辅助：服从上面的当前角色卡，不另设人格】\n可信指导\n\n【表达重组后：检查整组气泡承接，仍服从角色卡】\n'+read_coherence_skill())
             path.write_text('---\nname: unrelated\n---\n其他人格', 'utf-8')
             with self.assertRaises(ValueError): read_dialogue_skill(path)
 

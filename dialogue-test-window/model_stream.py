@@ -5,11 +5,16 @@ from pathlib import Path
 import subprocess
 import threading
 import time
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
 
 def validate_reply(text):
     try:value=json.loads(text)
     except (ValueError,TypeError):return False
-    return (isinstance(value,dict) and set(value)=={'bubbles'} and
+    from chat_social import response_object
+    try:response_object(value)
+    except (ValueError,TypeError):return False
+    return (isinstance(value,dict) and
             isinstance(value['bubbles'],list) and 1<=len(value['bubbles'])<=3 and
             all(isinstance(s,str) and s.strip() and len(s)<=4000 for s in value['bubbles']))
 
