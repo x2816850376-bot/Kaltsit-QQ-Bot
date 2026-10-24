@@ -29,6 +29,8 @@ from chat_expression_history import ExpressionHistory
 from chat_scope import GroupScope, CHAT_TOOLS
 from chat_social import ConversationSocial, UPDATE_SCHEMA, SLANG_SCHEMA
 from chat_continuity import ConversationContinuity, UPDATE_SCHEMA as CONTINUITY_SCHEMA
+from chat_time import ExchangeClock
+from chat_semantic import SemanticClient
 
 async def main():
     root = Path(__file__).resolve().parent
@@ -48,13 +50,16 @@ async def main():
     social=ConversationSocial(runtime_dir()/'conversation-social.private.json',GROUP,
                               hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
     continuity=ConversationContinuity(runtime_dir()/'conversation-continuity.private.json',GROUP,social.revision)
+    exchange_clock=ExchangeClock(runtime_dir()/'exchange-time.private.json',GROUP)
+    semantic=SemanticClient(root)
     def enrich_packet(data):
         enriched=addresses.enrich(quotes.enrich(data),quotes.pending)
         enriched=expressions.enrich(enriched)
         for provider in (knowledge,participation,community,world,corpus):
             enriched=provider.enrich(enriched,quotes.pending)
         continuity.reconcile(runtime_dir()/'qq-response-batches.json')
-        return continuity.enrich(social.enrich(enriched))
+        exchange_clock.reconcile(runtime_dir()/'qq-response-batches.json')
+        return semantic.enrich(exchange_clock.enrich(continuity.enrich(social.enrich(enriched))))
     # Seed from a host-owned, scope-checked packet. The model cannot choose a
     # file or write it; this avoids an extra LLM round trip just to read context.
     import os
@@ -160,7 +165,10 @@ async def main():
                         args=arguments if isinstance(arguments,dict) else {}
                         if set(args)-{'session_id','query','max_chars'}:
                             data={'status':'rejected','reason':'无效原作语料查询参数'}
-                        else:data=corpus.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1500))
+                        else:
+                            data=corpus.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1500))
+                            if data.get('status') not in ('rejected','unavailable'):
+                                data=semantic.supplement({'content':args.get('query','')},{'canonical_knowledge':data}).get('canonical_knowledge',data)
                         return CallToolResult(isError=data['status'] in ('rejected','unavailable'),
                             content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='send_chat_message' and isinstance(arguments,dict) and 'bubbles' in arguments:
@@ -169,12 +177,17 @@ async def main():
                         commit_social(data.get('state')=='SUCCEEDED')
                         try:continuity.confirm(continuity_key,data)
                         except (OSError,ValueError,TypeError):print('Continuity state not saved; do not resend delivered bubbles',file=sys.stderr)
+                        try:exchange_clock.reconcile(runtime_dir()/'qq-response-batches.json')
+                        except (OSError,ValueError,TypeError):print('Exchange time not saved; do not resend',file=sys.stderr)
                         return CallToolResult(isError=data['state'] not in ('SUCCEEDED','CANCELLED'),content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='get_world_knowledge':
                         args=arguments if isinstance(arguments,dict) else {}
                         if set(args)-{'session_id','query','max_chars'}:
                             data={'status':'rejected','reason':'无效世界观查询参数'}
-                        else:data=continuity.offer(world.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1800)))
+                        else:
+                            data=continuity.offer(world.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1800)))
+                            if data.get('status') not in ('rejected','unavailable'):
+                                data=semantic.supplement({'content':args.get('query','')},{'world_knowledge':data}).get('world_knowledge',data)
                         return CallToolResult(isError=data['status'] in ('rejected','unavailable'),
                             content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='get_community_knowledge':
@@ -238,6 +251,8 @@ async def main():
                         if isinstance(receipt,dict) and receipt.get('state')=='SUCCEEDED':
                             try:continuity.confirm(continuity_key,{'parts':[{'index':1,'state':'SUCCEEDED'}]})
                             except (OSError,ValueError,TypeError):print('Continuity state not saved; do not resend delivered text',file=sys.stderr)
+                            try:exchange_clock.confirm(continuity_key,trigger,{'parts':[{'state':'SUCCEEDED'}]})
+                            except (OSError,ValueError,TypeError):print('Exchange time not saved; do not resend',file=sys.stderr)
                             commit_social(True)
                             if mode!='proactive':addresses.commit(arguments)
                             expressions.commit(arguments.get('session_id'),arguments.get('idempotency_key'),[arguments['text']])

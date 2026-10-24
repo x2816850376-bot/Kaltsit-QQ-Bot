@@ -16,6 +16,7 @@ def main():
         config.write_text(json.dumps({'account':'10000001','groups':['20000001','20000002'],
             'onebot_http_url':'http://127.0.0.1:3000','onebot_ws_url':'ws://127.0.0.1:3001',
             'onebot_token':'synthetic-test-only','codex_path':'synthetic-codex.exe','node_path':'node'}),'utf-8')
+        os.environ['KALTSIT_SEMANTIC_DISABLED']='1'
         os.environ['KALTSIT_CONFIG']=str(config);os.environ['KALTSIT_GROUP']='20000001'
         # Patches cover only CLI discovery/help. subprocess generation tests still
         # verify their own argument/stdin isolation and mock their model result.

@@ -23,7 +23,7 @@ def main():
             records.append({'path':path.relative_to(ROOT).as_posix(),'size':len(body),'sha256':hashlib.sha256(body).hexdigest()})
     world=json.loads((ROOT/'knowledge/terra-journey/manifest.json').read_text('utf-8'))
     corpus=json.loads((ROOT/'knowledge/kaltsit-corpus/manifest.json').read_text('utf-8'))
-    manifest.write_bytes(json.dumps({'edition':'full-knowledge-source','prepared_date':options.prepared_date,'model':'gpt-6-luna','reasoning':'high','fast':False,'personal_data_included':False,'group_memory_included':False,'full_indexed_book_text_included':True,'scan_images_included':False,'world_indexed_pages':world['indexed_pages'],'handwritten_regions':world['searchable_handwriting_passages'],'canonical_source_files':corpus['source_files'],'manifest_self_excluded':True,'files':records},ensure_ascii=False,indent=2).encode('utf-8'))
+    manifest.write_bytes(json.dumps({'edition':'full-knowledge-source','prepared_date':options.prepared_date,'model':'gpt-6-luna','reasoning':'high','fast':False,'personal_data_included':False,'group_memory_included':False,'full_indexed_book_text_included':True,'scan_images_included':False,'optional_embedding_model':'BAAI/bge-small-zh-v1.5','embedding_assets_included':False,'exchange_clock_state_included':False,'world_indexed_pages':world['indexed_pages'],'handwritten_regions':world['searchable_handwriting_passages'],'canonical_source_files':corpus['source_files'],'manifest_self_excluded':True,'files':records},ensure_ascii=False,indent=2).encode('utf-8'))
     target=ROOT.with_name('凯尔希QQ机器人-完整知识库版.zip')
     if target.exists() and not options.replace:raise ValueError('同名ZIP已存在；明确要更新时传入--replace，校验新包后才替换')
     temporary=target.with_name(target.name+'.'+uuid.uuid4().hex+'.pending')

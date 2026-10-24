@@ -12,6 +12,8 @@ from chat_world import TerraKnowledge
 from chat_corpus import CanonicalKnowledge
 from chat_social import ConversationSocial
 from chat_continuity import ConversationContinuity
+from chat_time import ExchangeClock
+from chat_semantic import SemanticClient
 
 def enrich_snapshot(root,directory,packet):
     root=Path(root);directory=Path(directory)
@@ -34,6 +36,10 @@ def enrich_snapshot(root,directory,packet):
                                          hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
         continuity.reconcile(directory/'qq-response-batches.json')
         out=continuity.enrich(out)
+        clock=ExchangeClock(directory/'exchange-time.private.json',cid)
+        clock.reconcile(directory/'qq-response-batches.json')
+        out=clock.enrich(out)
+    out=SemanticClient(root).enrich(out)
     return out
 
 def combine(snapshot,incoming):

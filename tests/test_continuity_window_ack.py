@@ -91,5 +91,17 @@ class WindowAckTests(unittest.TestCase):
         self.assertEqual(runner.run_turn.call_count,1)
         self.assertFalse(self.make_store(self.scope).data['followups'])
 
+    def test_ordinary_greeting_records_exchange_only_after_display(self):
+        runner=SimpleNamespace(run_turn=Mock(return_value=(json.dumps({'bubbles':['下午好，博士']}),[],.1)))
+        original=self.server.load_module
+        def modules(name,path):return runner if name=='test_model_stream' else original(name,path)
+        with patch.object(self.server,'load_current_runtime',return_value=SimpleNamespace(cli_args=lambda:['fake','-'])),patch.object(self.server,'load_module',side_effect=modules),patch.object(self.server,'current_metadata',return_value={}):
+            result=self.server.generate({'nickname':'博士','message':'下午好凯尔希','test_id':self.identity})
+        self.assertEqual(runner.run_turn.call_count,1)
+        self.assertEqual(len(result['delivery_id']),32)
+        self.assertFalse(self.server.exchange_clock(self.scope).data['people'])
+        self.assertEqual(self.post('/chat/ack',{'test_id':self.identity,'delivery_id':result['delivery_id']})[0],200)
+        self.assertIn('test:博士',self.server.exchange_clock(self.scope).data['people'])
+
 
 if __name__=='__main__':unittest.main()

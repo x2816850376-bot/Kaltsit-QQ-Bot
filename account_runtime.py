@@ -71,6 +71,8 @@ def main():
 
     chat.receiver.on_event=receive
     service.start()
+    from chat_semantic import ensure_worker
+    ensure_worker()
     if not service.status()['running']:raise ValueError('Account MCP failed to start')
     chat.receiver.start()
     children={};paused=False;last_write=0

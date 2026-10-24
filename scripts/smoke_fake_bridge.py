@@ -114,7 +114,7 @@ async def main():
             ws_port=ws_server.sockets[0].getsockname()[1]
             with tempfile.TemporaryDirectory(prefix='kaltsit-fake-onebot-') as temp:
                 stage=Path(temp)/'source'
-                shutil.copytree(ROOT,stage,ignore=shutil.ignore_patterns('__pycache__','.venv','runtime','private-knowledge','data','.tmp','.cache','imports','.git'))
+                shutil.copytree(ROOT,stage,ignore=shutil.ignore_patterns('__pycache__','.venv','.semantic-venv','runtime','private-knowledge','data','.tmp','.cache','imports','.git'))
                 cfg={'account':ACCOUNT,'groups':GROUPS,'onebot_http_url':f'http://127.0.0.1:{http.server_port}','onebot_ws_url':f'ws://127.0.0.1:{ws_port}','onebot_token':TOKEN,'mcp_port':port(),'test_port':port()}
                 config=stage/'config/config.json';config.write_text(json.dumps(cfg),'utf-8')
                 env=dict(os.environ,KALTSIT_CONFIG=str(config),KALTSIT_GROUP=GROUPS[0],PYTHONUTF8='1',PYTHONIOENCODING='utf-8')

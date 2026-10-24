@@ -35,6 +35,7 @@ def load_current_runtime():
 
 def current_metadata(worker=None):
     import hashlib
+    from chat_semantic import status as semantic_status
     worker = worker or load_current_runtime()
     manifest_path=ROOT/'knowledge/terra-journey/manifest.json'
     manifest=json.loads(manifest_path.read_text('utf-8')) if manifest_path.exists() else {}
@@ -47,6 +48,8 @@ def current_metadata(worker=None):
             'conversation_skill_sha256': load_module('metadata_action',ROOT/'chat_dialogue.py').action_sha256(),
             'conversation_features':['action','short_threads','reviewed_slang','fragment_batch'],
             'continuity_features':['pending_exchanges_72h','source_bound_stories_7d','confirmed_bubble_progress'],
+            'local_retrieval':semantic_status(ROOT),
+            'time_context':'confirmed_exchange_per_person',
             'dialogue_skill_sha256': worker.dialogue_sha256(),
             'bubble_skill_sha256': load_module('metadata_dialogue',ROOT/'chat_dialogue.py').coherence_sha256(),
             'reply_format':'natural_bubbles',
@@ -92,6 +95,12 @@ def continuity_store(scope):
     social=social_store(scope)
     return ConversationContinuity(social.path.with_name('conversation-continuity.private.json'),social.cid,social.revision)
 
+
+def exchange_clock(scope):
+    from chat_time import ExchangeClock
+    social=social_store(scope)
+    return ExchangeClock(social.path.with_name('exchange-time.private.json'),scope)
+
 def social_scopes(test_id):
     result=[]
     if test_id:result.append('test:'+test_id)
@@ -103,7 +112,7 @@ def social_scopes(test_id):
     return result[:100]
 
 
-def build_prompt(data, *, prepared=None):
+def build_prompt(data, *, prepared=None, lookup=True):
     scope=test_scope(data)
     nickname = data.get('nickname', '晨星')
     message = data.get('message', '')
@@ -122,6 +131,7 @@ def build_prompt(data, *, prepared=None):
         name = row.get('nickname', '')
         if not isinstance(text, str) or not isinstance(name, str): raise ValueError('无效历史消息')
         rows.append({'role': row['role'], 'nickname': name[:40], 'content': text[:1500]})
+    if not lookup:return ''  # HTTP input validation never performs retrieval.
     chat = {'context': context, 'recent_messages': rows,
             'current_time': datetime.now().astimezone().isoformat(timespec='seconds'),
             'current': {'sender_id': 'test:'+nickname, 'sender_name': nickname,
@@ -130,6 +140,7 @@ def build_prompt(data, *, prepared=None):
     if continuity:
         chat['current'].update(conversation_id=scope,id=time.time_ns(),is_self=False)
         with SOCIAL_LOCK:chat.update(continuity.context(chat['current']))
+        with SOCIAL_LOCK:chat.update(exchange_clock(scope).context(chat['current']))
     expression = load_module('test_expression_history', ROOT/'chat_expression_history.py')
     chat['recent_self_replies'] = expression.window_replies(history)
     chat['recent_self_reply_rules'] = expression.RULE
@@ -158,6 +169,8 @@ def build_prompt(data, *, prepared=None):
     query=corpus.corpus_query(chat['current'])
     if query:
         chat['canonical_knowledge']=corpus.CanonicalKnowledge().retrieve(query,1000)
+    from chat_semantic import SemanticClient
+    chat=SemanticClient(ROOT).supplement(chat['current'],chat)
     if prepared is not None:prepared.update(continuity=continuity,trigger=chat['current'])
     return ('独立文字聊天测试。按developer中的当前凯尔希·思衡托角色卡和表达自检回应当前消息。'
             '先按交流选择Skill确定本次回应目的，按表达Skill重组，再按整组气泡Skill检查承接及人格事实。输出标准JSON对象，bubbles为1至3条最终正文；短答一条，独立意思才分条，故事按叙事段落，不拆代码和链接。可选dialogue_update={"topic":"当前话题","pending_question":"尚未回答的问题","progress":"刚确认或纠正的内容","closed":false}，没有未结束的话题省略，结束可closed=true；可选slang_candidates=[{"term":"当前消息实际出现的新词","meaning":"不确定留空","usage":"用法"}]，最多2条，仅候选。顶层仅允许bubbles、dialogue_update、slang_candidates及下述continuity_update，JSON仅供宿主，窗口只展示气泡正文。改写或重说当前完成，不输出解释或思考过程。'
@@ -206,9 +219,9 @@ def generate(data):
             social=social_store(scope)
             try:social.commit(str(trigger['id'])+':'+str(time.time_ns()),trigger,value.get('dialogue_update'),value.get('slang_candidates'),succeeded=True)
             except (OSError,ValueError,TypeError):pass  # Never retry a complete reply for metadata failure.
-        if value.get('continuity_update') is not None:
+        if prepared.get('continuity'):
             delivery_id=uuid.uuid4().hex
-            try:prepared['continuity'].stage(delivery_id,prepared['trigger'],value['continuity_update'],bubbles)
+            try:prepared['continuity'].stage(delivery_id,prepared['trigger'],value.get('continuity_update') or {},bubbles)
             except (OSError,ValueError,TypeError):
                 # Auxiliary memory failure cannot erase a completed reply or
                 # cause another paid model generation.
@@ -270,7 +283,7 @@ class Handler(BaseHTTPRequestHandler):
             if not 0 < length <= 65536: raise ValueError('请求过长')
             data = json.loads(self.rfile.read(length))
             if not isinstance(data, dict): raise ValueError('无效请求')
-            if self.path=='/chat':build_prompt(data)
+            if self.path=='/chat':build_prompt(data,lookup=False)
         except (ValueError, TypeError): return self.respond(400, {'error': '请检查消息格式与长度'})
         if self.path=='/chat/ack':
             try:
@@ -281,6 +294,7 @@ class Handler(BaseHTTPRequestHandler):
                     delivery=next((r for r in store.data['deliveries'] if r['key']==identity),None)
                     if delivery is None:raise ValueError('Unknown delivery')
                     store.confirm(identity,{'parts':[{'index':i+1,'state':'SUCCEEDED'} for i in range(len(delivery['bubbles']))]})
+                    exchange_clock(scope).confirm(identity,delivery['trigger'],{'parts':[{'state':'SUCCEEDED'}]})
                 return self.respond(200,{'ok':True})
             except (OSError,ValueError,TypeError):return self.respond(400,{'error':'回复确认失败，未推进后续状态'})
         if self.path in ('/slang/review','/social/reset'):
@@ -291,6 +305,7 @@ class Handler(BaseHTTPRequestHandler):
                         if scope is None or set(data)!={'test_id'}:raise ValueError('Reset only owns a test conversation')
                         social_store(scope).path.unlink(missing_ok=True)
                         continuity_store(scope).path.unlink(missing_ok=True)
+                        exchange_clock(scope).path.unlink(missing_ok=True)
                     else:
                         if set(data)-{'scope','id','status','meaning','usage'}:raise ValueError('Unknown review fields')
                         social_store(data.get('scope')).review(data.get('id'),data.get('status'),data.get('meaning'),data.get('usage'))
@@ -305,4 +320,6 @@ class Handler(BaseHTTPRequestHandler):
 
 
 if __name__ == '__main__':
+    from chat_semantic import ensure_worker
+    ensure_worker()
     ThreadingHTTPServer(('127.0.0.1', PORT), Handler).serve_forever()

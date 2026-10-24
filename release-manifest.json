@@ -1,6 +1,6 @@
 {
   "edition": "full-knowledge-source",
-  "prepared_date": "2026-10-24",
+  "prepared_date": "2026-10-25",
   "model": "gpt-6-luna",
   "reasoning": "high",
   "fast": false,
@@ -8,6 +8,9 @@
   "group_memory_included": false,
   "full_indexed_book_text_included": true,
   "scan_images_included": false,
+  "optional_embedding_model": "BAAI/bge-small-zh-v1.5",
+  "embedding_assets_included": false,
+  "exchange_clock_state_included": false,
   "world_indexed_pages": 454,
   "handwritten_regions": 24,
   "canonical_source_files": 15,
@@ -15,8 +18,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "size": 256,
-      "sha256": "e12f3f1a33d191847ddf20c2ee3528e60b80960782f4566edd51fb12fd493c86"
+      "size": 272,
+      "sha256": "2e45f92a36447d4d65c2f06ce62045f46c6985739fb8aac087a51b787fa0afee"
     },
     {
       "path": "01-安装依赖.cmd",
@@ -59,14 +62,19 @@
       "sha256": "ed2ff5ed8daf24a2ed1cc40e7951645c573dbb548bfbae4ed83e7ac449df1886"
     },
     {
+      "path": "09-安装本地语义检索.cmd",
+      "size": 179,
+      "sha256": "d7ce1b960b1d7313d228eeff4bb98794ff779a84241a220bc4348f2f300d4c74"
+    },
+    {
       "path": "account_runtime.py",
-      "size": 6489,
-      "sha256": "189b3ce94349694e47305731e2b45187bfe8d4521b44a7e16e3d2771c4c50351"
+      "size": 6553,
+      "sha256": "9e0144801f1375f4ec256097dc2a35017cb26c390db11284016084e593b82151"
     },
     {
       "path": "AGENTS.md",
-      "size": 1293,
-      "sha256": "ef9bdcc947fa26f5c4b3d1f8009e1fe3783e4f414369e32800e4d98b937b328d"
+      "size": 1525,
+      "sha256": "15aaa25df73b8265f57c7914b1a7bf8cf8d037dc880f188509d2c7766ab4b6b8"
     },
     {
       "path": "bot_config.py",
@@ -134,6 +142,11 @@
       "sha256": "85994cc4f3a1009e6e79e70d6a8abb8e658500ec7d41750485ab1ea37774477f"
     },
     {
+      "path": "chat_semantic.py",
+      "size": 15045,
+      "sha256": "9fe1757ae0ca73f73c1841f757568b1c8763f49d8c81bef61513fd941deb208c"
+    },
+    {
       "path": "chat_social.py",
       "size": 11094,
       "sha256": "d86d74c786a2cd455968f9a7f3814923d229d81eeebf440aadba986965d130c8"
@@ -147,6 +160,11 @@
       "path": "chat_style.py",
       "size": 1321,
       "sha256": "810cbc4f01535e3e18f6f3bed92cda49fcfd89e81d11aa89760b4891689024dd"
+    },
+    {
+      "path": "chat_time.py",
+      "size": 3740,
+      "sha256": "3f3ac835d58759c33d12f4003996a88d74d7a64dc18f144cd8eb665352010432"
     },
     {
       "path": "chat_world.py",
@@ -180,8 +198,8 @@
     },
     {
       "path": "conversation_packet.py",
-      "size": 3058,
-      "sha256": "36214ea19540d87a4ff0348237c63dee459780c68650b9117918d588a927af88"
+      "size": 3340,
+      "sha256": "539d8dc9e2e1f66c1e634d35dfc63480f25e7c600ae196587e61a64a517bf2a6"
     },
     {
       "path": "dialogue-test-window/index.html",
@@ -195,8 +213,8 @@
     },
     {
       "path": "dialogue-test-window/server.py",
-      "size": 19272,
-      "sha256": "22989112caa0f9bfa71c48e225eaa9a91864860a1cd6677e1adbd1c0a5daef10"
+      "size": 20191,
+      "sha256": "735000ee2ada12c24abd7ce09412420c21768984bfcfbc6e09b544f31ccc71c4"
     },
     {
       "path": "dialogue-test-window/slang.html",
@@ -239,9 +257,14 @@
       "sha256": "63ae3cbb4c3c01f4f7d2d7378540ec29a20473273e9c3a10b4e33fe62aba8db7"
     },
     {
+      "path": "docs/semantic-time.md",
+      "size": 4470,
+      "sha256": "251da6267f7129f0a37c53a0c60bc45626480dae0060ba32b930377c4f8b35fc"
+    },
+    {
       "path": "docs/validation.md",
-      "size": 16017,
-      "sha256": "f0cee0e3f83b86c3607b297aaef5fe06373fdd203ff341a49484491cba99c27b"
+      "size": 17427,
+      "sha256": "373cc0447bb011ec8c87353e7f9541fa5acf784f732e20525ea145a78bf7b303"
     },
     {
       "path": "doctor.py",
@@ -460,8 +483,8 @@
     },
     {
       "path": "mcp-stdio-proxy.py",
-      "size": 23804,
-      "sha256": "f691e1679a9fd9c99d5e899cf7e4f8b09daf5efa23ba1962c9919cff3e50881c"
+      "size": 25118,
+      "sha256": "b9c92abe410d1a02a51fcb76820e2a0d333aa8431746bccca0f2facbe1cb458e"
     },
     {
       "path": "model_slots.py",
@@ -480,8 +503,13 @@
     },
     {
       "path": "README.md",
-      "size": 14252,
-      "sha256": "b7a9f1b5436a0a0ff05a3d1c50438bfd04d6d64af6c6a3e678c94e1c0685c1a8"
+      "size": 15429,
+      "sha256": "4b163ec336e311b1d12bb820e8b0e242c51d1c19a264af2daa31629d25724e16"
+    },
+    {
+      "path": "requirements-semantic.txt",
+      "size": 90,
+      "sha256": "f16c90d7d1d3879b04bc1cd3155b60d3ebb78ccd1975072b604dd4525f0b6350"
     },
     {
       "path": "requirements.txt",
@@ -494,9 +522,14 @@
       "sha256": "7a8f8d4128a074e73bded451fc4fd68e88f6d228b3d80197f2f2ec643d3ecdfd"
     },
     {
+      "path": "scripts/build_semantic_index.py",
+      "size": 5878,
+      "sha256": "017aff5c098ca6a8faeea5e9074cbbfce2a965bd6252b1d86f3e4b097519802a"
+    },
+    {
       "path": "scripts/build_source_zip.py",
-      "size": 3045,
-      "sha256": "20d58b826ea5b539457af8c88dc8fc3d656c78fc0465c6d6026d2b04b69123a0"
+      "size": 3169,
+      "sha256": "0b2ae7b47d846bc2740b989a1423170eb654328b2741e53f1146021cb42d52c5"
     },
     {
       "path": "scripts/check_cli_transport.py",
@@ -505,8 +538,8 @@
     },
     {
       "path": "scripts/check_release.py",
-      "size": 2096,
-      "sha256": "8b579caaf9143cae21b8e8880e760dbafb3daf15e2fda4dfbc617fbb2b7252dd"
+      "size": 2113,
+      "sha256": "14dbab397372a6143ce8add94d4602ab73f78af913ce19f6538b33f9103c8c90"
     },
     {
       "path": "scripts/import_private_knowledge.py",
@@ -515,18 +548,18 @@
     },
     {
       "path": "scripts/run_tests.py",
-      "size": 1367,
-      "sha256": "e3f2f7e02e26fe3a1ba1836df0f7952c32120fb376c29cc2e99e95defeb33e90"
+      "size": 1419,
+      "sha256": "2ee010dce09af4946aa812baf5fd838f02a38c755ffa4eec69ba9f788159a2c9"
     },
     {
       "path": "scripts/smoke_fake_bridge.py",
-      "size": 10056,
-      "sha256": "23b44bb47ee3b84acc9f8616afd094609b5fa167996f6a2ec0d916e619861af2"
+      "size": 10073,
+      "sha256": "47f28bb59455a068a3042f29eee94004c14727d560170d4a9f4a2e8c122afb0b"
     },
     {
       "path": "scripts/smoke_private_bridge.py",
-      "size": 12921,
-      "sha256": "d16434ba1cc5c45eb8472f03d092a6428254ec3bdd4314b2105bea395c27ce05"
+      "size": 12938,
+      "sha256": "3d2f394c28fd18cf8c63eb55f3688ced559909b13e94fc08e035037c82e47344"
     },
     {
       "path": "scripts/test_auto_receive.py",
@@ -559,6 +592,11 @@
       "sha256": "fc71433d2aa2bf27de55a4f01b0aa659b8169744f7952f75755c8dba1d466908"
     },
     {
+      "path": "setup-semantic.ps1",
+      "size": 1293,
+      "sha256": "85311bccd1ac4d63d8fa79cf584ffef801f059c77d63099f681c07db49f749d8"
+    },
+    {
       "path": "setup.ps1",
       "size": 2496,
       "sha256": "72ee0b1dfc2cd1809e199aa7f01c974c3f936febb10be983fe25b698a55af593"
@@ -570,8 +608,8 @@
     },
     {
       "path": "skills/kaltsit-conversation-action/SKILL.md",
-      "size": 4464,
-      "sha256": "785bd60074fe7aa8151edec5c92ab0d7d745bc1af9914e3501330e7810832671"
+      "size": 5058,
+      "sha256": "e31b7e3bb4275d9490818001f00251477f4b9b4aa3d0d5131271fce29c264d24"
     },
     {
       "path": "skills/kaltsit-dialogue-output/references/feedback-20261009.md",
@@ -595,8 +633,8 @@
     },
     {
       "path": "tests/test_continuity_window_ack.py",
-      "size": 6366,
-      "sha256": "8c7bda5d7488415c6e87fd2ac13a42580a7d078ce1bfd2e656e2e634e1edf396"
+      "size": 7457,
+      "sha256": "984f7a9967d2aa953a7b57626675affbe1066509ed5181fefedab16ecec9661e"
     },
     {
       "path": "tests/test_conversation_continuity.py",
@@ -664,6 +702,11 @@
       "sha256": "62efb6d73728bf6a875c7b1d3f6a81efb14213423fb241c7ddb9c1eb26d079c4"
     },
     {
+      "path": "tests/test_semantic_time.py",
+      "size": 10184,
+      "sha256": "138a84346f0f153970b89e379e99c06766f3f005f375dd47c9e5181dfed00f67"
+    },
+    {
       "path": "tests/test_web_fallback.py",
       "size": 3592,
       "sha256": "af60ce8375257c7703b54b25499737f46f180086a3f7d5cdc196474c338f6dce"
@@ -680,8 +723,8 @@
     },
     {
       "path": "THIRD_PARTY.md",
-      "size": 3600,
-      "sha256": "ae2c7df671e8f541b6dd9ec33f1d57c94da71e0d9ad3551f09b3a95376f2d2ef"
+      "size": 4192,
+      "sha256": "4c805102b1d03d0f3108792fdc65ce1faf92ee51bed17b8377487d56cb4ed524"
     },
     {
       "path": "tulpa-tools-only.cjs",

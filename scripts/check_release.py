@@ -4,7 +4,7 @@ from pathlib import Path
 import re
 import sys
 ROOT=Path(__file__).resolve().parent.parent
-FORBIDDEN={'runtime','.venv','private-knowledge','__pycache__','.cache','.tmp','imports','data'}
+FORBIDDEN={'runtime','.venv','.semantic-venv','private-knowledge','__pycache__','.cache','.tmp','imports','data'}
 
 def source_files():
     # Repository internals are local Git metadata, never part of the download.

@@ -1,0 +1,2 @@
+# Optional isolated local CPU retrieval environment; no API credentials.
+fastembed==0.9.0

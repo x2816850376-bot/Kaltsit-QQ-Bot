@@ -11,6 +11,7 @@
 - Bilibili：以明日方舟官方PV评论语境摘要为主，补充旧混合样本；评论是玩家观点，不是官方设定。保留视频BV号与少量关联短摘录，不分发评论者昵称、头像、账号档案或完整评论采样库。
 - Nuwa蒸馏方法参考 https://github.com/alchaincyf/nuwa-skill ，本包不复制其完整技能仓库；提供最终角色卡及本项目表达规则。
 - Python、MCP SDK、httpx、Pillow等依赖通过 pip 安装，分别遵循原许可证。使用安装器下载的组件不是本源码包内的资产。
+- 可选语义组件通过独立安装器获取 [FastEmbed](https://github.com/qdrant/fastembed)（[Apache-2.0](https://github.com/qdrant/fastembed/blob/main/LICENSE)）及其依赖。[BAAI/bge-small-zh-v1.5](https://huggingface.co/BAAI/bge-small-zh-v1.5)模型卡标注MIT；FastEmbed使用Qdrant提供的对应ONNX版本。权重、环境、向量缓存不在本源码包中，实际下载组件保留各自许可。本轮语义检索和时间语境设计参考 [CyberWaifu](https://github.com/Syan-Lin/CyberWaifu)，采用独立实现，没有复制该项目的角色提示词或源码。
 
 本包不代表鹰角、腾讯、OpenAI或上述项目的官方产品。完整版由用户指定提供完整已录入知识，但不因此新增第三方版权授权；发布者添加或再分发第三方原文应核对来源与使用条件，不直接套用代码MIT。
 
