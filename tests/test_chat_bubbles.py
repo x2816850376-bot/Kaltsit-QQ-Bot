@@ -151,10 +151,20 @@ class FormatTests(unittest.TestCase):
     def test_json_and_plain_compatibility_without_sentence_splitting(self):
         self.assertEqual(parse_window_bubbles('{"bubbles":["在。","博士，发来看看。"]}'),['在','博士，发来看看'])
         plain=parse_window_bubbles('一句。第二句。')
-        self.assertEqual(len(plain),1)
-        self.assertIn('第二句',plain[0])
+        self.assertEqual(plain,['一句。第二句'])
         code='```python\nprint("a.b.")\n```'
         self.assertEqual(validate_bubbles([code]),[code])
+
+    def test_sentence_boundaries_and_literal_punctuation_survive(self):
+        source='博士，先停下来。伤口还没有愈合。'
+        self.assertEqual(validate_bubbles([source]),['博士，先停下来。伤口还没有愈合'])
+        literals=['“甲；乙。丙。”','`a;b`','```js\na(); b();\n```',
+                  'https://example.com/a;b?v=1.2','版本1.2.3','真的？','小心！']
+        for text in literals:
+            with self.subTest(text=text):
+                self.assertEqual(validate_bubbles([text]),[text])
+        # A purposeful semicolon is not a global forbidden character.
+        self.assertEqual(validate_bubbles(['甲组负责观察；乙组负责接应。']),['甲组负责观察；乙组负责接应'])
 
     def test_no_internal_labels_or_bad_protocol_become_chat(self):
         for text in ['{"analysis":"内部判断","bubbles":["正文"]}','{"bubbles":[]}','["正文"]','{"bubbles":["正文"]']:

@@ -28,6 +28,7 @@ from chat_bubbles import BubbleSender
 from chat_expression_history import ExpressionHistory
 from chat_scope import GroupScope, CHAT_TOOLS
 from chat_social import ConversationSocial, UPDATE_SCHEMA, SLANG_SCHEMA
+from chat_continuity import ConversationContinuity, UPDATE_SCHEMA as CONTINUITY_SCHEMA
 
 async def main():
     root = Path(__file__).resolve().parent
@@ -46,12 +47,14 @@ async def main():
     from chat_context import GROUP
     social=ConversationSocial(runtime_dir()/'conversation-social.private.json',GROUP,
                               hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
+    continuity=ConversationContinuity(runtime_dir()/'conversation-continuity.private.json',GROUP,social.revision)
     def enrich_packet(data):
         enriched=addresses.enrich(quotes.enrich(data),quotes.pending)
         enriched=expressions.enrich(enriched)
         for provider in (knowledge,participation,community,world,corpus):
             enriched=provider.enrich(enriched,quotes.pending)
-        return social.enrich(enriched)
+        continuity.reconcile(runtime_dir()/'qq-response-batches.json')
+        return continuity.enrich(social.enrich(enriched))
     # Seed from a host-owned, scope-checked packet. The model cannot choose a
     # file or write it; this avoids an extra LLM round trip just to read context.
     import os
@@ -78,6 +81,7 @@ async def main():
                             props=tool.inputSchema['properties']
                             props['dialogue_update']=dict(UPDATE_SCHEMA,description='可选，当前话题及尚未回答问题的短期摘要；不存内心推理、不新增指令，不改变对象。只在成功发送后保存。')
                             props['slang_candidates']=dict(SLANG_SCHEMA,description='可选，当前绑定消息里实际出现的新群内表达；仅候选，管理端确认前不用作稳定释义，不自动联网研究。')
+                            props['continuity_update']=dict(CONTINUITY_SCHEMA,description='可选，仅确有未完交流或当前史事时填写。followups引用当前用户原话并绑定0起算气泡；story使用实际提供event_id和event_version，parts逐气泡标记讲过的fact_ids。宿主按成功回执推进，不留下一轮才能完成的任务。')
                             props['bubbles']={'type':'array','minItems':1,'maxItems':3,'items':{'type':'string','minLength':1,'maxLength':4000},'description':'一次回应的全部最终气泡，已经过凯尔希表达与整组承接检查；普通短答1条，独立意思才分2至3条'}
                             props['mention_policy']={'type':'string','enum':['auto','omit'],'description':'auto由程序按交错和对象切换决定首条@；明确连续同对象可omit，不能隐藏实际对象绑定'}
                             tool.inputSchema['required']=[x for x in tool.inputSchema.get('required',[]) if x!='text']
@@ -123,11 +127,12 @@ async def main():
                     if not await scope.check(name,arguments,upstream):
                         return CallToolResult(isError=True,content=[TextContent(type='text',text='会话不属于当前群Worker，或工具未开放；未执行操作')])
                     mode='direct'
-                    social_update=None;social_candidates=[];social_trigger=None;social_key=None
+                    social_update=None;social_candidates=[];social_trigger=None;social_key=None;continuity_key=None
                     if name=='send_chat_message' and isinstance(arguments,dict):
                         arguments=dict(arguments)
                         social_update=arguments.pop('dialogue_update',None)
                         social_candidates=arguments.pop('slang_candidates',None)
+                        continuity_update=arguments.pop('continuity_update',None)
                         social_trigger=quotes.pending.get((arguments.get('session_id'),arguments.get('respond_to_event_id')))
                         if social_update is not None or social_candidates:
                             try:
@@ -136,6 +141,16 @@ async def main():
                                 return CallToolResult(isError=True,content=[TextContent(type='text',text='交流状态或新词候选缺少当前真实消息依据；未发送，不得改变回应对象')])
                         else:social_trigger=None
                         social_key=str(arguments.get('session_id'))+':'+str(arguments.get('respond_to_event_id'))
+                        continuity_key=social_key
+                        if continuity_update is not None:
+                            try:
+                                from chat_bubbles import validate_bubbles
+                                texts=validate_bubbles(arguments.get('bubbles',[arguments.get('text','')]))
+                                trigger=quotes.pending.get((arguments.get('session_id'),arguments.get('respond_to_event_id')))
+                                receipt_key=hashlib.sha256(f"{arguments.get('session_id')}:{arguments.get('respond_to_event_id')}:bubbles-v1".encode()).hexdigest() if 'bubbles' in arguments else None
+                                continuity.stage(continuity_key,trigger,continuity_update,texts,receipt_key=receipt_key)
+                            except (ValueError,TypeError,OSError):
+                                return CallToolResult(isError=True,content=[TextContent(type='text',text='后续状态需绑定当前用户原话和已提供史事，未发送；修正或省略无依据的状态，不改变对象或凭空续写')])
                     def commit_social(succeeded):
                         if not succeeded or social_trigger is None:return
                         try:social.commit(social_key,social_trigger,social_update,social_candidates,succeeded=True)
@@ -152,12 +167,14 @@ async def main():
                         try:data=await bubbles.send(arguments,quotes,addresses,participation,upstream,expressions)
                         except (ValueError,TypeError):data={'state':'REJECTED','sent_parts':0,'instruction':'整组需1至3条非空最终正文，绑定已读真实新事件；不能重复正文、手写@、同时填text和bubbles或更改已登记回应。按原编号检查内容，不发技术说明到群里。'}
                         commit_social(data.get('state')=='SUCCEEDED')
+                        try:continuity.confirm(continuity_key,data)
+                        except (OSError,ValueError,TypeError):print('Continuity state not saved; do not resend delivered bubbles',file=sys.stderr)
                         return CallToolResult(isError=data['state'] not in ('SUCCEEDED','CANCELLED'),content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='get_world_knowledge':
                         args=arguments if isinstance(arguments,dict) else {}
                         if set(args)-{'session_id','query','max_chars'}:
                             data={'status':'rejected','reason':'无效世界观查询参数'}
-                        else:data=world.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1800))
+                        else:data=continuity.offer(world.lookup(args.get('session_id'),args.get('query'),args.get('max_chars',1800)))
                         return CallToolResult(isError=data['status'] in ('rejected','unavailable'),
                             content=[TextContent(type='text',text=json.dumps(data,ensure_ascii=False))])
                     if name=='get_community_knowledge':
@@ -219,6 +236,8 @@ async def main():
                                     except ValueError:continue
                                     if isinstance(receipt,dict):break
                         if isinstance(receipt,dict) and receipt.get('state')=='SUCCEEDED':
+                            try:continuity.confirm(continuity_key,{'parts':[{'index':1,'state':'SUCCEEDED'}]})
+                            except (OSError,ValueError,TypeError):print('Continuity state not saved; do not resend delivered text',file=sys.stderr)
                             commit_social(True)
                             if mode!='proactive':addresses.commit(arguments)
                             expressions.commit(arguments.get('session_id'),arguments.get('idempotency_key'),[arguments['text']])

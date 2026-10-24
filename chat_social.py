@@ -44,9 +44,13 @@ def validate_candidates(value):
     return result
 
 def response_object(value):
-    if not isinstance(value,dict) or 'bubbles' not in value or set(value)-{'bubbles','dialogue_update','slang_candidates'}:
+    if not isinstance(value,dict) or 'bubbles' not in value or set(value)-{'bubbles','dialogue_update','slang_candidates','continuity_update'}:
         raise ValueError('Invalid final reply fields')
     validate_update(value.get('dialogue_update'));validate_candidates(value.get('slang_candidates'))
+    if 'continuity_update' in value:
+        from chat_continuity import validate_update as validate_continuity
+        if not isinstance(value['bubbles'],list):raise ValueError('Invalid bubbles')
+        validate_continuity(value['continuity_update'],len(value['bubbles']))
     return value
 
 def message_text(row):

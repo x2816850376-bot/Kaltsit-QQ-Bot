@@ -11,6 +11,7 @@ from chat_community import CommunityKnowledge
 from chat_world import TerraKnowledge
 from chat_corpus import CanonicalKnowledge
 from chat_social import ConversationSocial
+from chat_continuity import ConversationContinuity
 
 def enrich_snapshot(root,directory,packet):
     root=Path(root);directory=Path(directory)
@@ -29,6 +30,10 @@ def enrich_snapshot(root,directory,packet):
         social=ConversationSocial(directory/'conversation-social.private.json',cid,
                                   hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
         out=social.enrich(out)
+        continuity=ConversationContinuity(directory/'conversation-continuity.private.json',cid,
+                                         hashlib.sha256((root/'prompts/persona_runtime.txt').read_bytes()).hexdigest())
+        continuity.reconcile(directory/'qq-response-batches.json')
+        out=continuity.enrich(out)
     return out
 
 def combine(snapshot,incoming):

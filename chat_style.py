@@ -14,7 +14,9 @@ def normalize_outgoing_text(text):
         rest=text[index+1:].lstrip(' \t')
         if char=='。':
             if rest and not rest.startswith(('\n','\r','？','?','！','!','，',',','；',';',':','：')):
-                output.append('，')
+                # The user's chat preference omits bubble-final stops, not
+                # sentence boundaries inside a longer message.
+                output.append('。')
         elif char=='.' and (not rest or rest.startswith(('\n','\r'))):
             # Preserve ellipses and numeric/version notation; inline code and URLs
             # are already protected. Ordinary English sentence stops are removed.

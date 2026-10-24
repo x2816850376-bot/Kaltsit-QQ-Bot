@@ -19,7 +19,7 @@ STORY_USAGE=(
     '判断必须落在这次选择付出的代价上，不用抽象道理代替结尾，不套固定罪因。只发送完整故事正文。')
 
 
-def documented_event(root,query,max_chars,generic=False):
+def documented_event(root,query,max_chars,generic=False,*,event_id=None):
     root=Path(root);path=root/'story-events.json';index=root/'index.sqlite3'
     if not path.exists() or not index.exists():return None
     try:
@@ -28,8 +28,9 @@ def documented_event(root,query,max_chars,generic=False):
         candidates=[]
         with closing(sqlite3.connect(index.resolve().as_uri()+'?mode=ro',uri=True)) as db:
             for card in catalog.get('events',[]):
+                if event_id is not None and card['id']!=event_id:continue
                 tags=card['tags'];score=sum(len(t) for t in tags if t in query)
-                if not generic and not score:continue
+                if event_id is None and not generic and not score:continue
                 sources={};valid=True
                 for ref in card['sources']:
                     hand=ref['scope']=='handwritten_annotation_only'
