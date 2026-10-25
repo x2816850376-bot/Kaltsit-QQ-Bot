@@ -12,7 +12,7 @@ def read_action_skill(path=None):
     pieces=text.split('\n---\n',1)
     if not text.startswith('---\n') or len(pieces)!=2 or 'name: kaltsit-conversation-action' not in pieces[0]:raise ValueError('Unexpected action skill')
     body=pieces[1].strip()
-    if not body or len(body)>2000 or '[TODO' in body:raise ValueError('Invalid action skill')
+    if not body or len(body)>2400 or '[TODO' in body:raise ValueError('Invalid action skill')
     return body
 
 def action_sha256(path=None):
