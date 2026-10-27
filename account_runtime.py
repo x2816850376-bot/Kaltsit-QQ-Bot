@@ -14,8 +14,7 @@ FLAGS=getattr(subprocess,'CREATE_NO_WINDOW',0)
 STOP=RUNTIME/'STOP'
 
 def write_state(**values):
-    config=load()
-    values.update(account=config['account'],model=config['model'],reasoning=config['reasoning'],
+    values.update(account=load()['account'],model='gpt-6-luna',reasoning='high',
                   pid=os.getpid(),updated=time.time())
     path=RUNTIME/'account-state.json'
     temporary=path.with_suffix('.pending')
@@ -29,8 +28,8 @@ def main():
         json.dump({'pid':os.getpid(),'account':cfg['account']},handle)
     access=create_access(cfg)
     grant=access.authorize(credential['token'],source=False)
-    if grant['scope'].get('chat_account')!=cfg['account']:
-        raise ValueError('Authorization does not match configured account')
+    if grant['scope'].get('chat_account')!=cfg['account'] or grant['scope'].get('conversations'):
+        raise ValueError('Authorization does not match unrestricted current-account request')
     from chatlocal.mcp_server import MCPService
     from chatlocal.onebot import Client
     if Client(timeout=3).login()!=cfg['account']:raise ValueError('Actual QQ account changed')
@@ -48,8 +47,6 @@ def main():
         if kind=='private' and uid==cfg['account'] and not event.get('target_id'):return
         peer=str(event.get('group_id','')) if kind=='group' else str(event.get('target_id') if uid==cfg['account'] else uid)
         if not peer.isascii() or not peer.isdigit() or not 0<int(peer)<10**16:return
-        if kind=='group' and not cfg['all_groups'] and peer not in cfg['groups']:return
-        if kind=='private' and not cfg['private_chats']:return
         cid=f"{cfg['account']}:{'group' if kind=='group' else 'direct'}:{peer}"
         with access.connect() as db:
             row=db.execute('SELECT id FROM chat_sessions WHERE conversation_id=? AND active=1',(cid,)).fetchone()
@@ -103,7 +100,7 @@ def main():
             if time.monotonic()-last_write>2:
                 write_state(status='low_power' if paused else 'listening',
                             receiver=chat.receiver.status(),active_workers=len(children),
-                            all_groups=cfg['all_groups'],private_chats=cfg['private_chats'],**counters)
+                            all_groups=True,private_chats=True,**counters)
                 last_write=time.monotonic()
             time.sleep(.3)
     finally:

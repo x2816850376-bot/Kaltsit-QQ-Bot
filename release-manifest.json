@@ -1,6 +1,6 @@
 {
   "edition": "full-knowledge-source",
-  "prepared_date": "2026-10-25",
+  "prepared_date": "2026-10-27",
   "model": "gpt-6-luna",
   "reasoning": "high",
   "fast": false,
@@ -18,8 +18,8 @@
   "files": [
     {
       "path": ".gitignore",
-      "size": 272,
-      "sha256": "2e45f92a36447d4d65c2f06ce62045f46c6985739fb8aac087a51b787fa0afee"
+      "size": 256,
+      "sha256": "e12f3f1a33d191847ddf20c2ee3528e60b80960782f4566edd51fb12fd493c86"
     },
     {
       "path": "01-安装依赖.cmd",
@@ -68,23 +68,28 @@
     },
     {
       "path": "account_runtime.py",
-      "size": 6553,
-      "sha256": "9e0144801f1375f4ec256097dc2a35017cb26c390db11284016084e593b82151"
+      "size": 6396,
+      "sha256": "1cec238dd1301bc111efe8eee42501b2a1f2eef9f03d7805c48ac494077b8da3"
+    },
+    {
+      "path": "add_private_regression.py",
+      "size": 4792,
+      "sha256": "7d47c161466c8f8f60395f9ad46c776d100d831815778d54f2197fa4715458ef"
     },
     {
       "path": "AGENTS.md",
-      "size": 1525,
-      "sha256": "15aaa25df73b8265f57c7914b1a7bf8cf8d037dc880f188509d2c7766ab4b6b8"
+      "size": 1157,
+      "sha256": "22763679ee4492cf54dc1f8064396dbaa89e90d41ff918e6d889acf8b5ef4e74"
     },
     {
       "path": "bot_config.py",
-      "size": 5290,
-      "sha256": "02aa555be5d6a6a67c05fa333f16d6d2842f2f067425d1c2dec46a5fb15e71da"
+      "size": 5382,
+      "sha256": "06e18c5fb31820532f55101f2188fb0c47d2b58d899bc5c80d151c7a3a2a167b"
     },
     {
       "path": "chat_address.py",
-      "size": 9633,
-      "sha256": "08da038eb08695ae9a7fd291405fe11a2fc0ff971d75d65a957f94938ce534bc"
+      "size": 9703,
+      "sha256": "431fbfd6ea63d7217c43f1920c4cb9bd7d243342c78033d7f1023227d796f15d"
     },
     {
       "path": "chat_bubbles.py",
@@ -103,8 +108,8 @@
     },
     {
       "path": "chat_context.py",
-      "size": 9216,
-      "sha256": "8c1d1e81595d432385e62ddd10c99d76b6a607ddfd0bddedaa2e2e9533707d2f"
+      "size": 9217,
+      "sha256": "6bc2101c4edc5c60a200236f41dbbe3a94e23280a067255a20f0a196103cca1d"
     },
     {
       "path": "chat_continuity.py",
@@ -113,13 +118,13 @@
     },
     {
       "path": "chat_corpus.py",
-      "size": 5079,
-      "sha256": "fdcfc5830b1a9f880bbf7376ae071873b92575076035a3bf0a68f9c72c37eed8"
+      "size": 10468,
+      "sha256": "36c195d0bbeefeacb589f5a8ff05ddc23320472bbd638bb61d84949d4b313312"
     },
     {
       "path": "chat_dialogue.py",
-      "size": 2962,
-      "sha256": "17b4cde76171cbed69784c8fba6ad6ebc234c30f32b125e132ed38e49cf7ddf4"
+      "size": 2916,
+      "sha256": "78f0015e9f72a64353da00eae95c38d544acf2e1fe57e2795a8398d8de9735b2"
     },
     {
       "path": "chat_expression_history.py",
@@ -128,13 +133,13 @@
     },
     {
       "path": "chat_knowledge.py",
-      "size": 17027,
-      "sha256": "e95bc64d24eef7a9e8a329fadb2466e529c17c90a97b34af34a719420f6bfcca"
+      "size": 34076,
+      "sha256": "00239c3c2a5ade8b19771d42494cefbf256f9ae5e398c63be8a1e3732ad44e39"
     },
     {
       "path": "chat_participation.py",
-      "size": 7609,
-      "sha256": "843711f781c066fa3b3fb212969fac0c69740e2bb224b8c06ae17254aff77b01"
+      "size": 7741,
+      "sha256": "9bf2c1bd46de8178ab6b03ad84732a959f4164392f7845a057f26abc6b0dc6a5"
     },
     {
       "path": "chat_scope.py",
@@ -153,8 +158,8 @@
     },
     {
       "path": "chat_story.py",
-      "size": 5050,
-      "sha256": "803153648e6d61758ef7ab89f1e7f812aa1c98f9c054915c517e9f890b621a53"
+      "size": 5053,
+      "sha256": "a51c64fb0dbc2ce64ad97f2274bb72c8764d8115142e8cf550f1ab58e7f59f52"
     },
     {
       "path": "chat_style.py",
@@ -173,23 +178,28 @@
     },
     {
       "path": "cli_config.py",
-      "size": 3023,
-      "sha256": "3dbc5288b2cc75328e35ff5eebda91c24d861451ce8a9b8f5eff6a9c134f7021"
+      "size": 3084,
+      "sha256": "a97ef649471707c52f81ab7bdb3956b620736aab852ba6cfddb15c01e7f8829c"
     },
     {
       "path": "config/config.example.json",
-      "size": 370,
-      "sha256": "e411b4126451a85b057f7528a424a08ea1d3c47ccff6cd02814fa88a7e5e1df1"
+      "size": 334,
+      "sha256": "1b00451f7f049539040bdd3f26649cd90990fc64ea3dafa29421d0a703ba086c"
     },
     {
       "path": "configure.py",
-      "size": 4241,
-      "sha256": "177dc46cfb44aa4134c19f52d731f570a8b764082698f7662bf026922532994c"
+      "size": 3536,
+      "sha256": "6f8303a670e815b853a9d1642741fc5b86d9a9708150f70dc9e06bcb2b066a86"
+    },
+    {
+      "path": "configure_all.py",
+      "size": 1869,
+      "sha256": "afb958dbf9b3d97b0f351429868878473ddbcdae3516425d307d5442d5e5da38"
     },
     {
       "path": "control.py",
-      "size": 2901,
-      "sha256": "0a053065be144f6efbd4dc13460b3e243f90bf48c748227f98699269453ceb4b"
+      "size": 7460,
+      "sha256": "859842d3f281781cca368dd176fa5c0046532909d49c257635f18a874f863157"
     },
     {
       "path": "conversation_decision.py",
@@ -203,18 +213,23 @@
     },
     {
       "path": "dialogue-test-window/index.html",
-      "size": 7571,
-      "sha256": "7679940d9ada13f1a6c6f250ba6b378e2a6871995ee2e44dd046ecd6611a947e"
+      "size": 8782,
+      "sha256": "4a182b78b779d7efe3584b6dfadee49eb8660a7931ea666d73ebc6bf9d5cde56"
     },
     {
       "path": "dialogue-test-window/model_stream.py",
-      "size": 3568,
-      "sha256": "b89abdd54183aba27228ea5cae24324c103d5a332443c2359cb55ba2ca74d8e7"
+      "size": 4635,
+      "sha256": "fe09d69aeaa438eb0d748eb237e991e61983ffb6caf4b4baf35c14ec36c18ab6"
+    },
+    {
+      "path": "dialogue-test-window/remote_gateway.py",
+      "size": 13573,
+      "sha256": "705c04f75e5970e96253ec9db9a11b431210f757fec7f720453ac99960d68c82"
     },
     {
       "path": "dialogue-test-window/server.py",
-      "size": 20191,
-      "sha256": "735000ee2ada12c24abd7ce09412420c21768984bfcfbc6e09b544f31ccc71c4"
+      "size": 27023,
+      "sha256": "7631b8ad16e8920b4c372fff1797f6b4e6322286a3dd52f09843df34c406844a"
     },
     {
       "path": "dialogue-test-window/slang.html",
@@ -227,9 +242,24 @@
       "sha256": "d27cd57594d012a51cbbc60a3f267bd9ff633a46127a13135b37752151669538"
     },
     {
+      "path": "dialogue-test-window/voice_preview.py",
+      "size": 10371,
+      "sha256": "b66875832e030c18832f8b17d37d1b267127d863cad86f06e0ad5abeeaf8f4fb"
+    },
+    {
+      "path": "dialogue-test-window/web-budget-hook.cjs",
+      "size": 2026,
+      "sha256": "4a5d14c5e4bbd3381ab4f6ff33e7084df6f993ffdfe8b29cd969db935220c1df"
+    },
+    {
       "path": "docs/configuration.md",
       "size": 2407,
       "sha256": "3c018e66dfb09a24719f84bafa2c844d2f621c940526e9507b4c9b2f149def21"
+    },
+    {
+      "path": "docs/conversation-behavior-validation.md",
+      "size": 2335,
+      "sha256": "ebbe5936c3f62b64716a4ee32bfc379a4607e25c48de2c28e713571077c05af0"
     },
     {
       "path": "docs/conversation-continuity.md",
@@ -243,13 +273,18 @@
     },
     {
       "path": "docs/doctor-voice-refinement.md",
-      "size": 4643,
-      "sha256": "7005f721da42e9077cd864a90d319c610cba5a55a417be4e3ce393b505402352"
+      "size": 4927,
+      "sha256": "74e9d057bba06fe00c478dfb678af069906039a87496a569582f533721acc42c"
     },
     {
       "path": "docs/knowledge.md",
       "size": 4655,
       "sha256": "5270e08bc3c4e5c99697008eea286810900e54d04b7cc553412a21e92a1b8fa6"
+    },
+    {
+      "path": "docs/local-semantic-time.md",
+      "size": 2877,
+      "sha256": "6b69dbcee73ba1832584328641081cc8ffc9ecef30b9fa2e3c1d319ea6bbbc65"
     },
     {
       "path": "docs/qq-bridge-notice.md",
@@ -263,8 +298,8 @@
     },
     {
       "path": "docs/validation.md",
-      "size": 17427,
-      "sha256": "373cc0447bb011ec8c87353e7f9541fa5acf784f732e20525ea145a78bf7b303"
+      "size": 9153,
+      "sha256": "c48cfb960bc668422b1b1f7b87a4ea4452e914e9ea1aa716be0e653b4c13147f"
     },
     {
       "path": "doctor.py",
@@ -280,6 +315,31 @@
       "path": "knowledge/arknights/operator-aliases.json",
       "size": 402096,
       "sha256": "e461b9743017fca98d8d2c91782a8b5795ca4fc6a5f1e90b9968fe0f4bb4c261"
+    },
+    {
+      "path": "knowledge/arknights/operator-identities.json",
+      "size": 10037,
+      "sha256": "2ab9a4c7d973318c18d3dddd9f51dcbd6804f4c4d81e419a01c049349873cd67"
+    },
+    {
+      "path": "knowledge/arknights/operator-relations.json",
+      "size": 608300,
+      "sha256": "9505ea8176a4942c088c063395428647a34d44228e86b78de0e2bd91e102c3e1"
+    },
+    {
+      "path": "knowledge/arknights/operator-topic-concepts.json",
+      "size": 549698,
+      "sha256": "88c66426fd31b7aafca51a48a3606b54bff64b33792d7f710fe78947d772c879"
+    },
+    {
+      "path": "knowledge/arknights/operator-topic-corpus.json",
+      "size": 4187835,
+      "sha256": "5fe3a4fd46cf6599f5a19823063f2343442a57512dd472c029f61e895cfd744c"
+    },
+    {
+      "path": "knowledge/arknights/operator-topic-links.json",
+      "size": 83326,
+      "sha256": "bd9105497e953dfa794d54858afb910daaa45941835fd08dfe0e896ecd839789"
     },
     {
       "path": "knowledge/arknights/operators.json",
@@ -478,13 +538,13 @@
     },
     {
       "path": "luna-chat-runtime.py",
-      "size": 26189,
-      "sha256": "c5036efd668e906ee135b635e1027e7df3e999dcea8428d7d9b5e9bf54331f28"
+      "size": 26544,
+      "sha256": "bc92609c370aa13d8436203af49e71080f38ea0eab079e961fa4597fd88a84b3"
     },
     {
       "path": "mcp-stdio-proxy.py",
-      "size": 25118,
-      "sha256": "b9c92abe410d1a02a51fcb76820e2a0d333aa8431746bccca0f2facbe1cb458e"
+      "size": 24909,
+      "sha256": "1976aa783cac371e0878333f0b7bb5b5787c41f8135d46721be4388d9974129b"
     },
     {
       "path": "model_slots.py",
@@ -492,19 +552,24 @@
       "sha256": "6e0efe9608d68464debdd8eadde5208fc023a22c200b92d47d9a815b4df5d226"
     },
     {
+      "path": "open-dialogue-test.pyw",
+      "size": 3811,
+      "sha256": "cfdf2a37e148b83c253de90b32fb43df0e304f4951d083d0dc28abd3844c3855"
+    },
+    {
       "path": "prompts/persona_full.txt",
-      "size": 20473,
-      "sha256": "742d77e32f0e4001cb5ff802f962a7901bbdb321e9c4d06a23ec31cb9b9b0bcb"
+      "size": 20491,
+      "sha256": "9055b601884375322a980d7c1fadcaa68ab15d3477d216902579b92a9a3c88e1"
     },
     {
       "path": "prompts/persona_runtime.txt",
-      "size": 17922,
-      "sha256": "6108d2607f9c4890265cb4f0727960ac105df53a7d8d195c4e74142efc126d07"
+      "size": 18109,
+      "sha256": "891511f2280f10228719383a8ba3a9e839e5cbb2ca496615dd7c78503e205ab2"
     },
     {
       "path": "README.md",
-      "size": 15429,
-      "sha256": "4b163ec336e311b1d12bb820e8b0e242c51d1c19a264af2daa31629d25724e16"
+      "size": 10020,
+      "sha256": "fbb71f727322ed04a07401eb38ac32bcf7fa61b856728c14435bc7ba762a6983"
     },
     {
       "path": "requirements-semantic.txt",
@@ -517,9 +582,29 @@
       "sha256": "02ff7a7057856a19abdd38af9e1e68b9ce6ad19e5168a4ce6ec24152cd10257c"
     },
     {
+      "path": "scripts/__pycache__/check_release.cpython-312.pyc",
+      "size": 3641,
+      "sha256": "5279d176044517df8d74327b0fe02e1f8380d6fe2131a07bdf81a344f87553c4"
+    },
+    {
       "path": "scripts/build_canonical_index.py",
       "size": 3679,
       "sha256": "7a8f8d4128a074e73bded451fc4fd68e88f6d228b3d80197f2f2ec643d3ecdfd"
+    },
+    {
+      "path": "scripts/build_operator_identities.py",
+      "size": 1811,
+      "sha256": "5dae3c5441fc8375344f306bdc62ee828be7e67c8ce477c19742fba4da7b0b06"
+    },
+    {
+      "path": "scripts/build_operator_relations.py",
+      "size": 5252,
+      "sha256": "49b529a6cd68cacd5b14dd398a27e61c8559abb5a55372ac85a64b1345df6a81"
+    },
+    {
+      "path": "scripts/build_operator_topic_corpus.py",
+      "size": 5621,
+      "sha256": "53fe9d05b0eed9eebd6821adc44afb7bfbe4dcada956bd2b1065509dcf71a7e5"
     },
     {
       "path": "scripts/build_semantic_index.py",
@@ -528,8 +613,8 @@
     },
     {
       "path": "scripts/build_source_zip.py",
-      "size": 3169,
-      "sha256": "0b2ae7b47d846bc2740b989a1423170eb654328b2741e53f1146021cb42d52c5"
+      "size": 2444,
+      "sha256": "3e34bd829a35c024bfe89165062a420fcfaa90041e7a644095647c65102be262"
     },
     {
       "path": "scripts/check_cli_transport.py",
@@ -538,8 +623,18 @@
     },
     {
       "path": "scripts/check_release.py",
-      "size": 2113,
-      "sha256": "14dbab397372a6143ce8add94d4602ab73f78af913ce19f6538b33f9103c8c90"
+      "size": 2096,
+      "sha256": "8b579caaf9143cae21b8e8880e760dbafb3daf15e2fda4dfbc617fbb2b7252dd"
+    },
+    {
+      "path": "scripts/compare_greeting_latency.py",
+      "size": 2795,
+      "sha256": "7a8b0dcec42e796e6e5aaeb734f4b1289943a857464800c37a9b5a04f1ddd274"
+    },
+    {
+      "path": "scripts/ensure_test_site.ps1",
+      "size": 592,
+      "sha256": "335d02fb2e55c1b280698d1126c8af9174dddd48498d16f76859e96e41dd7eb9"
     },
     {
       "path": "scripts/import_private_knowledge.py",
@@ -547,19 +642,29 @@
       "sha256": "77335ed8bf921f31538fe5bb56ee5b97cf7e7cc787ca1bae0ac1e1a6f14aa958"
     },
     {
+      "path": "scripts/measure_prefetched_greeting.py",
+      "size": 3681,
+      "sha256": "a80b7a39a0ec293f6b3b2d26142c6196a5d1e3ad87bf1ea8eeeed33d1a0ac62c"
+    },
+    {
+      "path": "scripts/rebuild_operator_topic_links.py",
+      "size": 12210,
+      "sha256": "3d17889136e7bbbed0c40c9ad335267377780f033a2140010b47d0ce947e6682"
+    },
+    {
       "path": "scripts/run_tests.py",
-      "size": 1419,
-      "sha256": "2ee010dce09af4946aa812baf5fd838f02a38c755ffa4eec69ba9f788159a2c9"
+      "size": 1448,
+      "sha256": "29d05e44645e79e73ae652236fdf63ebf6140547e565da48a108ec7fd883d891"
     },
     {
       "path": "scripts/smoke_fake_bridge.py",
-      "size": 10073,
-      "sha256": "47f28bb59455a068a3042f29eee94004c14727d560170d4a9f4a2e8c122afb0b"
+      "size": 10213,
+      "sha256": "dca9e4f7588a8f50a275df41c159b2c3529529c23490fb6660bd7e2570f27346"
     },
     {
       "path": "scripts/smoke_private_bridge.py",
-      "size": 12938,
-      "sha256": "3d2f394c28fd18cf8c63eb55f3688ced559909b13e94fc08e035037c82e47344"
+      "size": 13107,
+      "sha256": "ea9bcf6189c556bd02e766159eab1c1d54017fe1082f503c4d6e20b311c002d5"
     },
     {
       "path": "scripts/test_auto_receive.py",
@@ -608,8 +713,8 @@
     },
     {
       "path": "skills/kaltsit-conversation-action/SKILL.md",
-      "size": 5058,
-      "sha256": "e31b7e3bb4275d9490818001f00251477f4b9b4aa3d0d5131271fce29c264d24"
+      "size": 6027,
+      "sha256": "3910a714e459992272532902614bea75cd259d84c9d2e983b479e4025c5f5c77"
     },
     {
       "path": "skills/kaltsit-dialogue-output/references/feedback-20261009.md",
@@ -618,13 +723,13 @@
     },
     {
       "path": "skills/kaltsit-dialogue-output/SKILL.md",
-      "size": 7845,
-      "sha256": "aa8fa632e8a037d85fa5aac8a789b738a7c4cecbf85750977ad74958444bde6e"
+      "size": 9412,
+      "sha256": "a062a1e813579909c549b1f2efcf29c915442c3390085f8db3732d9b37ce8ad4"
     },
     {
       "path": "tests/test_chat_bubbles.py",
-      "size": 11511,
-      "sha256": "76b67b5d781f20fb635c4aa2aa2b0065f252792b6bd64c7c3c127bd908ec694e"
+      "size": 11523,
+      "sha256": "0a95d415d0cd19cbef1853501f11e9d247ffa85864c46a410fa6ae61c5cffa46"
     },
     {
       "path": "tests/test_chat_participation.py",
@@ -633,8 +738,8 @@
     },
     {
       "path": "tests/test_continuity_window_ack.py",
-      "size": 7457,
-      "sha256": "984f7a9967d2aa953a7b57626675affbe1066509ed5181fefedab16ecec9661e"
+      "size": 8409,
+      "sha256": "e947dd746fdf93595952bc20fe81dbdd4dad99a186512dd90d0679176d327fad"
     },
     {
       "path": "tests/test_conversation_continuity.py",
@@ -648,13 +753,13 @@
     },
     {
       "path": "tests/test_dialogue_output.py",
-      "size": 3530,
-      "sha256": "b348c4ec29422f444617114490b534da34bf8ab3aa0a690f9a22ca0dbce1cc06"
+      "size": 3471,
+      "sha256": "25bc9b44103ee0702c9de542f58e31c4137e3734bc077fcdd2c48df93e09aef2"
     },
     {
       "path": "tests/test_expression_history.py",
-      "size": 4692,
-      "sha256": "b8351e5402de8de00aafbc272f787ff0aee9a9a79cb9509908ae87904325841c"
+      "size": 4986,
+      "sha256": "686986891eb0b6cd2d0a29e01d0d003fabbdc303f2082784b081d6257616db7b"
     },
     {
       "path": "tests/test_full_knowledge.py",
@@ -683,8 +788,13 @@
     },
     {
       "path": "tests/test_public_knowledge.py",
-      "size": 2231,
-      "sha256": "35f8ec39a14e628fe0921cae3476d7497d97e78364e63351830dec27e3dd04a1"
+      "size": 5721,
+      "sha256": "4c0aed3ba1a24e6e17aa3f7cf745a3851a1da0bfc764fc6009a2914f84476124"
+    },
+    {
+      "path": "tests/test_remote_test_gateway.py",
+      "size": 6557,
+      "sha256": "6845f213d94623a04a6d08c1d9dafde93b26878a0be12decee8e6be352f1a575"
     },
     {
       "path": "tests/test_reply_routing.py",
@@ -707,9 +817,19 @@
       "sha256": "138a84346f0f153970b89e379e99c06766f3f005f375dd47c9e5181dfed00f67"
     },
     {
+      "path": "tests/test_voice_preview.py",
+      "size": 15133,
+      "sha256": "8d2f09f270de04d2c07530687d05138036182c9039b5e89f87d0e21481506a5b"
+    },
+    {
       "path": "tests/test_web_fallback.py",
       "size": 3592,
       "sha256": "af60ce8375257c7703b54b25499737f46f180086a3f7d5cdc196474c338f6dce"
+    },
+    {
+      "path": "tests/test_window_web_budget.py",
+      "size": 4141,
+      "sha256": "2558278716047b38c3f0424589e4a57fa9bebe85a7655e3d8bc38de7813bb149"
     },
     {
       "path": "tests/test_world_completion.py",
@@ -723,13 +843,18 @@
     },
     {
       "path": "THIRD_PARTY.md",
-      "size": 4192,
-      "sha256": "4c805102b1d03d0f3108792fdc65ce1faf92ee51bed17b8377487d56cb4ed524"
+      "size": 3315,
+      "sha256": "4802db70102f2022569c0c6b638e263303750c5d44630713a937033d64cef387"
     },
     {
       "path": "tulpa-tools-only.cjs",
       "size": 3261,
       "sha256": "89b439c85a8f51d35f357f887de4fc8db318348c44f1fec5a379d2fac28f875a"
+    },
+    {
+      "path": "upgrade_conversation_scope.py",
+      "size": 6333,
+      "sha256": "4faa4bceeb1db37d427b8fb9df1df0f792568c2fe00326381ee0c83f7ec8b9c6"
     },
     {
       "path": "vendor/Tulpa/chatlocal/__init__.py",
@@ -903,8 +1028,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_access.py",
-      "size": 13793,
-      "sha256": "93a5e975f894540c4a62e17649973074f70e8e1dc3fb1caa2404aa6da6e444dd"
+      "size": 13016,
+      "sha256": "76bd65ebbbc8cdfde8f8fd7cf91c14b36caaf546bebb0ed6b74ce6b012c33b51"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_actions.py",
@@ -913,13 +1038,13 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat.py",
-      "size": 38218,
-      "sha256": "c63fce66bae671c345e5446268a362a529a6ba0ba50715217dee0c106e5afc25"
+      "size": 37710,
+      "sha256": "f06c1d2c8683804ebf321b44c6f447cc74049e8d66ea15a6dbf74b27196bce80"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat_media.py",
-      "size": 27240,
-      "sha256": "a9fd6b937c41895cf7a4a6db14f0540290df8426754a767f80bfd12a1c611ff5"
+      "size": 27242,
+      "sha256": "368b4c9fcb0e010f5077171dad1314019b04766c56b873737f62a02aa281f830"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_chat_prompts.py",
@@ -938,8 +1063,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_server.py",
-      "size": 12248,
-      "sha256": "352594416b7409aa1a3e3acde7b93bb529ee5dbba8bc1ea8146d2e1309366606"
+      "size": 12256,
+      "sha256": "e7e163868f1e9aeff8c38794dea0febb1d3224f9499922e220c9ffead1e31d49"
     },
     {
       "path": "vendor/Tulpa/chatlocal/mcp_tools.py",
@@ -998,8 +1123,8 @@
     },
     {
       "path": "vendor/Tulpa/chatlocal/prompts/mcp_chat/kaltsit_arknights_standard.md",
-      "size": 17922,
-      "sha256": "6108d2607f9c4890265cb4f0727960ac105df53a7d8d195c4e74142efc126d07"
+      "size": 18046,
+      "sha256": "9906fc5ee916d6697e3ceb16df8a5abb7e937b578465c24611573c5385420617"
     },
     {
       "path": "vendor/Tulpa/chatlocal/qq_labels.py",

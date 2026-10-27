@@ -61,6 +61,17 @@ class WindowAckTests(unittest.TestCase):
         self.assertEqual(self.post('/chat/ack',{**body,'delivery_id':'d'*32})[0],400)
         self.assertFalse(self.make_store(self.scope).data['followups'])
 
+    def test_preview_switch_accepts_only_fixed_modes_from_local_origin(self):
+        original=self.server.load_module;switch=Mock()
+        def modules(name,path):return SimpleNamespace(set_mode=switch) if name=='mode_voice_preview' else original(name,path)
+        with patch.object(self.server,'load_module',side_effect=modules),patch.object(self.server,'current_metadata',return_value={'voice_preview':{'mode':'systematic'}}):
+            self.assertEqual(self.post('/voice-preview/mode',{'mode':'systematic'},'http://evil.invalid')[0],403)
+            self.assertEqual(self.post('/voice-preview/mode',{'mode':'../auth.json'})[0],400)
+            self.assertEqual(self.post('/voice-preview/mode',{'mode':'systematic','path':'other'})[0],400)
+            switch.assert_not_called()
+            self.assertEqual(self.post('/voice-preview/mode',{'mode':'systematic'})[0],200)
+            switch.assert_called_once_with(self.server.ROOT,'systematic')
+
     def test_restart_clears_only_owned_continuity_not_other_window(self):
         self.staged();self.assertEqual(self.post('/social/reset',{'test_id':self.identity})[0],200)
         self.assertFalse(self.make_store(self.scope).data['deliveries'])

@@ -33,6 +33,7 @@ WEB_SEARCH = 'live'
 BOT_NAME = '凯尔希'
 PERSONA_PRESET = 'kaltsit_arknights_standard'
 TOOLS = ['get_chat_session','send_chat_message','read_chat_image','list_chat_stickers','read_chat_sticker','note_chat_sticker','send_chat_sticker','get_operator_knowledge','get_community_knowledge','get_world_knowledge','get_canonical_knowledge']
+
 SHANGHAI_TZ = timezone(timedelta(hours=8), name='Asia/Shanghai')
 
 def current_time_context():

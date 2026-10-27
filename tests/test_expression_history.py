@@ -64,7 +64,11 @@ class ExpressionHistoryTests(unittest.TestCase):
         prompt=server.build_prompt({'message':'继续','history':[{'role':'assistant','text':text}]})
         instruction,data=prompt.split('【聊天数据】\n')
         self.assertNotIn(text,instruction)
-        self.assertEqual(json.loads(data)['recent_self_replies'],[{'text':text}])
+        value=json.loads(data)
+        if 'dialogue_replay' in value:
+            assistant=[json.loads(line.split(' | ',2)[2]) for line in value['dialogue_replay'].splitlines() if ' | 凯尔希 | ' in line and not line.endswith('此回合待续')]
+            self.assertEqual(assistant,[text])
+        else:self.assertEqual(value['recent_self_replies'],[{'text':text}])
 
     def test_storage_failure_does_not_fail_already_sent_reply(self):
         with tempfile.TemporaryDirectory() as folder:

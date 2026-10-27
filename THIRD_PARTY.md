@@ -2,7 +2,7 @@
 
 - 本项目原创连接、配置、运行器适配与表达Skill：MIT，见根目录 LICENSE。
 - `vendor/Tulpa/chatlocal/`：来自 Tulpa MCP 0.5.2 本机发行版的 Python 源码，原项目 https://github.com/fumingyang2004/Tulpa ，保留 `vendor/Tulpa/LICENSE`。本包只采用既有OneBot、授权、会话和媒体实现，不使用内置第二模型。
-- Tulpa 群聊行为参考 qq-bridge；原 MIT 通知保留在 `licenses/qq-bridge-MIT.txt`。本轮交流选择、短期话题与用语确认设计进一步参考 Derpyu520/qq-bridge 的二代仿真，来源版本、适配范围和MIT声明见 [说明](docs/qq-bridge-notice.md)。没有分发 QQ/微信读取器、桌面二进制、模型权重或编解码器。
+- Tulpa 群聊行为参考 qq-bridge；原 MIT 通知保留在 `licenses/qq-bridge-MIT.txt`。没有分发 QQ/微信读取器、桌面二进制、模型权重或编解码器。
 - NapCat/其他OneBot：作为使用者独立安装的协议端，不复制其源码或二进制，不覆盖其许可。链接 https://github.com/NapNeko/NapCatQQ 。
 - 明日方舟、凯尔希及泰拉设定相关权利归原权利人。角色卡是非官方群聊改编。PRTS资料见每条`source_url`；游戏数据镜像来源保留在条目`sources`。完整版恢复两位凯尔希的详细档案，其他干员提供简介，不将游戏原文重新许可为MIT。
 - PRTS社区编写内容的署名为PRTS贡献者；其网站[版权说明](https://prts.wiki/w/PRTS:%E7%89%88%E6%9D%83)及[干员页面页尾](https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C)区分游戏原文和其他内容。可适用的社区内容及本包对这些内容的整理按 [CC BY-NC-SA 4.0](https://creativecommons.org/licenses/by-nc-sa/4.0/)保留署名、非商业及相同方式共享要求；这不重新许可鹰角的游戏原文，也不把知识素材改成MIT。
@@ -11,8 +11,7 @@
 - Bilibili：以明日方舟官方PV评论语境摘要为主，补充旧混合样本；评论是玩家观点，不是官方设定。保留视频BV号与少量关联短摘录，不分发评论者昵称、头像、账号档案或完整评论采样库。
 - Nuwa蒸馏方法参考 https://github.com/alchaincyf/nuwa-skill ，本包不复制其完整技能仓库；提供最终角色卡及本项目表达规则。
 - Python、MCP SDK、httpx、Pillow等依赖通过 pip 安装，分别遵循原许可证。使用安装器下载的组件不是本源码包内的资产。
-- 可选语义组件通过独立安装器获取 [FastEmbed](https://github.com/qdrant/fastembed)（[Apache-2.0](https://github.com/qdrant/fastembed/blob/main/LICENSE)）及其依赖。[BAAI/bge-small-zh-v1.5](https://huggingface.co/BAAI/bge-small-zh-v1.5)模型卡标注MIT；FastEmbed使用Qdrant提供的对应ONNX版本。权重、环境、向量缓存不在本源码包中，实际下载组件保留各自许可。本轮语义检索和时间语境设计参考 [CyberWaifu](https://github.com/Syan-Lin/CyberWaifu)，采用独立实现，没有复制该项目的角色提示词或源码。
 
 本包不代表鹰角、腾讯、OpenAI或上述项目的官方产品。完整版由用户指定提供完整已录入知识，但不因此新增第三方版权授权；发布者添加或再分发第三方原文应核对来源与使用条件，不直接套用代码MIT。
 
-本包对Tulpa的适配包括项目内凯尔希角色卡、场景选择、多客户端MCP请求标识、好友私聊接入及明确的群/私聊授权范围；上游源码保留原许可。交流目的、短期话题、用语审核和气泡处理在本项目调用层实现。安装包版本号是上游参考，不是本项目的维护版本号。
+本包对Tulpa的改动：采用项目内凯尔希角色卡与场景样本，调整场景选择的空结果处理；其余已采用的授权、OneBot和MCP源码保留原许可。安装包版本号是上游参考，不是本项目的维护版本号。

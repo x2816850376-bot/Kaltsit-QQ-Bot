@@ -128,13 +128,6 @@ class MCPChat:
         target = dict(platform='qq', conversation_id=cid, conversation=cid)
         account, category, peer = qq_address(target)
         scope = grant['scope']
-        if category=='direct' and not scope.get('chat_private',False):
-            raise AccessDenied('此连接未明确授权私聊自动回复，请重新配置。')
-        if 'chat_groups' in scope:
-            if category=='group' and not scope.get('chat_all_groups') and peer not in scope['chat_groups']:
-                raise AccessDenied('该群不在持续聊天授权范围内。')
-            if category=='direct' and not scope.get('chat_private'):
-                raise AccessDenied('此连接未授权私聊自动回复。')
         authorized_account = scope.get('chat_account') or json.loads(grant['accounts']).get('qq')
         if 'qq' not in scope['platforms'] or category not in ('group','direct') or authorized_account != account:
             raise AccessDenied('目标 QQ 账号不在持续聊天授权中，请核对账号或重新创建连接。')

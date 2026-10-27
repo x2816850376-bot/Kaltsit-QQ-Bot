@@ -1,0 +1,370 @@
+{
+  "schema_version": 1,
+  "source": "由PRTS干员英文基名与阶段名称自动归并",
+  "groups": [
+    {
+      "identity_group": "amiya",
+      "canonical": "阿米娅",
+      "members": [
+        "阿米娅",
+        "阿米娅(医疗)",
+        "阿米娅(近卫)"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85",
+        "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85%28%E5%8C%BB%E7%96%97%29",
+        "https://prts.wiki/w/%E9%98%BF%E7%B1%B3%E5%A8%85%28%E8%BF%91%E5%8D%AB%29"
+      ]
+    },
+    {
+      "identity_group": "angelina",
+      "canonical": "安洁莉娜",
+      "members": [
+        "安洁莉娜",
+        "予愿安洁莉娜"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C",
+        "https://prts.wiki/w/%E4%BA%88%E6%84%BF%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C"
+      ]
+    },
+    {
+      "identity_group": "astgenne",
+      "canonical": "星源",
+      "members": [
+        "星源",
+        "溯光星源"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%98%9F%E6%BA%90",
+        "https://prts.wiki/w/%E6%BA%AF%E5%85%89%E6%98%9F%E6%BA%90"
+      ]
+    },
+    {
+      "identity_group": "blaze",
+      "canonical": "煌",
+      "members": [
+        "煌",
+        "烛煌"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E7%85%8C",
+        "https://prts.wiki/w/%E7%83%9B%E7%85%8C"
+      ]
+    },
+    {
+      "identity_group": "ch'en",
+      "canonical": "陈",
+      "members": [
+        "陈",
+        "假日威龙陈",
+        "赤刃明霄陈"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E9%99%88",
+        "https://prts.wiki/w/%E5%81%87%E6%97%A5%E5%A8%81%E9%BE%99%E9%99%88",
+        "https://prts.wiki/w/%E8%B5%A4%E5%88%83%E6%98%8E%E9%9C%84%E9%99%88"
+      ]
+    },
+    {
+      "identity_group": "executor",
+      "canonical": "送葬人",
+      "members": [
+        "送葬人",
+        "圣约送葬人"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E9%80%81%E8%91%AC%E4%BA%BA",
+        "https://prts.wiki/w/%E5%9C%A3%E7%BA%A6%E9%80%81%E8%91%AC%E4%BA%BA"
+      ]
+    },
+    {
+      "identity_group": "exusiai",
+      "canonical": "能天使",
+      "members": [
+        "能天使",
+        "新约能天使"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%83%BD%E5%A4%A9%E4%BD%BF",
+        "https://prts.wiki/w/%E6%96%B0%E7%BA%A6%E8%83%BD%E5%A4%A9%E4%BD%BF"
+      ]
+    },
+    {
+      "identity_group": "eyjafjalla",
+      "canonical": "艾雅法拉",
+      "members": [
+        "艾雅法拉",
+        "纯烬艾雅法拉"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89",
+        "https://prts.wiki/w/%E7%BA%AF%E7%83%AC%E8%89%BE%E9%9B%85%E6%B3%95%E6%8B%89"
+      ]
+    },
+    {
+      "identity_group": "fang",
+      "canonical": "芬",
+      "members": [
+        "芬",
+        "历阵锐枪芬"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%8A%AC",
+        "https://prts.wiki/w/%E5%8E%86%E9%98%B5%E9%94%90%E6%9E%AA%E8%8A%AC"
+      ]
+    },
+    {
+      "identity_group": "gavial",
+      "canonical": "嘉维尔",
+      "members": [
+        "嘉维尔",
+        "百炼嘉维尔"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%98%89%E7%BB%B4%E5%B0%94",
+        "https://prts.wiki/w/%E7%99%BE%E7%82%BC%E5%98%89%E7%BB%B4%E5%B0%94"
+      ]
+    },
+    {
+      "identity_group": "greyy",
+      "canonical": "格雷伊",
+      "members": [
+        "格雷伊",
+        "承曦格雷伊"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%A0%BC%E9%9B%B7%E4%BC%8A",
+        "https://prts.wiki/w/%E6%89%BF%E6%9B%A6%E6%A0%BC%E9%9B%B7%E4%BC%8A"
+      ]
+    },
+    {
+      "identity_group": "hibiscus",
+      "canonical": "芙蓉",
+      "members": [
+        "芙蓉",
+        "濯尘芙蓉"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%8A%99%E8%93%89",
+        "https://prts.wiki/w/%E6%BF%AF%E5%B0%98%E8%8A%99%E8%93%89"
+      ]
+    },
+    {
+      "identity_group": "hoshiguma",
+      "canonical": "星熊",
+      "members": [
+        "星熊",
+        "斩业星熊"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%98%9F%E7%86%8A",
+        "https://prts.wiki/w/%E6%96%A9%E4%B8%9A%E6%98%9F%E7%86%8A"
+      ]
+    },
+    {
+      "identity_group": "jessica",
+      "canonical": "杰西卡",
+      "members": [
+        "杰西卡",
+        "涤火杰西卡"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%9D%B0%E8%A5%BF%E5%8D%A1",
+        "https://prts.wiki/w/%E6%B6%A4%E7%81%AB%E6%9D%B0%E8%A5%BF%E5%8D%A1"
+      ]
+    },
+    {
+      "identity_group": "kal'tsit",
+      "canonical": "凯尔希",
+      "members": [
+        "凯尔希",
+        "凯尔希·思衡托"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C",
+        "https://prts.wiki/w/%E5%87%AF%E5%B0%94%E5%B8%8C%C2%B7%E6%80%9D%E8%A1%A1%E6%89%98"
+      ]
+    },
+    {
+      "identity_group": "kroos",
+      "canonical": "克洛丝",
+      "members": [
+        "克洛丝",
+        "寒芒克洛丝"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%85%8B%E6%B4%9B%E4%B8%9D",
+        "https://prts.wiki/w/%E5%AF%92%E8%8A%92%E5%85%8B%E6%B4%9B%E4%B8%9D"
+      ]
+    },
+    {
+      "identity_group": "lappland",
+      "canonical": "拉普兰德",
+      "members": [
+        "拉普兰德",
+        "荒芜拉普兰德"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7",
+        "https://prts.wiki/w/%E8%8D%92%E8%8A%9C%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7"
+      ]
+    },
+    {
+      "identity_group": "lava",
+      "canonical": "炎熔",
+      "members": [
+        "炎熔",
+        "炎狱炎熔"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E7%82%8E%E7%86%94",
+        "https://prts.wiki/w/%E7%82%8E%E7%8B%B1%E7%82%8E%E7%86%94"
+      ]
+    },
+    {
+      "identity_group": "leizi",
+      "canonical": "惊蛰",
+      "members": [
+        "惊蛰",
+        "司霆惊蛰"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%83%8A%E8%9B%B0",
+        "https://prts.wiki/w/%E5%8F%B8%E9%9C%86%E6%83%8A%E8%9B%B0"
+      ]
+    },
+    {
+      "identity_group": "nearl",
+      "canonical": "临光",
+      "members": [
+        "临光",
+        "耀骑士临光"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E4%B8%B4%E5%85%89",
+        "https://prts.wiki/w/%E8%80%80%E9%AA%91%E5%A3%AB%E4%B8%B4%E5%85%89"
+      ]
+    },
+    {
+      "identity_group": "perfumer",
+      "canonical": "调香师",
+      "members": [
+        "调香师",
+        "撷英调香师"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%B0%83%E9%A6%99%E5%B8%88",
+        "https://prts.wiki/w/%E6%92%B7%E8%8B%B1%E8%B0%83%E9%A6%99%E5%B8%88"
+      ]
+    },
+    {
+      "identity_group": "pramanix",
+      "canonical": "初雪",
+      "members": [
+        "初雪",
+        "圣聆初雪"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%88%9D%E9%9B%AA",
+        "https://prts.wiki/w/%E5%9C%A3%E8%81%86%E5%88%9D%E9%9B%AA"
+      ]
+    },
+    {
+      "identity_group": "reed",
+      "canonical": "苇草",
+      "members": [
+        "苇草",
+        "焰影苇草"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%8B%87%E8%8D%89",
+        "https://prts.wiki/w/%E7%84%B0%E5%BD%B1%E8%8B%87%E8%8D%89"
+      ]
+    },
+    {
+      "identity_group": "silence",
+      "canonical": "赫默",
+      "members": [
+        "赫默",
+        "淬羽赫默"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%B5%AB%E9%BB%98",
+        "https://prts.wiki/w/%E6%B7%AC%E7%BE%BD%E8%B5%AB%E9%BB%98"
+      ]
+    },
+    {
+      "identity_group": "silverash",
+      "canonical": "银灰",
+      "members": [
+        "银灰",
+        "凛御银灰"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E9%93%B6%E7%81%B0",
+        "https://prts.wiki/w/%E5%87%9B%E5%BE%A1%E9%93%B6%E7%81%B0"
+      ]
+    },
+    {
+      "identity_group": "skadi",
+      "canonical": "斯卡蒂",
+      "members": [
+        "斯卡蒂",
+        "浊心斯卡蒂"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%96%AF%E5%8D%A1%E8%92%82",
+        "https://prts.wiki/w/%E6%B5%8A%E5%BF%83%E6%96%AF%E5%8D%A1%E8%92%82"
+      ]
+    },
+    {
+      "identity_group": "specter",
+      "canonical": "幽灵鲨",
+      "members": [
+        "幽灵鲨",
+        "归溟幽灵鲨"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%B9%BD%E7%81%B5%E9%B2%A8",
+        "https://prts.wiki/w/%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8"
+      ]
+    },
+    {
+      "identity_group": "swire",
+      "canonical": "诗怀雅",
+      "members": [
+        "诗怀雅",
+        "琳琅诗怀雅"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E8%AF%97%E6%80%80%E9%9B%85",
+        "https://prts.wiki/w/%E7%90%B3%E7%90%85%E8%AF%97%E6%80%80%E9%9B%85"
+      ]
+    },
+    {
+      "identity_group": "texas",
+      "canonical": "德克萨斯",
+      "members": [
+        "德克萨斯",
+        "缄默德克萨斯"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF",
+        "https://prts.wiki/w/%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF"
+      ]
+    },
+    {
+      "identity_group": "thorns",
+      "canonical": "棘刺",
+      "members": [
+        "棘刺",
+        "引星棘刺"
+      ],
+      "source_urls": [
+        "https://prts.wiki/w/%E6%A3%98%E5%88%BA",
+        "https://prts.wiki/w/%E5%BC%95%E6%98%9F%E6%A3%98%E5%88%BA"
+      ]
+    }
+  ]
+}

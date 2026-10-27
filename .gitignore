@@ -1,5 +1,4 @@
 .venv/
-.semantic-venv/
 runtime/
 config/config.json
 vendor/Tulpa/data/

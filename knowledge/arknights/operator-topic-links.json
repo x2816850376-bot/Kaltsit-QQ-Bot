@@ -1,0 +1,1904 @@
+{
+  "schema_version": 1,
+  "retrieved_at": "2026-10-25T19:02:47.113882+00:00",
+  "source": "用户确认条目与PRTS原始档案提取",
+  "links": [
+    {
+      "keywords": [
+        "辣味糖果",
+        "辣糖",
+        "辣味的糖果"
+      ],
+      "canonical": "霜星",
+      "topic": "角色细节／个人偏好",
+      "relation": "与霜星相关的代表性口味细节",
+      "evidence": "用户确认该细节用于识别霜星；回答时仍需结合当前语境，不把单独出现的“糖果”强行指向霜星。",
+      "verification": "user_confirmed",
+      "source_url": "https://prts.wiki/w/%E9%9C%9C%E6%98%9F"
+    },
+    {
+      "keywords": [
+        "臭棋篓子"
+      ],
+      "canonical": "望",
+      "topic": "旁述关系／棋类关联",
+      "relation": "令档案中对望的称呼，不代表令本人爱好",
+      "evidence": "令档案中“那个臭棋篓子”指向望；望在档案中明确被称为无业棋手，并接受与干员对弈的邀约。",
+      "section": "档案7",
+      "verification": "user_confirmed",
+      "source_url": "https://prts.wiki/w/%E4%BB%A4"
+    },
+    {
+      "keywords": [
+        "里面琳琅满目的乐器"
+      ],
+      "canonical": "丰川祥子",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "倒不是喜欢里面琳琅满目的乐器，和热情的音乐爱好者们",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90?action=raw"
+    },
+    {
+      "keywords": [
+        "里面琳琅满目"
+      ],
+      "canonical": "丰川祥子",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "倒不是喜欢里面琳琅满目的乐器，和热情的音乐爱好者们",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90?action=raw"
+    },
+    {
+      "keywords": [
+        "避开大家使用排练室的时间"
+      ],
+      "canonical": "丰川祥子",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "祥子喜欢避开大家使用排练室的时间，一人在此弹琴，她很享受这片刻",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90?action=raw"
+    },
+    {
+      "keywords": [
+        "避开大家使用排练室"
+      ],
+      "canonical": "丰川祥子",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "祥子喜欢避开大家使用排练室的时间，一人在此弹琴，她很享受这片刻",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B8%B0%E5%B7%9D%E7%A5%A5%E5%AD%90?action=raw"
+    },
+    {
+      "keywords": [
+        "闻植物的清新香气"
+      ],
+      "canonical": "九色鹿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "九色鹿喜欢闻植物的清新香气，喜欢欣赏墨迹未干的书画，还喜欢品尝鲜嫩的新茶",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B9%9D%E8%89%B2%E9%B9%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "欣赏墨迹未干的书画"
+      ],
+      "canonical": "九色鹿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "九色鹿喜欢闻植物的清新香气，喜欢欣赏墨迹未干的书画，还喜欢品尝鲜嫩的新茶",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B9%9D%E8%89%B2%E9%B9%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "品尝鲜嫩的新茶"
+      ],
+      "canonical": "九色鹿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "九色鹿喜欢闻植物的清新香气，喜欢欣赏墨迹未干的书画，还喜欢品尝鲜嫩的新茶",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%B9%9D%E8%89%B2%E9%B9%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "直接用名字"
+      ],
+      "canonical": "亚叶",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” “有些人喜欢直接用名字，有些人喜欢用事物",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%BA%9A%E5%8F%B6?action=raw"
+    },
+    {
+      "keywords": [
+        "记忆人脸"
+      ],
+      "canonical": "伯塔尼",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "我不太擅长记忆人脸，所以一开始对着面生的同事也不敢贸然上前打招呼，我甚至无法判断对方是“讲师”还是“学生”",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%BC%AF%E5%A1%94%E5%B0%BC?action=raw"
+    },
+    {
+      "keywords": [
+        "主动发现自己想做的事情"
+      ],
+      "canonical": "佩德洛",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "此外，我们还注意到佩德洛干员似乎相当不擅长主动发现自己想做的事情，但只要为他安排了需要做的事情，并告知他要做的原因之后，他就反而丝毫不缺积极性",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%BD%A9%E5%BE%B7%E6%B4%9B?action=raw"
+    },
+    {
+      "keywords": [
+        "个搭配"
+      ],
+      "canonical": "余",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "百灶城外修园林的总爱吃个搭配，荤素咸甜鳞兽，菜不能相佐，他就吃不痛快",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E4%BD%99?action=raw"
+    },
+    {
+      "keywords": [
+        "调酒"
+      ],
+      "canonical": "冰酿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她擅长调酒，更擅长倾听别人的烦恼，但最为可贵的一点是，她充分尊重每个人的自我空间，永远不会越界去探究他人内心深处的隐秘感受，即使对方主动向她袒露心扉",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%86%B0%E9%85%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "倾听别人的烦恼"
+      ],
+      "canonical": "冰酿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她擅长调酒，更擅长倾听别人的烦恼，但最为可贵的一点是，她充分尊重每个人的自我空间，永远不会越界去探究他人内心深处的隐秘感受，即使对方主动向她袒露心扉",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%86%B0%E9%85%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "听歌"
+      ],
+      "canonical": "凛冬",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "凛冬喜欢听歌，尤其钟爱在乌萨斯的年轻人中流行的一种被称为Hardbass的电子音乐，歌曲急促的节奏和鼓动人心的低音总会让她感到热血沸腾，伴随音乐填充肢体的是难以克制的冲动——一种想要大展拳脚，想要冲破所有无聊日常，急于挣脱束缚的心情总在这时浸染凛冬的心灵",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%87%9B%E5%86%AC?action=raw"
+    },
+    {
+      "keywords": [
+        "成为一个专门设计杀人工具"
+      ],
+      "canonical": "凯瑟琳",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "但是，这并不意味着她会热衷于成为一个专门设计杀人工具，并且引以为傲的人，她宁愿用上全部的精气神去照看身边的人",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%87%AF%E7%91%9F%E7%90%B3?action=raw"
+    },
+    {
+      "keywords": [
+        "到大家得知愿望能实现时的开心笑容"
+      ],
+      "canonical": "刺玫",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "我很喜欢看到大家得知愿望能实现时的开心笑容",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%88%BA%E7%8E%AB?action=raw"
+    },
+    {
+      "keywords": [
+        "吃好"
+      ],
+      "canonical": "刻俄柏",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "很巧，这些都是她喜欢做的事，所以在一位干员牵线搭桥后，她毫不犹豫选择了加入罗德岛",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F?action=raw"
+    },
+    {
+      "keywords": [
+        "喝好"
+      ],
+      "canonical": "刻俄柏",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "很巧，这些都是她喜欢做的事，所以在一位干员牵线搭桥后，她毫不犹豫选择了加入罗德岛",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F?action=raw"
+    },
+    {
+      "keywords": [
+        "睡好"
+      ],
+      "canonical": "刻俄柏",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "很巧，这些都是她喜欢做的事，所以在一位干员牵线搭桥后，她毫不犹豫选择了加入罗德岛",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F?action=raw"
+    },
+    {
+      "keywords": [
+        "蜜饼"
+      ],
+      "canonical": "刻俄柏",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "虽然来到罗德岛之后吃了那么多稀奇古怪的东西，但要问她最爱什么，她还是会毫不犹豫选择蜜饼，只有这东西，她不会随便吃，现在的话，只吃炎熔、火神和角峰烤的饼，其他的人，就算是后勤的大厨，她也不会吃哪怕一点碎屑",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%88%BB%E4%BF%84%E6%9F%8F?action=raw"
+    },
+    {
+      "keywords": [
+        "带着小型录音器"
+      ],
+      "canonical": "协律",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "别人用琴弦或吟唱来构筑音乐术式，而她更喜欢带着小型录音器，穿梭在街角、集市和老旧的工坊里，收集那些微小而真实的声音——锻铁时的敲击、雪夜里风穿过屋檐的低鸣，或是远处电车刹车时带着火花的摩擦",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%8D%8F%E5%BE%8B?action=raw"
+    },
+    {
+      "keywords": [
+        "性地用手头的武器横在他脖子上"
+      ],
+      "canonical": "卡涅利安",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "结果，他往桌子下面安窃听器的时候，我习惯性地用手头的武器横在他脖子上，才想起自己拿的不是剑，是小号",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%8D%A1%E6%B6%85%E5%88%A9%E5%AE%89?action=raw"
+    },
+    {
+      "keywords": [
+        "文雅一点的死法"
+      ],
+      "canonical": "卡涅利安",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "你喜欢文雅一点的死法，还是直接点的",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%8D%A1%E6%B6%85%E5%88%A9%E5%AE%89?action=raw"
+    },
+    {
+      "keywords": [
+        "吃冰淇淋或者其他冷饮"
+      ],
+      "canonical": "史尔特尔",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "这也是她总喜欢吃冰淇淋或者其他冷饮的原因",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%8F%B2%E5%B0%94%E7%89%B9%E5%B0%94?action=raw"
+    },
+    {
+      "keywords": [
+        "就是听你唱歌了——”“欸欸"
+      ],
+      "canonical": "吉星",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "”“呜，萌萌香小姐，我剩下的爱好就是听你唱歌了——”“欸欸",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%90%89%E6%98%9F?action=raw"
+    },
+    {
+      "keywords": [
+        "玻利瓦尔咖啡豆"
+      ],
+      "canonical": "和弦",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "与夫人共同爱好玻利瓦尔咖啡豆，二人每年亲自前往采买",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%92%8C%E5%BC%A6?action=raw"
+    },
+    {
+      "keywords": [
+        "玩战争游戏"
+      ],
+      "canonical": "哈洛德",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” 哈洛德为啥和桃金娘带起来的那群喜欢玩战争游戏的孩子混得那么好啊",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%93%88%E6%B4%9B%E5%BE%B7?action=raw"
+    },
+    {
+      "keywords": [
+        "体验各式各样的食品"
+      ],
+      "canonical": "坚雷",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "喜欢体验各式各样的食品，将之视为享受生活的方式",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%9D%9A%E9%9B%B7?action=raw"
+    },
+    {
+      "keywords": [
+        "甜食的原因"
+      ],
+      "canonical": "埃癸斯",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她是这样说的：“经过这段时间的观察，我已经知晓了拉特兰人热衷于甜食的原因",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%9F%83%E7%99%B8%E6%96%AF?action=raw"
+    },
+    {
+      "keywords": [
+        "站在所有人前面"
+      ],
+      "canonical": "复奏",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "调查的最后，我们依旧无法为复奏的行为下一个明确的定义，她似乎并非在扩张影响力，而是习惯站在所有人前面，把现有的麻烦挡下来",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A4%8D%E5%A5%8F?action=raw"
+    },
+    {
+      "keywords": [
+        "绘画"
+      ],
+      "canonical": "夕",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "擅长绘画，尤其是炎国传统绘画",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A4%95?action=raw"
+    },
+    {
+      "keywords": [
+        "说书人为自己起的名字"
+      ],
+      "canonical": "夜半",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢说书人口中的故事，也喜欢说书人为自己起的名字，因此后来无论是行走江湖，还是与罗德岛签订合同，都使用夜半两字作为自己的名号",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A4%9C%E5%8D%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "说书人口中"
+      ],
+      "canonical": "夜半",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢说书人口中的故事，也喜欢说书人为自己起的名字，因此后来无论是行走江湖，还是与罗德岛签订合同，都使用夜半两字作为自己的名号",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A4%9C%E5%8D%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "说书人为自己起"
+      ],
+      "canonical": "夜半",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢说书人口中的故事，也喜欢说书人为自己起的名字，因此后来无论是行走江湖，还是与罗德岛签订合同，都使用夜半两字作为自己的名号",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A4%9C%E5%8D%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "画画"
+      ],
+      "canonical": "妮芙",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "卡兹戴尔居民的识字率不甚理想，比起写字，他们更擅长画画，而她手中的这块木片上——画着一个长着翅膀和光环的纸杯......里面是糊糊",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%A6%AE%E8%8A%99?action=raw"
+    },
+    {
+      "keywords": [
+        "看书"
+      ],
+      "canonical": "孑",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "与外表给人的感觉相反，孑本人的性格非常安静，甚至可以说有些呆板，他喜欢看书，研究厨艺，对他来说，能够简简单单地过生活是最好的，不过，生活总是不遂人愿",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%AD%91?action=raw"
+    },
+    {
+      "keywords": [
+        "零食"
+      ],
+      "canonical": "安比尔",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她比较喜欢零食和甜品，似乎看一些题材轻松不复杂的电影和电视节目，非工作日的时候会和其他萨科塔干员聚会聊天",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%AE%89%E6%AF%94%E5%B0%94?action=raw"
+    },
+    {
+      "keywords": [
+        "稍显复古的音乐"
+      ],
+      "canonical": "安洁莉娜",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "喜欢小饰品和流行小说，意外的喜欢稍显复古的音乐，安洁莉娜的人生本应平常而快乐",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%AE%89%E6%B4%81%E8%8E%89%E5%A8%9C?action=raw"
+    },
+    {
+      "keywords": [
+        "根据心情随意“编写”一些旋律"
+      ],
+      "canonical": "小满",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "小满总是乐于用笛声为周围人带去情绪上的抚慰，也喜欢根据心情随意“编写”一些旋律，在音律上不拘一格，听起来却也活泼悦耳，有时候禾生还会为这些小曲填上词",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%B0%8F%E6%BB%A1?action=raw"
+    },
+    {
+      "keywords": [
+        "音像娱乐工作"
+      ],
+      "canonical": "年",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "声称自己擅长音像娱乐工作，经常提供一些罗德岛干员普遍不太喜爱的音像产品",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%B9%B4?action=raw"
+    },
+    {
+      "keywords": [
+        "做的事——雕塑"
+      ],
+      "canonical": "归溟幽灵鲨",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "或许，正如伊比利亚人用各种方式记录了他们的黄金时代一样，她也可以试着重新捡回她曾经最爱做的事——雕塑",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E5%BD%92%E6%BA%9F%E5%B9%BD%E7%81%B5%E9%B2%A8?action=raw"
+    },
+    {
+      "keywords": [
+        "做烘焙"
+      ],
+      "canonical": "怒潮凛冬",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "——干员真理的访谈记录 我进去的时候，那批纸杯蛋糕已经快被她们吃光了，呵呵......没关系，这就是我喜欢做烘焙的原因呀",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%80%92%E6%BD%AE%E5%87%9B%E5%86%AC?action=raw"
+    },
+    {
+      "keywords": [
+        "洞察敌人的弱点"
+      ],
+      "canonical": "拉普兰德",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "另一方面，拉普兰德极其擅长洞察敌人的弱点，这使得拥有特殊能力或源石技艺的敌人，在她的面前同样占不到便宜",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%8B%89%E6%99%AE%E5%85%B0%E5%BE%B7?action=raw"
+    },
+    {
+      "keywords": [
+        "空的曲子"
+      ],
+      "canonical": "拜松",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” “是的，大家都很喜欢空的曲子",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%8B%9C%E6%9D%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "去读一些人物传记"
+      ],
+      "canonical": "掠风",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "据我们的观察，掠风在舰上除却日常工作方面的知识获取，似乎尤为喜欢去读一些人物传记",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%8E%A0%E9%A3%8E?action=raw"
+    },
+    {
+      "keywords": [
+        "显然是受了抚养人凛视的影响"
+      ],
+      "canonical": "提丰",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "提丰的诸多习惯显然是受了抚养人凛视的影响",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%8F%90%E4%B8%B0?action=raw"
+    },
+    {
+      "keywords": [
+        "诗歌"
+      ],
+      "canonical": "摆渡人",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "听说赞索斯喜欢诗歌，我就邀请他来加入我们的诗歌爱好者协会",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%91%86%E6%B8%A1%E4%BA%BA?action=raw"
+    },
+    {
+      "keywords": [
+        "者们面前朗诵诗歌后"
+      ],
+      "canonical": "摆渡人",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "一开始，他还有些兴趣，但得知我们会在定期活动时聚在一起，在其他爱好者们面前朗诵诗歌后，他变得迟疑起来，似乎并不太习惯这样的集体活动",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%91%86%E6%B8%A1%E4%BA%BA?action=raw"
+    },
+    {
+      "keywords": [
+        "漫画"
+      ],
+      "canonical": "斑点",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "因此，像斑点这样，似乎对任何事情都没有兴趣，喜欢看漫画，追逐时尚，隔一段时间还会请梓兰小姐给他换一个毛型的萨尔贡人，确实是颇为少见",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%96%91%E7%82%B9?action=raw"
+    },
+    {
+      "keywords": [
+        "杀人的‘合格萨卡兹雇佣兵’"
+      ],
+      "canonical": "明椒",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "“不管曼弗雷德还有上面的大人物有什么远大目标，至少对于我来说，跟在曼弗雷德这种家伙的身后，当一个习惯杀人的‘合格萨卡兹雇佣兵’，这绝对不是我想要的那种好日子",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%98%8E%E6%A4%92?action=raw"
+    },
+    {
+      "keywords": [
+        "喝酒"
+      ],
+      "canonical": "星熊",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "喜欢喝酒，至今还没人见过她醉倒的样子",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%98%9F%E7%86%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "交际却有着一颗善良的心"
+      ],
+      "canonical": "暮落",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "考虑到罗德岛干员们来自大地的各个角落，种族、性格、经历也千差万别，的确有许多人不擅长交际却有着一颗善良的心，因此对于暮落的生活状态，人事部门的干员并没有放在心上",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9A%AE%E8%90%BD?action=raw"
+    },
+    {
+      "keywords": [
+        "运用种种手法保护其他干员"
+      ],
+      "canonical": "暴行",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不仅如此，该干员还十分擅长运用种种手法保护其他干员，这使得暴行所在小队的伤亡率比行动预测估算的数值更低",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9A%B4%E8%A1%8C?action=raw"
+    },
+    {
+      "keywords": [
+        "运用灵敏感官"
+      ],
+      "canonical": "月禾",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "前东国天灾信使，擅长运用灵敏感官，从最细微变化中察觉天灾发生并传达给城市",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9C%88%E7%A6%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "获得多数人的信赖"
+      ],
+      "canonical": "月禾",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "看来，比起天灾信使这一职责，她似乎更加擅长获得多数人的信赖",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9C%88%E7%A6%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "模仿歌舞杂耍的桥段"
+      ],
+      "canonical": "机械师",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "他是个比许多雷姆必拓人都更出色的击球选手，也比许多莱塔尼亚人更擅长模仿歌舞杂耍的桥段",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9C%BA%E6%A2%B0%E5%B8%88?action=raw"
+    },
+    {
+      "keywords": [
+        "处理东国方面的信息流通事务"
+      ],
+      "canonical": "松桐",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "松桐，本名森内彻，酒保、关东煮摊摊主，同时也是锻冶町周边情报交易的核心人物，从事多种职业，广泛涉足各类人际网络，尤其擅长处理东国方面的信息流通事务",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9D%BE%E6%A1%90?action=raw"
+    },
+    {
+      "keywords": [
+        "外面的土地"
+      ],
+      "canonical": "极光",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "爹喜欢矿区，喜欢希瓦艾什老爷，但他不喜欢外面的土地",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9E%81%E5%85%89?action=raw"
+    },
+    {
+      "keywords": [
+        "外面"
+      ],
+      "canonical": "极光",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "爹喜欢矿区，喜欢希瓦艾什老爷，但他不喜欢外面的土地",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9E%81%E5%85%89?action=raw"
+    },
+    {
+      "keywords": [
+        "单打独斗的干员"
+      ],
+      "canonical": "极境",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "他对同伴的重视远超许多更加喜欢单打独斗的干员，因此，小队成员之间起争执是他最不愿意见到的事情",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9E%81%E5%A2%83?action=raw"
+    },
+    {
+      "keywords": [
+        "单打独斗"
+      ],
+      "canonical": "极境",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "他对同伴的重视远超许多更加喜欢单打独斗的干员，因此，小队成员之间起争执是他最不愿意见到的事情",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9E%81%E5%A2%83?action=raw"
+    },
+    {
+      "keywords": [
+        "看街边"
+      ],
+      "canonical": "林",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "林：哈哈，记者先生难不成也喜欢看街边的小报",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%9E%97?action=raw"
+    },
+    {
+      "keywords": [
+        "集体行动"
+      ],
+      "canonical": "桃金娘",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "喜欢集体行动，总是往人多的地方凑，并且因为性格十分讨喜，深得一些年长干员的喜爱",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%A1%83%E9%87%91%E5%A8%98?action=raw"
+    },
+    {
+      "keywords": [
+        "机器解决问题"
+      ],
+      "canonical": "森蚺",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "比起拳头，她更喜欢用机器解决问题",
+      "section": "干员简介补充",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%A3%AE%E8%9A%BA?action=raw"
+    },
+    {
+      "keywords": [
+        "药物的萃取"
+      ],
+      "canonical": "棘刺",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "干员棘刺在剑术上拥有很高的天赋，而在药剂制作这一领域，他也有着过人的才能，棘刺极为擅长药物的萃取与提纯，特别是毒素类，经由他手制作的神经类毒素的效果精确，得到了医疗部某些干员的极大好评",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%A3%98%E5%88%BA?action=raw"
+    },
+    {
+      "keywords": [
+        "特蕾西娅小姐的这句话"
+      ],
+      "canonical": "槐琥",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” 希望大家喜欢特蕾西娅小姐的这句话",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%A7%90%E7%90%A5?action=raw"
+    },
+    {
+      "keywords": [
+        "特蕾西娅小姐"
+      ],
+      "canonical": "槐琥",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” 希望大家喜欢特蕾西娅小姐的这句话",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%A7%90%E7%90%A5?action=raw"
+    },
+    {
+      "keywords": [
+        "玩乐"
+      ],
+      "canonical": "泡泡",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢玩乐、爱出头、讲义气，还特别擅长夸大自己的“冒险”，许多小朋友都喜欢听她说这说那",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B3%A1%E6%B3%A1?action=raw"
+    },
+    {
+      "keywords": [
+        "集体活动"
+      ],
+      "canonical": "流星",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "为人温和且善解人意，喜欢集体活动并且经常会主动组织，虽然年轻，但十分可靠",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B5%81%E6%98%9F?action=raw"
+    },
+    {
+      "keywords": [
+        "电子器械"
+      ],
+      "canonical": "流星",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "流星十分不习惯电子器械",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B5%81%E6%98%9F?action=raw"
+    },
+    {
+      "keywords": [
+        "海蒂姐姐"
+      ],
+      "canonical": "海蒂",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” “我喜欢海蒂姐姐的睡前故事",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B5%B7%E8%92%82?action=raw"
+    },
+    {
+      "keywords": [
+        "者们的心中占据了重要地位"
+      ],
+      "canonical": "深律",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "凭借着宫廷出身的音乐造诣，深律很轻松就在罗德岛的音乐爱好者们的心中占据了重要地位，吸引了一大批干员成为他的忠实听众，他也很乐意以自己的号声为引，主动与干员们交流",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B7%B1%E5%BE%8B?action=raw"
+    },
+    {
+      "keywords": [
+        "演奏这首曲子"
+      ],
+      "canonical": "深律",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她也许是不喜欢这首曲子，也许是不喜欢这首曲子诞生的地方，又或者，我更愿意相信她仅仅是不喜欢演奏这首曲子的我......有一段时间，我一度不再想演奏这首曲子了，但后来我决定了，我需要演奏，我需要继续演奏下去，这不是为了鲁珀坎，甚至不是为了莱塔尼亚，而是为了我自己",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%B7%B1%E5%BE%8B?action=raw"
+    },
+    {
+      "keywords": [
+        "吃到不一样的美味"
+      ],
+      "canonical": "溯光星源",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "多出去走走吧，花点时间去玩乐、交朋友，去把你听到的那些歌谣和小调都学下来吧，选一首最喜欢的带回来给我",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%BA%AF%E5%85%89%E6%98%9F%E6%BA%90?action=raw"
+    },
+    {
+      "keywords": [
+        "听到不同的语音"
+      ],
+      "canonical": "溯光星源",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "多出去走走吧，花点时间去玩乐、交朋友，去把你听到的那些歌谣和小调都学下来吧，选一首最喜欢的带回来给我",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%BA%AF%E5%85%89%E6%98%9F%E6%BA%90?action=raw"
+    },
+    {
+      "keywords": [
+        "曲调"
+      ],
+      "canonical": "溯光星源",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "多出去走走吧，花点时间去玩乐、交朋友，去把你听到的那些歌谣和小调都学下来吧，选一首最喜欢的带回来给我",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E6%BA%AF%E5%85%89%E6%98%9F%E6%BA%90?action=raw"
+    },
+    {
+      "keywords": [
+        "玩火"
+      ],
+      "canonical": "火哨",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "你喜欢玩火，而且玩得很好，我们接受，只希望你能记得把火灭掉，现在看来，连这样的担心都是多余的",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%81%AB%E5%93%A8?action=raw"
+    },
+    {
+      "keywords": [
+        "打造点新玩意"
+      ],
+      "canonical": "火神",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "比起修东西，她更喜欢打造点新玩意",
+      "section": "干员简介补充",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%81%AB%E7%A5%9E?action=raw"
+    },
+    {
+      "keywords": [
+        "正是来自这种家学渊源"
+      ],
+      "canonical": "灵知",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "灵知对于研究的热衷正是来自这种家学渊源",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%81%B5%E7%9F%A5?action=raw"
+    },
+    {
+      "keywords": [
+        "甜食"
+      ],
+      "canonical": "焰尾",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "喜欢可爱的东西，爱吃甜食，对新奇的设备抱有强烈的好奇心",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%84%B0%E5%B0%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "性反驳老友"
+      ],
+      "canonical": "瑕光",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "”科瓦尔本想习惯性反驳老友，但想到了那段往事，想到一些故友旧人，他沉默了",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%91%95%E5%85%89?action=raw"
+    },
+    {
+      "keywords": [
+        "似乎是在海岬看雪"
+      ],
+      "canonical": "白雪",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "爱好似乎是在海岬看雪，但究竟是中意海岬，还是喜欢看雪，亦或者是必须要在海岬看雪，尚且不得而知",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%99%BD%E9%9B%AA?action=raw"
+    },
+    {
+      "keywords": [
+        "看雪"
+      ],
+      "canonical": "白雪",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "爱好似乎是在海岬看雪，但究竟是中意海岬，还是喜欢看雪，亦或者是必须要在海岬看雪，尚且不得而知",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%99%BD%E9%9B%AA?action=raw"
+    },
+    {
+      "keywords": [
+        "吃多加些盐"
+      ],
+      "canonical": "真理",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "娜塔莉娅喜欢吃多加些盐的",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%9C%9F%E7%90%86?action=raw"
+    },
+    {
+      "keywords": [
+        "画圆"
+      ],
+      "canonical": "矩",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "一套尺规，矩总说没人比他更擅长画圆，他想让你也拥有这份并不起眼的能力，毕竟世事总会在不起眼当中展现真知，不是吗",
+      "section": "信物描述",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%9F%A9?action=raw"
+    },
+    {
+      "keywords": [
+        "来找澄闪姐姐"
+      ],
+      "canonical": "祐天寺若麦",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "”罗德岛上不乏这样天真的孩子，她们总喜欢来找澄闪姐姐和若麦姐姐，拜托她们帮自己打扮得美美的，去找其他孩子炫耀",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%A5%90%E5%A4%A9%E5%AF%BA%E8%8B%A5%E9%BA%A6?action=raw"
+    },
+    {
+      "keywords": [
+        "收养孩子"
+      ],
+      "canonical": "结城理",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "结城同学看起来并不惊讶，点点头说注意到了拉特兰人似乎喜欢收养孩子",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BB%93%E5%9F%8E%E7%90%86?action=raw"
+    },
+    {
+      "keywords": [
+        "文书撰写的干员"
+      ],
+      "canonical": "维伊",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "在注意到他的副手也无法对此提供太多帮助之后，为保障合作顺利进行，我们拨派了一名在接待处工作，擅长文书撰写的干员，在工作时间内，协助他及时进行报告留档等事务",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BB%B4%E4%BC%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "酸味的棒棒糖"
+      ],
+      "canonical": "维娜·维多利亚",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "——因陀罗 维娜说过，她喜欢酸味的棒棒糖，是因为那种浓郁的酸味让她觉得自己活得真实，那大概和我喜欢吃老汉克店里那种尝起来像快过期了的劣质酱料是一回事，我能懂",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BB%B4%E5%A8%9C%C2%B7%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A?action=raw"
+    },
+    {
+      "keywords": [
+        "指点时政的酒客间风靡起来"
+      ],
+      "canonical": "维娜·维多利亚",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "时下酒馆里能消磨时间的办法不多，而这套供孩子嬉闹的游戏则迅速在喜欢指点时政的酒客间风靡起来",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BB%B4%E5%A8%9C%C2%B7%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A?action=raw"
+    },
+    {
+      "keywords": [
+        "指点时政"
+      ],
+      "canonical": "维娜·维多利亚",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "时下酒馆里能消磨时间的办法不多，而这套供孩子嬉闹的游戏则迅速在喜欢指点时政的酒客间风靡起来",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BB%B4%E5%A8%9C%C2%B7%E7%BB%B4%E5%A4%9A%E5%88%A9%E4%BA%9A?action=raw"
+    },
+    {
+      "keywords": [
+        "说唱"
+      ],
+      "canonical": "缄默德克萨斯",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” “所以老板你会喜欢说唱，其实是受到哥伦比亚的影响吗",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BC%84%E9%BB%98%E5%BE%B7%E5%85%8B%E8%90%A8%E6%96%AF?action=raw"
+    },
+    {
+      "keywords": [
+        "思考的自己学会这么做"
+      ],
+      "canonical": "缠丸",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "但至少，她已经学会了去怀疑，为了生存，她必须让不擅长思考的自己学会这么做",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BC%A0%E4%B8%B8?action=raw"
+    },
+    {
+      "keywords": [
+        "就是看电影"
+      ],
+      "canonical": "罗宾",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "罗宾的到来为她缓解了一些问题，毕竟正如第一份档案所说，罗宾的性格并不是天生阴郁，她过去实际上是个相当开朗的都市女孩，而且最大的爱好就是看电影",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BD%97%E5%AE%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "战斗的干员打成一片"
+      ],
+      "canonical": "罗德岛隐秘队",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "活泼友善的政宗迅速成为干员中的明星——许多干员都申请和政宗一起出任务，为的就是看一看会说话的可爱“云兽”，而原本孤高的义经也和许多热衷于战斗的干员打成一片",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BD%97%E5%BE%B7%E5%B2%9B%E9%9A%90%E7%A7%98%E9%98%9F?action=raw"
+    },
+    {
+      "keywords": [
+        "品酒或者喜欢买醉的干员欢迎"
+      ],
+      "canonical": "羽毛笔",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "这一切，让羽毛笔逐渐受到了许多喜欢品酒或者喜欢买醉的干员欢迎，她出现在调酒台的日子，罗德岛的酒吧总会热闹一些",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BE%BD%E6%AF%9B%E7%AC%94?action=raw"
+    },
+    {
+      "keywords": [
+        "品酒或者喜欢买醉"
+      ],
+      "canonical": "羽毛笔",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "这一切，让羽毛笔逐渐受到了许多喜欢品酒或者喜欢买醉的干员欢迎，她出现在调酒台的日子，罗德岛的酒吧总会热闹一些",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E7%BE%BD%E6%AF%9B%E7%AC%94?action=raw"
+    },
+    {
+      "keywords": [
+        "吃辣"
+      ],
+      "canonical": "老鲤",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "你们这伙尚蜀人口味怪得很，除了你，没一个喜欢吃辣，偏偏又只喜欢家乡菜",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%80%81%E9%B2%A4?action=raw"
+    },
+    {
+      "keywords": [
+        "家乡菜"
+      ],
+      "canonical": "老鲤",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "你们这伙尚蜀人口味怪得很，除了你，没一个喜欢吃辣，偏偏又只喜欢家乡菜",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%80%81%E9%B2%A4?action=raw"
+    },
+    {
+      "keywords": [
+        "快乐"
+      ],
+      "canonical": "能天使",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她只是喜欢快乐的事，然后变成了这样的人，仅此而已",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%83%BD%E5%A4%A9%E4%BD%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "点什么"
+      ],
+      "canonical": "能天使",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "”“哼，看来你也知道我喜欢点什么，这样很好",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%83%BD%E5%A4%A9%E4%BD%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "别人讲述他们的生活"
+      ],
+      "canonical": "艾拉",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "相比自己的故事，艾拉更喜欢听别人讲述他们的生活，尤其是在这片对她来说显得陌生的地方，每个人的故事都能增进她对周围的人和事物的了解，进而给她以启发",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%89%BE%E6%8B%89?action=raw"
+    },
+    {
+      "keywords": [
+        "听别人讲述他们"
+      ],
+      "canonical": "艾拉",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "相比自己的故事，艾拉更喜欢听别人讲述他们的生活，尤其是在这片对她来说显得陌生的地方，每个人的故事都能增进她对周围的人和事物的了解，进而给她以启发",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%89%BE%E6%8B%89?action=raw"
+    },
+    {
+      "keywords": [
+        "照顾他人的性格"
+      ],
+      "canonical": "芙蓉",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "天生就擅长照顾他人的性格和努力帮助芙蓉顺利地成为了罗德岛的医师",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8A%99%E8%93%89?action=raw"
+    },
+    {
+      "keywords": [
+        "搭理芙蓉"
+      ],
+      "canonical": "芙蓉",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "虽然在外人看起来，炎熔不是很喜欢搭理芙蓉，两姐妹的关系好像不怎么样",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8A%99%E8%93%89?action=raw"
+    },
+    {
+      "keywords": [
+        "应付自己的姐姐"
+      ],
+      "canonical": "芙蓉",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "”难怪炎熔总是不擅长应付自己的姐姐，周围的大家都默默地这么想着",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8A%99%E8%93%89?action=raw"
+    },
+    {
+      "keywords": [
+        "远离人群"
+      ],
+      "canonical": "芳汀",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "干员芳汀所掌握的源石技艺较为特殊，在使用时大多伴随有毒性与分解、腐蚀的特质，这使得他平常总是习惯远离人群，避免增加不必要的风险",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8A%B3%E6%B1%80?action=raw"
+    },
+    {
+      "keywords": [
+        "小队合作"
+      ],
+      "canonical": "苇草",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "【注意事项】 ...... 4，和斯卡蒂、红等干员不同，苇草擅长小队合作，足以担当战地指挥官",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8B%87%E8%8D%89?action=raw"
+    },
+    {
+      "keywords": [
+        "搭建棚屋"
+      ],
+      "canonical": "莱伊",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "卡特斯们依旧热衷于搭建棚屋，只是会选择避开凶恶的荒野，像莱伊一样在野外还保有这种习惯的人，则已经十分少见",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8E%B1%E4%BC%8A?action=raw"
+    },
+    {
+      "keywords": [
+        "快速找到其弱点"
+      ],
+      "canonical": "莱欧斯",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "莱欧斯每时每刻都在观察和了解生物，并将其记录整理，当遇到陌生生物时，他就能快速通过类似生物的构造特征和思维习惯快速找到其弱点",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%8E%B1%E6%AC%A7%E6%96%AF?action=raw"
+    },
+    {
+      "keywords": [
+        "观看"
+      ],
+      "canonical": "蒂比",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” 蒂比对于恐怖片的热爱非比寻常，不仅是喜欢观看，她还直接参与了不少恐怖片的制作，并拉着自己的朋友们一次又一次地热火朝天地观看它们，不仅享受被吓的乐趣，还一遍一遍地分析咂摸着里边的各种桥段、表现手法...... 至于为何对恐怖片如此情有独钟，蒂比突然很认真地告诉我们：看恐怖片是一个最简单直接的研究如何塑造电影氛围的方式，因为不论是背景还是音乐，或者是道具、演员的表演，只要有一环掉链子，恐怖片就会变成搞笑片，绝对无法让人沉浸其中并真的感到害怕——如何做到每一环都正正好好，传达出电影想要传达的氛围，讲好电影想要讲的故事，这是她想从其中学习的东西",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%92%82%E6%AF%94?action=raw"
+    },
+    {
+      "keywords": [
+        "如何做到每一环都正正好好"
+      ],
+      "canonical": "蒂比",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "当然，还有一个最简单的理由，那就是她的确很喜欢这种和朋友们挤在角落里，一起被吓得连声大叫的感觉",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%92%82%E6%AF%94?action=raw"
+    },
+    {
+      "keywords": [
+        "传达出电影想要传达的氛围"
+      ],
+      "canonical": "蒂比",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "当然，还有一个最简单的理由，那就是她的确很喜欢这种和朋友们挤在角落里，一起被吓得连声大叫的感觉",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%92%82%E6%AF%94?action=raw"
+    },
+    {
+      "keywords": [
+        "躲在自己的秘密基地安静地读书"
+      ],
+      "canonical": "薄绿",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "薄绿喜欢躲在自己的秘密基地安静地读书，也喜欢和朋友们一起玩闹，她喜欢爬树，喜欢冒险，喜欢所有新奇而有趣的东西",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%96%84%E7%BB%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "音乐"
+      ],
+      "canonical": "蜜蜡",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "蜜蜡喜欢音乐，在离家时，她随身携带了不少音乐协会发行的杂志，这些杂志新刊在术师小组内大受欢迎，连带着蜜蜡本人也迅速被接纳，十分顺利地与其他干员构建起了良好关系",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%9C%9C%E8%9C%A1?action=raw"
+    },
+    {
+      "keywords": [
+        "盯着弟弟妹妹的眼睛看"
+      ],
+      "canonical": "裂响",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "瑭雅喜欢盯着弟弟妹妹的眼睛看，她总觉得其中藏着些很特别的东西，但她弄不清楚",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%A3%82%E5%93%8D?action=raw"
+    },
+    {
+      "keywords": [
+        "盯着弟弟妹妹"
+      ],
+      "canonical": "裂响",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "瑭雅喜欢盯着弟弟妹妹的眼睛看，她总觉得其中藏着些很特别的东西，但她弄不清楚",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%A3%82%E5%93%8D?action=raw"
+    },
+    {
+      "keywords": [
+        "生食"
+      ],
+      "canonical": "衡沙",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "...... 物品异常损耗：生鲜水产十二种 损耗原因：未及时食用 备注：米奥并不喜欢吃生食，它要求我提高自己的生活品质，以便它与我共同进餐",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%A1%A1%E6%B2%99?action=raw"
+    },
+    {
+      "keywords": [
+        "性地抓起了挂在门后的逗宠棒"
+      ],
+      "canonical": "衡沙",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "拉恕尔打开了那扇帮他挡住了十几年恶意的厚重房门，习惯性地抓起了挂在门后的逗宠棒，朝着黑暗的房间深处摇了摇",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%A1%A1%E6%B2%99?action=raw"
+    },
+    {
+      "keywords": [
+        "倾听"
+      ],
+      "canonical": "见行者",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "相比于直接通过物理手段解决纷争，见行者更擅长倾听和调解",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%A7%81%E8%A1%8C%E8%80%85?action=raw"
+    },
+    {
+      "keywords": [
+        "影响的口音"
+      ],
+      "canonical": "诺威尔",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不过，根据他明显受到高卢语发音习惯影响的口音，也许可以推测他出生于维多利亚北部地区",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%AF%BA%E5%A8%81%E5%B0%94?action=raw"
+    },
+    {
+      "keywords": [
+        "电影"
+      ],
+      "canonical": "诺威尔",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "你很喜欢看电影",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%AF%BA%E5%A8%81%E5%B0%94?action=raw"
+    },
+    {
+      "keywords": [
+        "源石技艺的人来说"
+      ],
+      "canonical": "谜图",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "对于感染前就已经擅长源石技艺的人来说，要改变自己的战斗方式乃至生活方式，并没有那么容易，更不要说是性格极其固执的谜图",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%B0%9C%E5%9B%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "人把事情弄得一团糟"
+      ],
+      "canonical": "谜图",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "好吧，邀请他其实不是个好主意，他不喜欢限时，也不喜欢看人把事情弄得一团糟，可能他说自己只是把玩拼图当成一种集中注意力的手段，也是实话",
+      "section": "档案9",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%B0%9C%E5%9B%BE?action=raw"
+    },
+    {
+      "keywords": [
+        "应对人多的场合"
+      ],
+      "canonical": "赫默",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "在交际与人际关系上，赫默不擅长应对人多的场合，例如参加聚会和派对的时候，她会表现得沉默寡言",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%B5%AB%E9%BB%98?action=raw"
+    },
+    {
+      "keywords": [
+        "玩具"
+      ],
+      "canonical": "跃跃",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢玩具，喜欢笑话，喜欢新鲜刺激的挑战，不过她最爱的还是和人一起玩",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%B7%83%E8%B7%83?action=raw"
+    },
+    {
+      "keywords": [
+        "乐趣"
+      ],
+      "canonical": "跃跃",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "她喜欢玩具，喜欢笑话，喜欢新鲜刺激的挑战，不过她最爱的还是和人一起玩",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%B7%83%E8%B7%83?action=raw"
+    },
+    {
+      "keywords": [
+        "同她打牌"
+      ],
+      "canonical": "远山",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不过，有些人依旧喜欢同她打牌，一类是喜欢抓她的出千的瞬间，另一类，则只是喜欢看她那不常见的紧张表情",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%BF%9C%E5%B1%B1?action=raw"
+    },
+    {
+      "keywords": [
+        "看她那不常见"
+      ],
+      "canonical": "远山",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不过，有些人依旧喜欢同她打牌，一类是喜欢抓她的出千的瞬间，另一类，则只是喜欢看她那不常见的紧张表情",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E8%BF%9C%E5%B1%B1?action=raw"
+    },
+    {
+      "keywords": [
+        "看书"
+      ],
+      "canonical": "铅踝",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "” “好想法，想不到你竟然是个喜欢看书的人",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%93%85%E8%B8%9D?action=raw"
+    },
+    {
+      "keywords": [
+        "古董的收藏家"
+      ],
+      "canonical": "锡人",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "但锡人绝不是个只喜欢古董的收藏家",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%94%A1%E4%BA%BA?action=raw"
+    },
+    {
+      "keywords": [
+        "讲些玩笑话来缓"
+      ],
+      "canonical": "闪击",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "闪击是一个“欢乐”的人，他爱笑，脑子转得快，也十分擅长讲些玩笑话来缓和气氛，有些人将他的这种幽默感定义为“犯傻”，但我们将其视作一种乐观向上的生活态度，而闪击在战斗时积极且不畏生死的战斗风格，也无疑佐证了这一点",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%97%AA%E5%87%BB?action=raw"
+    },
+    {
+      "keywords": [
+        "打嗝"
+      ],
+      "canonical": "阿",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "你要是不喜欢打嗝，我也可以再想想办法",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%98%BF?action=raw"
+    },
+    {
+      "keywords": [
+        "我用这个名字来叫它"
+      ],
+      "canonical": "阿兰娜",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "我只是问她，是不喜欢“小螺帽”这个名字，还是不喜欢我用这个名字来叫它",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%98%BF%E5%85%B0%E5%A8%9C?action=raw"
+    },
+    {
+      "keywords": [
+        "吃甜食的拉特兰人都不得不承认"
+      ],
+      "canonical": "隐现",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "迄今为止，我们的拉特兰干员已经以各种各样的名目举办了不下十次甜品大赛，而在最新的一届大赛中，隐现自制的糖霜甜甜圈因其惊人的糖度而震撼全场，就连最爱吃甜食的拉特兰人都不得不承认，这份甜甜圈实在是太过甜腻了，每吃下一口，都仿佛能感觉到脂肪在增加",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9A%90%E7%8E%B0?action=raw"
+    },
+    {
+      "keywords": [
+        "见干员们在听完他的故事后"
+      ],
+      "canonical": "雪绒",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "雪绒喜欢看见干员们在听完他的故事后，受到鼓舞而闪闪发光的眼睛",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9B%AA%E7%BB%92?action=raw"
+    },
+    {
+      "keywords": [
+        "看见干员们在听完他"
+      ],
+      "canonical": "雪绒",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "雪绒喜欢看见干员们在听完他的故事后，受到鼓舞而闪闪发光的眼睛",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9B%AA%E7%BB%92?action=raw"
+    },
+    {
+      "keywords": [
+        "A6小队"
+      ],
+      "canonical": "雷狼龙S空爆",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "但她不像梓兰姐那么别扭，梓兰姐不承认自己喜欢A6小队，她可不一样",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9B%B7%E7%8B%BC%E9%BE%99S%E7%A9%BA%E7%88%86?action=raw"
+    },
+    {
+      "keywords": [
+        "至少表面上支持"
+      ],
+      "canonical": "雷狼龙S空爆",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "但她不像梓兰姐那么别扭，梓兰姐不承认自己喜欢A6小队，她可不一样",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9B%B7%E7%8B%BC%E9%BE%99S%E7%A9%BA%E7%88%86?action=raw"
+    },
+    {
+      "keywords": [
+        "游离于人群之外的女孩"
+      ],
+      "canonical": "霜叶",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "习惯游离于人群之外的女孩，战斗经验在罗德岛的正常人里名列前茅",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9C%9C%E5%8F%B6?action=raw"
+    },
+    {
+      "keywords": [
+        "心情跳动的节奏"
+      ],
+      "canonical": "霜叶",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "我喜欢心情跳动的节奏，像鼓点，像节拍器从这头摆到那头",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9C%9C%E5%8F%B6?action=raw"
+    },
+    {
+      "keywords": [
+        "心情跳动"
+      ],
+      "canonical": "霜叶",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "我喜欢心情跳动的节奏，像鼓点，像节拍器从这头摆到那头",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9C%9C%E5%8F%B6?action=raw"
+    },
+    {
+      "keywords": [
+        "心领神会地点到为止"
+      ],
+      "canonical": "露托",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "起初干员们并未准确理解她那句解释的含义，只当这是她过往的“创伤”——她自称在玻利瓦尔长期从事战场打扫工作，而罗德岛上有着悲惨身世的人并不少见，大家也早已习惯心领神会地点到为止，除非本人主动提起，否则也不会多加过问",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9C%B2%E6%89%98?action=raw"
+    },
+    {
+      "keywords": [
+        "未成熟的酸橙作为食材"
+      ],
+      "canonical": "青枳",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "“实际上，旧汐斯塔原产的橙子在成熟以后是很鲜甜的，可是当地人却总是喜欢用未成熟的酸橙作为食材",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%9D%92%E6%9E%B3?action=raw"
+    },
+    {
+      "keywords": [
+        "作为优秀军人的风笛小姐"
+      ],
+      "canonical": "风笛",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "而且，虽然大家很喜欢作为优秀军人的风笛小姐，但在农地挥洒汗水，端着三个炖锅走上桌子，穿着长裙边唱边旋转，说起故乡会发呆的风笛小姐...... 大家也一样喜欢",
+      "section": "档案8",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%A3%8E%E7%AC%9B?action=raw"
+    },
+    {
+      "keywords": [
+        "碎肉布丁"
+      ],
+      "canonical": "风笛",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "老师老师，你说我去报到时带点什么比较好，不知道他们会不会喜欢碎肉布丁",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%A3%8E%E7%AC%9B?action=raw"
+    },
+    {
+      "keywords": [
+        "糖果"
+      ],
+      "canonical": "风丸",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "虽然风丸一开始对此有些慌张，但她很快就拿出了自己的专业素养，迅速接受并成为了一个孩子们专属的擅长折纸、喜欢糖果、爱和他们玩的贴心姐姐",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%A3%8E%E4%B8%B8?action=raw"
+    },
+    {
+      "keywords": [
+        "电影"
+      ],
+      "canonical": "食铁兽",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "闲暇时间的食铁兽喜欢电影，喜欢炎国美食，喜欢和其他人在酒场豪饮",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%A3%9F%E9%93%81%E5%85%BD?action=raw"
+    },
+    {
+      "keywords": [
+        "炎国美食"
+      ],
+      "canonical": "食铁兽",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "闲暇时间的食铁兽喜欢电影，喜欢炎国美食，喜欢和其他人在酒场豪饮",
+      "section": "档案7",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%A3%9F%E9%93%81%E5%85%BD?action=raw"
+    },
+    {
+      "keywords": [
+        "性地将刀收回鞘中"
+      ],
+      "canonical": "麒麟R夜刀",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "并没有太多的悲伤，她只是习惯性地将刀收回鞘中",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%BA%92%E9%BA%9FR%E5%A4%9C%E5%88%80?action=raw"
+    },
+    {
+      "keywords": [
+        "替人操心的类型"
+      ],
+      "canonical": "鸿雪",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "那时她更喜欢到处散步，或者一个人坐在开阔的地方发呆，再就是写写东西——总而言之，不是喜欢替人操心的类型",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA?action=raw"
+    },
+    {
+      "keywords": [
+        "替人操心"
+      ],
+      "canonical": "鸿雪",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "那时她更喜欢到处散步，或者一个人坐在开阔的地方发呆，再就是写写东西——总而言之，不是喜欢替人操心的类型",
+      "section": "档案6",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA?action=raw"
+    },
+    {
+      "keywords": [
+        "玩水"
+      ],
+      "canonical": "鸿雪",
+      "topic": "PRTS档案话题",
+      "relation": "信物或物品关联",
+      "evidence": "我不大喜欢玩水，但我会搬一把躺椅，坐在人工湖边，一边心不在焉地读书，一边观察水中的欢闹",
+      "section": "基础信息",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%B8%BF%E9%9B%AA?action=raw"
+    },
+    {
+      "keywords": [
+        "操控高度模块化无人机"
+      ],
+      "canonical": "麦哲伦",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "擅长操控高度模块化无人机，因地制宜进行攻击或支援友军",
+      "section": "档案3",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%BA%A6%E5%93%B2%E4%BC%A6?action=raw"
+    },
+    {
+      "keywords": [
+        "任何人介入他的专业领域"
+      ],
+      "canonical": "齐尔查克",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不过，齐尔查克在工作中会非常严肃，并且不喜欢任何人介入他的专业领域",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%BD%90%E5%B0%94%E6%9F%A5%E5%85%8B?action=raw"
+    },
+    {
+      "keywords": [
+        "任何人介入他"
+      ],
+      "canonical": "齐尔查克",
+      "topic": "PRTS档案话题",
+      "relation": "档案中出现的兴趣、习惯或角色关联",
+      "evidence": "不过，齐尔查克在工作中会非常严肃，并且不喜欢任何人介入他的专业领域",
+      "section": "档案5",
+      "verification": "prts_topic_extract",
+      "source_url": "https://prts.wiki/w/%E9%BD%90%E5%B0%94%E6%9F%A5%E5%85%8B?action=raw"
+    }
+  ]
+}
