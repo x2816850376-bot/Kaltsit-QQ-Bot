@@ -125,12 +125,20 @@ class TerraKnowledge:
         anchors=json.loads((self.root/'verified-anchors.json').read_text('utf-8')) if (self.root/'verified-anchors.json').exists() else []
         summaries=[row for row in anchors if any(term in query for term in row['terms'])][:3]
         subjects=list(dict.fromkeys(TERMS.findall(query)))
-        generic_story=('泰拉' in query and re.search(r'故事|往事',query) and set(subjects)<={'泰拉'})
+        has_named_story_subject=bool(re.search(r'关于[^的，。！？!?]{1,20}(?:的|故事|往事)',query))
+        generic_story=('泰拉' in query and re.search(r'故事|往事',query) and
+                       set(subjects)<={'泰拉'} and not has_named_story_subject)
         if STORY_REQUEST.search(query) or generic_story:
             event=documented_event(self.root,query,max_chars,generic_story)
             if event:
                 event.update(query=original_query,rules=RULES)
                 return event
+            if STORY_REQUEST.search(query) and not generic_story:
+                return {'status':'not_found','source':'明日方舟：大地巡旅（完整事件未匹配）',
+                        'query':original_query,'mode':'documented_story',
+                        'retrieval_scope':'fragment_locator','full_context_required':True,
+                        'rules':RULES,'usage':STORY_USAGE,'pages':[],'verified_summaries':[],
+                        'reason':'当前命中不足以构成完整故事；需沿主题查找完整事件或改讲其他资料完整的往事'}
         if generic_story:
             # Select an existing checked narrative subject, then retrieve its
             # source passages. Never stitch arbitrary OCR hits into fiction.
@@ -179,7 +187,8 @@ class TerraKnowledge:
             excerpts.append({'scan_page':page,'file':file,'chapter':chapter,'verification':verification,'scope':scope,'source_speaker':speaker,'excerpt':excerpt})
         result={'status':'ok' if excerpts or summaries else 'not_found','source':'明日方舟：大地巡旅（全量已录入文字与校对手写）',
                 'query':original_query,'matched_topics':subjects,'rules':RULES,'verified_summaries':summaries,'pages':excerpts}
-        if STORY_REQUEST.search(query):result.update(mode='documented_story',usage=STORY_USAGE)
+        if STORY_REQUEST.search(query):result.update(mode='documented_story',usage=STORY_USAGE,
+            retrieval_scope='fragment_locator',full_context_required=True)
         return result
 
     def lookup(self,sid,query,max_chars=1800):

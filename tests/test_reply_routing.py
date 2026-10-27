@@ -5,6 +5,7 @@ import sys
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parent))
 from chat_context import GROUP, ReplyContextCache
+from conversation_packet import merge_wait_packets, _batch_routing
 
 BOT=GROUP.split(':')[0]
 SID='s'*32
@@ -68,5 +69,21 @@ class RoutingTests(unittest.TestCase):
         p=self.cache.enrich(dict(session_id=SID,messages=[message(2,'b','quoted',segments=[dict(type='reply',onebot_message_id='1001')])],chat_guidance=dict(examples=[{'scene':'reactor'}])))
         self.assertEqual(p['messages'][0]['reply_context']['target']['sender_id'],'a')
         self.assertEqual(p['chat_guidance']['examples'],[])
+
+    def test_debounce_merge_keeps_both_speakers_and_deduplicates(self):
+        first={'messages':[message(10,'a','甲的问题')], 'read_through_id':10, 'event':'ready'}
+        second={'messages':[message(10,'a','甲的问题'),message(11,'b','乙的问题')],
+                'read_through_id':11, 'event':'ready'}
+        merged=merge_wait_packets(first,second)
+        self.assertEqual([row['id'] for row in merged['messages']],[10,11])
+        self.assertEqual(merged['read_through_id'],11)
+
+    def test_batch_routing_keeps_interleaved_speaker_identity(self):
+        rows=[message(20,'a','问甲',nickname='甲'),message(21,'b','问乙',nickname='乙')]
+        self.cache.enrich(packet(rows))
+        routing=_batch_routing({'messages':rows})
+        self.assertTrue(routing['interleaved'])
+        self.assertEqual([item['speaker_id'] for item in routing['events']],['a','b'])
+        self.assertEqual({item['speaker_id'] for item in routing['speaker_threads']},{'a','b'})
 
 if __name__=='__main__':unittest.main(verbosity=2)

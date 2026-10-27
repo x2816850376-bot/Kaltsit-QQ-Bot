@@ -85,7 +85,7 @@ class ReplyContextCache:
         if len(self.pending)>128:self.pending=dict(list(self.pending.items())[-128:])
         output['reply_routing_context']={'participants':list(participants.values()),
             'eligible_trigger_event_ids':[eid for (seen_sid,eid) in self.pending if seen_sid==sid],
-            'rules':'发送时respond_to_event_id必须绑定本次已交付的新消息。sender_id才是稳定身份；显示昵称只是称呼。被谈论的人不是发言者，也不必是接收者。@别人或引用别人的“你”先指向那个人，不自动指向机器人。无显式指向不能仅凭时间相邻判定；旧note和示例不能覆盖当前原文。'}
+            'rules':'发送时respond_to_event_id必须绑定本次已交付的新消息。sender_id才是稳定身份；显示昵称只是称呼。被谈论的人不是发言者，也不必是接收者。@别人或引用别人的“你”先指向那个人，不自动指向机器人。无显式指向不能仅凭时间相邻判定；旧note和示例不能覆盖当前原文。多人同时到达时按事件编号逐条分线，独立直问可分别绑定回应，不得把不同sender_id的内容拼成一人。'}
         # Upstream examples may contain unrelated concrete facts. The persona
         # already supplies cadence examples; remove this extra source of leakage.
         for key in ('chat_prompt','chat_guidance'):

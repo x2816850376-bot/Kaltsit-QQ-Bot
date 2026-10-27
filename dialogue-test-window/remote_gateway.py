@@ -13,7 +13,7 @@ CONFIG=ROOT/'runtime/remote-test/config.private.json'
 BACKEND='http://127.0.0.1:18885'
 PORT=18886
 COOKIE='__Host-kaltsit_test'
-LOCK=threading.RLock();JOBS={};REQUESTS={};FAILS={};CHAT_TIMES=[];REVOKED=set()
+LOCK=threading.RLock();JOBS={};REQUESTS={};FAILS={};CHAT_TIMES=[];REVOKED=set();MAX_PENDING=5
 OPENER=build_opener(ProxyHandler({}))
 GET_PATHS={'/','/index.html','/health'}
 POST_PATHS={'/chat/ack','/social/reset','/voice-preview/mode'}
@@ -170,7 +170,10 @@ class Handler(BaseHTTPRequestHandler):
                 if len(CHAT_TIMES)>=40 or sum(now-t<60 for t in CHAT_TIMES)>=6:return self.send(429,{'error':'远程测试请求较多，请稍后再试'})
                 for job_id,job in list(JOBS.items()):
                     if now-job['at']>7200:JOBS.pop(job_id,None)
-                if sum(job['state']=='pending' for job in JOBS.values())>=1:return self.send(429,{'error':'上一条还在回复，请稍等'})
+                if any(job['state']=='pending' and job['owner']==user for job in JOBS.values()):
+                    return self.send(429,{'error':'你上一条消息还在回复，已按顺序排队'})
+                if sum(job['state']=='pending' for job in JOBS.values())>=MAX_PENDING:
+                    return self.send(429,{'error':'当前已有五条回复正在生成，请稍等'})
                 job_id=secrets.token_hex(16);JOBS[job_id]={'owner':user,'at':now,'state':'pending'};REQUESTS[key]={'digest':digest,'job':job_id};CHAT_TIMES.append(now)
                 if len(REQUESTS)>200:REQUESTS.pop(next(iter(REQUESTS)))
             threading.Thread(target=complete_job,args=(job_id,body),daemon=True).start()

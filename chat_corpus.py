@@ -163,6 +163,9 @@ class CanonicalKnowledge:
                 if row.get('is_self') or (sid,row.get('id')) not in pending:
                     continue
                 query = corpus_query(row)
-                if query:
+                # A story request must not receive isolated dialogue snippets
+                # as if they were a complete historical event. Let the world
+                # resolver/web lookup locate the full corresponding passage.
+                if query and not re.search(r'故事|往事',query):
                     row['canonical_knowledge'] = self.retrieve(query, 1000)
         return out

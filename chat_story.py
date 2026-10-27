@@ -8,6 +8,8 @@ import secrets
 import sqlite3
 
 STORY_USAGE=(
+    '检索到的片段只用于定位对应的完整事件或历史段落，不能直接拿片段拼成故事。'
+    '先沿同一主题、章节、来源页或事件卡补齐前因、行动、冲突、结果和时间范围，再开始叙述；找不到完整对应内容就换一段资料完整的往事，或明确停在已知事实，不补缺口。'
     'event_card给出同一历史片段的完整事实链，不是要逐项宣读的提纲。'
     '选择卡中一个有依据的具体细节作为切入点，让听者先进入当时的处境，再随主体的选择、阻力和后果往下听；'
     '可改变揭示顺序、取舍旁支和组织句子，不照卡片分点，不按国家百科的语气罗列年份和定义。'
@@ -62,6 +64,7 @@ def documented_event(root,query,max_chars,generic=False,*,event_id=None):
             excerpts.append({'scan_page':page,'verification':verification,'scope':scope,'source_speaker':speaker,'excerpt':excerpt})
         return {'status':'ok','source':'明日方舟：大地巡旅（已校对片段的事实摘要）','query':query,
                 'mode':'documented_story','story_topic':card['id'],'usage':STORY_USAGE,
+                'retrieval_scope':'complete_event','full_context_required':False,
                 'event_card':{'id':card['id'],'title':card['title'],'starting_detail':card['starting_detail'],
                               'narrative_focus':card['narrative_focus'],'facts':facts,'sequence':card['sequence'],
                               'boundaries':card['boundaries'],'sources':card['sources']},

@@ -14,7 +14,7 @@ INTENT=re.compile(r'是谁|什么人|介绍|档案|履历|资料|特点|特性|�
 TOPIC_TRIGGER=re.compile(r'爱好|喜欢|不喜欢|习惯|擅长|感兴趣|热衷|着迷|食物|吃|喝|酒|糖|茶|咖啡|音乐|歌曲|电影|书|画|乐器|收藏|宠物|家人|父亲|母亲|兄|姐|弟|妹|朋友|搭档|队友|关系|游戏|玩|棋|围棋|对弈|动作|跺脚',re.I)
 GENERIC_TOPIC_WORDS={'糖果','糖','酒','食物','音乐','电影','书','朋友','家人','爱好','习惯'}
 GENERIC_CONCEPT_ALIASES={'糖果','甜食','音乐','电影','书籍','阅读','酒'}
-RELATION_QUERY=re.compile(r'推荐|找一个|找个|陪我|和我|一起|谁.*(?:喜欢|擅长|会|能|适合)|适合.*(?:一起|陪)',re.I)
+RELATION_QUERY=re.compile(r'推荐|寻找|找一个|找个|帮我找|陪我|和我|一起|谁.*(?:喜欢|擅长|会|能|适合)|适合.*(?:一起|陪)',re.I)
 SINGLE_NAME=re.compile(r'(?:介绍|干员|关于|说说|认识|评价|请问|问下|那个|角色|抽到|出了|练|养|用|带|选|看待|叫|是)\s*(?:一下|的)?\s*[「“"《]?$',re.I)
 GAME_CONTEXT=re.compile(r'明日方舟|干员|抽卡|卡池|六星|专精|专三|模组|技能|配队|精二|肉鸽|限定|异格|火陈|水陈|舟圈|练谁|值得练|值得养|强度|阻挡|部署|萨卡兹|萨科塔')
 COMMON_ALIASES={'叔叔','大哥','小羊','粉毛','鸟','羊','兔子','驴','老爷子','老爷','小车','鼠鼠','猫头鹰',
@@ -26,6 +26,7 @@ TOPIC_RULES=('operator_topic_links、operator_topic_concepts与operator_relation
              '命中关联词时先把它当作相关干员的候选话题，结合当前上下文回答；不要把检索过程说给博士听。'
              '关系记录会区分主体、关系、对象和旁述来源；概念词可能对应多个干员，必须区分“喜欢的东西”“信物”“剧情中出现的物品”等关系，不要因为一个味道或物品词就武断归因。推荐或能力问题优先采用主体直接关系，不能把页面里提到的别人当成页面主角。'
              '当问题是“推荐一个、找一个、谁适合与我一起做某事”时，默认从干员关系库推荐实际合适的第三方，不要把凯尔希自己说成推荐对象；只有问题明确涉及“你、凯尔希、医生、看病、体检、治疗”等自身医疗或能力时，才可以推荐我自己。'
+             '法律学习、法律咨询或寻找有正规法律职业经验的干员时，优先采用legal_experience直接关系：但书（律师、律所经验）和斥罪（法官、司法经验）优先，送葬人作为拉特兰法律框架补充；陈、银灰等执法、军政或管理经历不能替代律师/法官职业经验。'
              '本地没有可靠关联时，才允许用一次受限的PRTS关键词查询补充，结果不足就保留不确定，不编造角色喜好。资料卡中的性别与直接关系证据优先于模型惯用称呼，不得把男性干员写成“她”，也不得否认已有的明确档案证据。')
 
 
@@ -243,6 +244,7 @@ class OperatorKnowledge:
             score=float(row.get('confidence',0.0))
             if row.get('evidence_role')=='subject_direct':score+=0.25
             if RELATION_QUERY.search(query) and row.get('predicate') in ('can_play','preference','skill_or_preference'):score+=0.2
+            if row.get('predicate')=='legal_experience' and re.search(r'法律|律师|律所|法官|司法|法院',query):score+=0.4
             if '信物' in query and row.get('relation','').find('信物')>=0:score+=0.2
             hits.append((score,len(matched),row,matched))
         hits.sort(key=lambda x:(-x[0],-x[1],x[2].get('subject','')))
@@ -274,13 +276,16 @@ class OperatorKnowledge:
         query_text=str(message.get('content',''))
         relation_rows=self.relation_matches(query_text)
         names=[]
-        for mention in mentions:
-            for name in ([mention.get('canonical')] if mention.get('canonical') else mention.get('candidates',[])):
-                if RELATION_QUERY.search(query_text):name=self.identity_canonical(name)
-                if name and name not in names:names.append(name)
+        # For recommendation/ability questions, direct relation subjects are
+        # the primary candidates. Mentioned page names or topic-concept hits
+        # must not displace a stronger subject-specific relation.
         if RELATION_QUERY.search(query_text):
             for row in relation_rows:
                 name=self.identity_canonical(row.get('subject'))
+                if name and name not in names:names.append(name)
+        for mention in mentions:
+            for name in ([mention.get('canonical')] if mention.get('canonical') else mention.get('candidates',[])):
+                if RELATION_QUERY.search(query_text):name=self.identity_canonical(name)
                 if name and name not in names:names.append(name)
         names=names[:4]
         by_name={x['name']:x for x in self.operators}
@@ -407,6 +412,12 @@ class OperatorKnowledge:
                 seen.add(eid)
                 content=str(message.get('content',''))[:3000]
                 quote_text=str(((message.get('reply_context') or {}).get('target') or {}).get('content',''))[:1500]
+                # An operator profile is not a complete story. For explicit
+                # story requests, leave narrative retrieval to the world/canon
+                # resolver or web search instead of turning profile fields into
+                # a biographical summary.
+                if re.search(r'故事|往事|传说',content):
+                    continue
                 recent=(output.get('context') or {}).get('messages',[])+output.get('messages',[])
                 mentions,cards=self.context_cards(message,recent,budget)
                 if RELATION_QUERY.search(content) and cards:

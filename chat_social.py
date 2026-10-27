@@ -5,6 +5,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import time
 import uuid
 
@@ -197,4 +198,16 @@ def should_coalesce(packet):
     plain=message_text(last).strip().strip('，,。.!！?？… ')
     for name in ('凯尔希','博士'):
         if plain.startswith(name):plain=plain[len(name):].lstrip('，,：: ')
-    return plain in ('等一下','等下','我跟你讲','我想问','我想问一下','还有','然后','但是','对了','你知道吗')
+    if plain in ('等一下','等下','我跟你讲','我想问','我想问一下','还有','然后','但是','对了','你知道吗'):
+        return True
+    # Only wait for likely fragments. Complete greetings and direct questions
+    # should keep the normal low-latency path.
+    if plain in ('你好','嗨','早上好','早安','下午好','晚上好','晚安','谢谢','谢了','在吗','在不在'):
+        return False
+    # Short standalone replies are complete turns, not a sentence fragment
+    # that needs the debounce window.
+    if plain in ('继续','？','?','好','行','嗯'):
+        return False
+    if any(plain.endswith(mark) for mark in '。！？!?；;'):
+        return False
+    return bool(re.search(r'(然后|还有|但是|不过|对了|等下|我想|你知道吗)$',plain))
